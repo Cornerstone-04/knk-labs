@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { navLinks, site } from "@/lib/data";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function Footer() {
   return (
@@ -68,9 +69,9 @@ export default function Footer() {
           </a>
           <Link
             href="/waitlist"
-            className="inline-block bg-orange px-4 py-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            className="inline-flex items-center gap-2 bg-orange px-4 py-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
           >
-            Join Waitlist →
+            Join Waitlist <LuArrowRight />
           </Link>
         </motion.div>
       </div>

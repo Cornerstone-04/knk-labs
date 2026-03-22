@@ -10,6 +10,7 @@ import {
 } from "motion/react";
 import { useState } from "react";
 import { navLinks, products } from "@/lib/data";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -97,7 +98,7 @@ export default function Navbar() {
                           className="flex items-center justify-between px-5 py-3 font-mono text-xxs uppercase tracking-[0.15em] text-white/40 no-underline hover:text-white hover:bg-white/5 transition-colors duration-150 border-b border-white/5"
                         >
                           All Products
-                          <span className="text-white/20">→</span>
+                          <LuArrowRight className="text-xxs" />
                         </Link>
 
                         {products.map((p) => (
@@ -111,13 +112,11 @@ export default function Navbar() {
                               <p className="font-heading font-bold text-[0.95rem] uppercase text-white group-hover:text-orange transition-colors duration-150">
                                 {p.name}
                               </p>
-                              <p className="font-mono text-[0.55rem] uppercase tracking-[0.1em] text-white/30 mt-0.5">
+                              <p className="font-mono text-[0.55rem] uppercase tracking-widest text-white/30 mt-0.5">
                                 {p.tag}
                               </p>
                             </div>
-                            <span className="font-mono text-xxs text-white/20 group-hover:text-orange transition-colors duration-150">
-                              →
-                            </span>
+                            <LuArrowRight className="font-mono text-xxs text-white/20 group-hover:text-orange transition-colors duration-150" />
                           </Link>
                         ))}
                       </motion.div>
@@ -153,7 +152,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          className="-mr-2 flex flex-col justify-center gap-[5px] p-2 md:hidden"
+          className="-mr-2 flex flex-col justify-center gap-1.25 p-2 md:hidden"
           aria-label="Toggle menu"
         >
           <motion.span
@@ -250,7 +249,7 @@ export default function Navbar() {
                 onClick={close}
                 className="w-full bg-orange px-6 py-4 text-center font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90"
               >
-                Join Waitlist →
+                Join Waitlist <LuArrowRight />
               </Link>
               <p className="text-center font-mono text-xxs uppercase tracking-[0.2em] text-white/20">
                 knklabs.com

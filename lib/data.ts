@@ -2,15 +2,15 @@ export const site = {
   name: "KNK Labs",
   tagline: "Innovation at Your Fingertips",
   description:
-    "Advanced wearable technology engineered to enhance performance, elevate safety, and redefine human–machine interaction.",
+    "Two gloves. Two hands. One seamless system. KNK Labs engineers intelligent wearables that extend human capability — Tek Glove for your left hand, Echo Glove for your right.",
   url: "https://knk.vercel.app",
   email: "hello@knklabs.com",
 };
 
 export const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
+  { href: "/about", label: "About" },
   { href: "/developers", label: "Developers" },
   { href: "/waitlist", label: "Join Waitlist" },
 ];
@@ -19,10 +19,11 @@ export const products = [
   {
     slug: "tek-glove",
     name: "Tek Glove",
+    hand: "Left Hand",
     tagline: "Control the Future. Feel the Data.",
-    desc: "An advanced smart glove designed for athletes, engineers, creators, operators, and innovators. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, Tek Glove turns your hand into a high-performance command system.",
-    image: "/images/tekglove-front.jpg",
-    tag: "Flagship",
+    desc: "Tek Glove sits on your left hand, mounting your Apple Watch on the dorsal side for instant visibility without obstructing wrist mobility. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, it turns your dominant data hand into a high-performance command system.",
+    image: "/images/tekglove_front_cutout.png",
+    tag: "Left Hand",
     features: [
       {
         id: "01",
@@ -68,10 +69,11 @@ export const products = [
   {
     slug: "echo-glove",
     name: "Echo Glove",
+    hand: "Right Hand",
     tagline: "Speak Less. Sense More. Work Smarter.",
-    desc: "A haptic-intelligent communication glove built for environments where clarity, awareness, and precision matter. Whether you're on a shop floor, in the field, or in a high-security environment, Echo Glove delivers alerts and communication silently and instantly.",
-    image: "/images/echo-glove-placeholder.jpg",
-    tag: "New",
+    desc: "Echo Glove sits on your right hand, purpose-built for communication. Haptic alerts, voice commands, and a built-in Bluetooth headset dock make it the silent, always-ready communication layer of the KNK system — ideal for environments where clarity and discretion matter.",
+    image: "/images/echo_glove_cutout.png",
+    tag: "Right Hand",
     features: [
       {
         id: "01",
@@ -109,6 +111,15 @@ export const products = [
     dockReasons: [],
   },
 ];
+
+export const bundle = {
+  name: "KNK System",
+  tag: "Bundle",
+  tagline: "The Complete Hand.",
+  desc: "Tek Glove on your left. Echo Glove on your right. Together they form a complete wearable system — data and control on one hand, communication and awareness on the other. Buy both and get the full KNK experience.",
+  image: "/images/knk_dual.png",
+  includes: ["Tek Glove (Left Hand)", "Echo Glove (Right Hand)"],
+};
 
 export const about = {
   headline: "Who We Are",

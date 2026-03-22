@@ -3,12 +3,12 @@
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "@/lib/data";
+import { products, bundle } from "@/lib/data";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function ProductsPage() {
   return (
     <div className="bg-bg pt-16">
-
       {/* Header */}
       <div className="border-b border-border px-6 pt-20 pb-16 md:px-12">
         <div className="mx-auto max-w-7xl">
@@ -49,7 +49,6 @@ export default function ProductsPage() {
         return (
           <section key={p.slug} className="border-b border-border">
             <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
-
               {/* Image */}
               <motion.div
                 initial={{ opacity: 0, x: isEven ? -30 : 30 }}
@@ -57,12 +56,18 @@ export default function ProductsPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
                 className={`flex items-center justify-center bg-surface px-8 py-20 ${
-                  isEven ? "md:order-1 border-r border-border" : "md:order-2 border-l border-border"
+                  isEven
+                    ? "md:order-1 border-r border-border"
+                    : "md:order-2 border-l border-border"
                 }`}
               >
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 5 + i, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 5 + i,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 >
                   <Image
                     src={p.image}
@@ -132,8 +137,11 @@ export default function ProductsPage() {
                   transition={{ duration: 0.5, delay: 0.35 }}
                   className="flex flex-wrap gap-2 mb-10"
                 >
-                  {p.features.map(f => (
-                    <span key={f.id} className="border border-white/10 px-3 py-1.5 font-mono text-xxs uppercase tracking-[0.15em] text-white/35">
+                  {p.features.map((f) => (
+                    <span
+                      key={f.id}
+                      className="border border-white/10 px-3 py-1.5 font-mono text-xxs uppercase tracking-[0.15em] text-white/35"
+                    >
                       {f.title}
                     </span>
                   ))}
@@ -148,9 +156,9 @@ export default function ProductsPage() {
                 >
                   <Link
                     href={`/products/${p.slug}`}
-                    className="inline-block border border-white/20 px-8 py-[0.85rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white no-underline transition-all duration-200 hover:border-white/60"
+                    className="inline-flex items-center gap-2 border border-white/20 px-8 py-[0.85rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white no-underline transition-all duration-200 hover:border-white/60"
                   >
-                    Learn More →
+                    Learn More <LuArrowRight />
                   </Link>
                   <Link
                     href="/waitlist"
@@ -164,6 +172,64 @@ export default function ProductsPage() {
           </section>
         );
       })}
+
+      {/* Bundle */}
+      <section className="border-b border-border px-6 py-24 md:px-12 bg-surface">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="mb-4 font-mono text-xxs tracking-[0.3em] uppercase text-orange">
+              The Bundle
+            </div>
+            <h2 className="mb-6 font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white">
+              {bundle.tagline}
+            </h2>
+            <p className="mb-8 font-sans text-[0.9rem] leading-[1.85] text-white/50">
+              {bundle.desc}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-10">
+              {bundle.includes.map((item) => (
+                <span
+                  key={item}
+                  className="border border-white/10 px-3 py-1.5 font-mono text-xxs uppercase tracking-[0.15em] text-white/35"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+            <Link
+              href="/waitlist"
+              className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            >
+              Join the Waitlist <LuArrowRight />
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="flex items-center justify-center px-8 py-16"
+          >
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Image
+                src="/images/knk_dual.png"
+                alt="KNK System Bundle"
+                width={480}
+                height={400}
+                className="object-contain max-w-full"
+              />
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="px-6 py-24 text-center">
@@ -184,14 +250,13 @@ export default function ProductsPage() {
             </h2>
             <Link
               href="/waitlist"
-              className="inline-block bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+              className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
             >
-              Join the Waitlist →
+              Join the Waitlist <LuArrowRight />
             </Link>
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 }

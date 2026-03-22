@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
 import { Toaster } from "sonner";
+import ScreenLoader from "@/components/ui/page-loader";
 
 const barlow = Barlow_Condensed({
   variable: "--font-barlow",
@@ -35,7 +36,8 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://knk.vercel.app",
     title: "KNK Labs — Innovation at Your Fingertips",
-    description: "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
+    description:
+      "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
     siteName: "KNK Labs",
   },
   twitter: {
@@ -46,10 +48,18 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}>
+    <html
+      lang="en"
+      className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
+    >
       <body>
+        <ScreenLoader />
         <Navbar />
         <main>{children}</main>
         <Footer />

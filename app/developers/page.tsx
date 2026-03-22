@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { developers } from "@/lib/data";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function DevelopersPage() {
   return (
@@ -83,8 +84,8 @@ export default function DevelopersPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/waitlist" className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90">
-              Join the Waitlist →
+            <Link href="/waitlist" className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90">
+              Join the Waitlist <LuArrowRight />
             </Link>
           </motion.div>
         </div>
