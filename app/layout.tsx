@@ -57,6 +57,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body>
         <ScreenLoader />

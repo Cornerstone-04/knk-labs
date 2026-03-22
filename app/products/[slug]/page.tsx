@@ -17,97 +17,106 @@ export default function ProductPage({
   const product = products.find((p) => p.slug === slug);
   if (!product) notFound();
 
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-
   const otherProducts = products.filter((p) => p.slug !== slug);
 
   return (
     <div className="bg-bg pt-16">
       {/* ── HERO ── */}
-      <section
-        ref={heroRef}
-        className="relative min-h-[85vh] flex items-end overflow-hidden border-b border-border"
-      >
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.06)_0%,transparent_65%)] z-0" />
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-bg to-transparent z-1" />
+      <section className="border-b border-border px-6 pt-24 pb-0 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          {/* 1. Add a Grid container that stacks on mobile and splits on Large screens */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-12">
+            {/* 2. Wrap all your text/buttons in a single column */}
+            <div className="flex flex-col">
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-4"
+              >
+                {product.tag}
+              </motion.p>
 
-        {/* Floating image */}
-        <motion.div
-          style={{ opacity: heroOpacity, y: heroY }}
-          className="absolute inset-0 z-0 flex items-center justify-end pr-12 md:pr-24"
-        >
-          <motion.div
-            animate={{ y: [0, -16, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="relative"
-          >
-            <div className="absolute bottom-[-15%] left-1/2 -translate-x-1/2 w-[70%] h-[30%] bg-orange/10 blur-3xl rounded-full pointer-events-none" />
-            <Image
-              src={product.image}
-              alt={product.name}
-              width={520}
-              height={520}
-              className="object-contain max-w-[45vw] relative z-10"
-              priority
-            />
-          </motion.div>
-        </motion.div>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="font-heading font-black text-[clamp(3.5rem,7vw,9rem)] leading-none tracking-[-0.02em] text-white mb-4"
+              >
+                {product.name}
+              </motion.h1>
 
-        {/* Text */}
-        <motion.div
-          style={{ opacity: heroOpacity }}
-          className="relative z-2 w-full px-6 md:px-12 pb-16 pt-32"
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-4"
-          >
-            {product.tag}
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading font-black text-[clamp(3.5rem,10vw,9rem)] leading-none tracking-[-0.02em] text-white mb-4 max-w-[60%]"
-          >
-            {product.name}
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="font-mono text-xxs uppercase tracking-[0.2em] text-orange/60 mb-10"
-          >
-            {product.tagline}
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.65 }}
-            className="flex flex-wrap gap-4"
-          >
-            <Link
-              href="/waitlist"
-              className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+              <motion.p
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                className="font-mono text-xxs uppercase tracking-[0.2em] text-orange/60 mb-10"
+              >
+                {product.tagline}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-wrap gap-4 mb-16 lg:mb-0"
+              >
+                <Link
+                  href="/waitlist"
+                  className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+                >
+                  Join the Waitlist
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-block border border-white/15 px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
+                >
+                  All Products
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* 3. Hero image column */}
+            <motion.div
+              initial={{ opacity: 0, x: 24 }} // Changed Y to X for a slight horizontal entrance
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.4,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="relative bg-surface overflow-hidden flex items-center justify-center rounded-2xl"
+              style={{ minHeight: "450px" }} // Increased height for desktop side-by-side
             >
-              Join the Waitlist
-            </Link>
-            <Link
-              href="/products"
-              className="inline-block border border-white/15 px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
-            >
-              All Products
-            </Link>
-          </motion.div>
-        </motion.div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(249,115,22,0.08)_0%,transparent_65%)] pointer-events-none" />
+              <motion.div
+                animate={{ y: [0, -12, 0] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10 py-12"
+              >
+                <Image
+                  src={product.images.hero}
+                  alt={product.name}
+                  width={600} // Slightly larger for desktop
+                  height={600}
+                  className="object-contain max-h-100 lg:max-h-125 w-auto"
+                  priority
+                  sizes="(max-width: 1024px) 80vw, 50vw"
+                />
+              </motion.div>
+              {/* Subtle shadow overlay */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/20 to-transparent pointer-events-none z-20" />
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* ── OVERVIEW ── */}
@@ -125,6 +134,16 @@ export default function ProductPage({
             <p className="font-sans text-[1rem] leading-[1.9] text-white/55">
               {product.desc}
             </p>
+            {product.slug === "tek-glove" && (
+              <Link
+                href="https://tekglove.co.uk"
+                target="_blank"
+                className="inline-flex items-center gap-2 font-mono text-xxs tracking-[0.2em] uppercase text-orange border-b border-orange/30 pb-1 hover:border-orange transition-all"
+              >
+                Explore Technical Documentation{" "}
+                <LuArrowRight className="w-3 h-3" />
+              </Link>
+            )}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -282,18 +301,23 @@ export default function ProductPage({
 
       {/* ── OTHER PRODUCTS ── */}
       {otherProducts.length > 0 && (
-        <section className="border-b border-border px-6 py-24 md:px-12">
+        <section className="border-b border-border px-6 py-16 md:px-12 bg-surface/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
+              className="mb-10 flex items-center justify-between"
             >
-              Also From KNK Labs
+              <div className="font-mono text-xxs uppercase tracking-[0.3em] text-orange">
+                Related Gear
+              </div>
+              <div className="h-px flex-1 bg-border ml-8 hidden md:block" />
             </motion.div>
-            <div className="grid grid-cols-1 gap-px bg-border ">
+
+            {/* Changed to grid-cols-2 on tablet and grid-cols-3 on desktop if needed */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {otherProducts.map((p, i) => (
                 <motion.div
                   key={p.slug}
@@ -301,35 +325,33 @@ export default function ProductPage({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="group bg-bg overflow-hidden"
+                  className="group bg-bg border border-border overflow-hidden flex flex-col"
                 >
-                  <div className="relative aspect-video bg-surface overflow-hidden">
+                  <div className="relative aspect-21/9 bg-surface overflow-hidden">
                     <Image
-                      src={
-                        p.slug === "echo-glove"
-                          ? "/images/echo_glove_cutout.png"
-                          : "/images/tekglove_angle_cutout.png"
-                      }
+                      src={p.images.hero} // Using the standard cutout for consistency
                       alt={p.name}
                       fill
-                      className="object-contain brightness-75 transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-contain p-4 brightness-90 transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 font-mono text-xxs tracking-[0.15em] uppercase text-black bg-orange px-2.5 py-1">
+                    <div className="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase text-black bg-orange px-2 py-0.5">
                       {p.tag}
                     </div>
                   </div>
-                  <div className="p-8 flex items-end justify-between">
+
+                  <div className="p-5 flex items-center justify-between gap-4">
                     <div>
-                      <h3 className="font-heading font-bold text-[1.4rem] text-white mb-1">
+                      <h3 className="font-heading font-bold text-[1.1rem] text-white uppercase leading-tight">
                         {p.name}
                       </h3>
-                      <p className="font-mono text-xxs uppercase tracking-[0.15em] text-orange/60">
+                      <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 mt-1">
                         {p.tagline}
                       </p>
                     </div>
                     <Link
                       href={`/products/${p.slug}`}
-                      className="font-mono text-xxs tracking-[0.15em] uppercase text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-orange hover:border-orange transition-all duration-200 shrink-0 ml-8"
+                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest uppercase text-orange border-b border-orange/0 pb-0.5 no-underline hover:border-orange transition-all duration-200 shrink-0"
                     >
                       View <LuArrowRight />
                     </Link>
@@ -358,24 +380,12 @@ export default function ProductPage({
               <br />
               <span className="text-orange">{product.name}?</span>
             </h2>
-            <div className="flex flex-col md:flex-row items-center gap-4 justify-center">
               <Link
                 href="/waitlist"
                 className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
               >
                 Join the Waitlist <LuArrowRight />
               </Link>
-              {product.slug === "tek-glove" && (
-                <Link
-                  href="https://tekglove.co.uk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-white/20 px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/60 hover:text-white"
-                >
-                  More About TekGlove <LuArrowRight />
-                </Link>
-              )}
-            </div>
           </motion.div>
         </div>
       </section>

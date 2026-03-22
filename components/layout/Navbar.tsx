@@ -8,19 +8,25 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks, products } from "@/lib/data";
-import { LuArrowRight } from "react-icons/lu";
+import { LuArrowRight, LuChevronDown } from "react-icons/lu";
 
 export default function Navbar() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const pathname = usePathname();
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
+    if (!mounted) return;
     const prev = scrollY.getPrevious() ?? 0;
     setScrolled(latest > 20);
     if (latest > prev && latest > 80 && !open) setHidden(true);
@@ -58,47 +64,57 @@ export default function Navbar() {
         <ul className="hidden list-none items-center gap-8 md:flex">
           {navLinks.slice(0, -1).map(({ href, label }) => {
             const isProducts = label === "Products";
-            const active = pathname.startsWith(href);
+            const active =
+              href === "/" ? pathname === "/" : pathname.startsWith(href);
 
             if (isProducts) {
               return (
-                <li key={href} className="relative">
+                <li
+                  key={href}
+                  className="relative flex items-center" // Ensure the list item is a flex-center
+                  onMouseEnter={() => setDropdown(true)}
+                  onMouseLeave={() => setDropdown(false)}
+                >
                   <button
-                    onMouseEnter={() => setDropdown(true)}
-                    onMouseLeave={() => setDropdown(false)}
                     onClick={() => setDropdown((d) => !d)}
-                    className={`flex items-center gap-1.5 font-sans text-[0.78rem] tracking-[0.05em] bg-transparent border-none p-0 cursor-pointer transition-colors duration-200 ${
-                      active ? "text-white" : "text-white/50 hover:text-white"
+                    className={`flex items-center gap-1.5 font-sans text-[0.78rem] tracking-[0.05em] bg-transparent border-none p-0 cursor-pointer transition-colors duration-200 leading-none h-full ${
+                      active || dropdown
+                        ? "text-white"
+                        : "text-white/50 hover:text-white"
                     }`}
                   >
                     {label}
                     <motion.span
-                      animate={{ rotate: dropdown ? 180 : 0 }}
+                      animate={{
+                        rotate: dropdown ? 180 : 0,
+                        y: dropdown ? 1 : 0,
+                      }}
                       transition={{ duration: 0.2 }}
-                      className="text-[0.6rem] leading-none"
+                      className="text-[0.65rem] inline-block" // Changed to inline-block for better transform handling
                     >
-                      ▾
+                      <LuChevronDown />
                     </motion.span>
                   </button>
 
                   <AnimatePresence>
                     {dropdown && (
                       <motion.div
-                        initial={{ opacity: 0, y: 6 }}
+                        initial={{ opacity: 0, y: 10 }} // Slightly more offset for a smoother float
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 6 }}
-                        transition={{ duration: 0.2 }}
-                        onMouseEnter={() => setDropdown(true)}
-                        onMouseLeave={() => setDropdown(false)}
-                        className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-56 border border-white/10 bg-black/95 backdrop-blur-md overflow-hidden"
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="absolute top-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2 w-56 border border-white/10 bg-black/95 backdrop-blur-md overflow-hidden shadow-2xl"
                       >
+                        {/* Invisible bridge to prevent dropdown from closing when moving mouse from link to menu */}
+                        <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
+
                         <Link
                           href="/products"
                           onClick={() => setDropdown(false)}
-                          className="flex items-center justify-between px-5 py-3 font-mono text-xxs uppercase tracking-[0.15em] text-white/40 no-underline hover:text-white hover:bg-white/5 transition-colors duration-150 border-b border-white/5"
+                          className="flex items-center justify-between px-5 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-white/40 no-underline hover:text-white hover:bg-white/5 transition-colors duration-150 border-b border-white/5"
                         >
                           All Products
-                          <LuArrowRight className="text-xxs" />
+                          <LuArrowRight />
                         </Link>
 
                         {products.map((p) => (
@@ -109,14 +125,14 @@ export default function Navbar() {
                             className="flex items-center justify-between px-5 py-4 no-underline hover:bg-white/5 transition-colors duration-150 group border-b border-white/5 last:border-0"
                           >
                             <div>
-                              <p className="font-heading font-bold text-[0.95rem] uppercase text-white group-hover:text-orange transition-colors duration-150">
+                              <p className="font-heading font-bold text-[0.85rem] uppercase text-white group-hover:text-orange transition-colors duration-150 leading-tight">
                                 {p.name}
                               </p>
-                              <p className="font-mono text-[0.55rem] uppercase tracking-widest text-white/30 mt-0.5">
+                              <p className="font-mono text-[9px] uppercase tracking-widest text-white/30 mt-1">
                                 {p.tag}
                               </p>
                             </div>
-                            <LuArrowRight className="font-mono text-xxs text-white/20 group-hover:text-orange transition-colors duration-150" />
+                            <LuArrowRight className="text-[10px] text-white/20 group-hover:text-orange group-hover:translate-x-0.5 transition-all" />
                           </Link>
                         ))}
                       </motion.div>
@@ -247,7 +263,7 @@ export default function Navbar() {
               <Link
                 href="/waitlist"
                 onClick={close}
-                className="w-full bg-orange px-6 py-4 text-center font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90"
+                className="inline-flex items-center justify-center gap-2 w-full bg-orange px-6 py-4 text-center font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90"
               >
                 Join Waitlist <LuArrowRight />
               </Link>

@@ -1,6 +1,13 @@
+"use client";
+
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 export function WatchSVG({ progress }: { progress: number }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return <div style={{ width: 120, height: 148 }} />;
+
   const secondAngle = (progress / 100) * 360;
   const minuteAngle = (progress / 100) * 30;
   const screenOpacity = Math.min(progress / 60, 1);

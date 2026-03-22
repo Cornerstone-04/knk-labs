@@ -22,7 +22,15 @@ export const products = [
     hand: "Left Hand",
     tagline: "Control the Future. Feel the Data.",
     desc: "Tek Glove sits on your left hand, mounting your Apple Watch on the dorsal side for instant visibility without obstructing wrist mobility. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, it turns your dominant data hand into a high-performance command system.",
+    images: {
+      front: "/images/tekglove_front_cutout.png",
+      angle: "/images/tekglove_angle_cutout.png",
+      hero: "/images/knk_tekgloves_cutout.png",
+      full: "/images/tekglove-front.jpg",
+      extra: "/images/tekglove-angle.jpg",
+    },
     image: "/images/tekglove_front_cutout.png",
+
     tag: "Left Hand",
     features: [
       {
@@ -73,6 +81,13 @@ export const products = [
     tagline: "Speak Less. Sense More. Work Smarter.",
     desc: "Echo Glove sits on your right hand, purpose-built for communication. Haptic alerts, voice commands, and a built-in Bluetooth headset dock make it the silent, always-ready communication layer of the KNK system — ideal for environments where clarity and discretion matter.",
     image: "/images/echo_glove_cutout.png",
+    images: {
+      front: "/images/echo_glove_cutout.png",
+      angle: "/images/echo_glove_cutout.png",
+      hero: "/images/echo_glove_cutout.png",
+      full: "/images/echo_glove.png",
+      extra: "/images/echo_glove_cutout.png",
+    },
     tag: "Right Hand",
     features: [
       {

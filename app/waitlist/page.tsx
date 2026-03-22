@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
-import { toast } from "sonner";
 import { waitlist } from "@/lib/data";
 
 type ProductPref = "tek-glove" | "echo-glove" | "both" | "";
@@ -15,36 +14,9 @@ export default function WaitlistPage() {
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
-    const form = e.currentTarget;
-    const data = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      country: (form.elements.namedItem("country") as HTMLInputElement).value,
-      productPreference: pref,
-    };
-
-    try {
-      const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error ?? "Submission failed");
-
-      setSubmitted(true);
-    } catch (err) {
-      const message =
-        err instanceof Error ? err.message : "Something went wrong";
-      toast.error(message, {
-        description: "Please try again or contact us at hello@knklabs.com",
-        duration: 5000,
-      });
-    } finally {
-      setLoading(false);
-    }
+    await new Promise((r) => setTimeout(r, 600));
+    setLoading(false);
+    setSubmitted(true);
   };
 
   return (
@@ -100,9 +72,9 @@ export default function WaitlistPage() {
                 You're on the list.
               </h2>
               <p className="font-sans text-[0.85rem] leading-[1.8] text-white/40">
-                Check your inbox — we've sent a confirmation.
+                We'll be in touch as soon as your spot is ready.
                 <br />
-                We'll be in touch when your spot is ready.
+                Stay sharp.
               </p>
             </motion.div>
           ) : (
@@ -179,7 +151,7 @@ export default function WaitlistPage() {
                 disabled={loading || !pref}
                 className={`border-none px-8 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black transition-opacity ${loading || !pref ? "cursor-not-allowed bg-orange/40" : "cursor-pointer bg-orange hover:opacity-85"}`}
               >
-                {loading ? "Submitting..." : "Join the Waitlist"}
+                {loading ? "Submitting..." : "Join the Waitlist →"}
               </button>
 
               <p className="font-mono text-xxs text-white/25 text-center">

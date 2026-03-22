@@ -326,7 +326,7 @@ export default function HomePage() {
                   </p>
                   <Link
                     href={`/products/${p.slug}`}
-                    className="font-mono text-xxs tracking-[0.15em] uppercase text-orange border-b border-orange/40 pb-0.5 no-underline hover:border-orange transition-colors duration-200"
+                    className="font-mono text-xxs tracking-[0.15em] uppercase text-orange border-b border-orange/40 pb-0.5 no-underline hover:border-orange transition-colors duration-200 inline-flex items-center gap-2"
                   >
                     Learn More <LuArrowRight />
                   </Link>
@@ -367,7 +367,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/waitlist"
-              className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+              className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
             >
               Join the Waitlist <LuArrowRight />
             </Link>
@@ -450,7 +450,7 @@ export default function HomePage() {
           >
             <Link
               href="/about"
-              className="font-mono text-xxs tracking-[0.15em] uppercase text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-white hover:border-white/50 transition-all duration-200"
+              className="inline-flex items-center gap-2 font-mono text-xxs tracking-[0.15em] uppercase text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-white hover:border-white/50 transition-all duration-200"
             >
               See All Expertise <LuArrowRight />
             </Link>
@@ -480,7 +480,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/developers"
-              className="border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200"
+              className="inline-flex items-center gap-2 border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200"
             >
               Visit Developer Hub <LuArrowRight />
             </Link>
@@ -545,7 +545,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/waitlist"
-              className="font-sans font-semibold text-[0.85rem] tracking-[0.08em] uppercase bg-orange text-black px-10 py-4 inline-block no-underline transition-opacity duration-200 hover:opacity-85"
+              className="font-sans font-semibold text-[0.85rem] tracking-[0.08em] uppercase bg-orange text-black px-10 py-4 inline-flex items-center gap-2 no-underline transition-opacity duration-200 hover:opacity-85"
             >
               Join the Waitlist <LuArrowRight />
             </Link>

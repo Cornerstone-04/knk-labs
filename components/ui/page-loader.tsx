@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { WatchSVG } from "./watch-svg";
@@ -7,22 +6,22 @@ import { WatchSVG } from "./watch-svg";
 export default function ScreenLoader() {
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
+    if (!mounted) return;
     document.body.style.overflow = "hidden";
-
     const start = performance.now();
     const duration = 2200;
     let rafId = 0;
     let timeoutId: ReturnType<typeof setTimeout> | null = null;
-
     const tick = (now: number) => {
       const elapsed = now - start;
       const p = Math.min(elapsed / duration, 1);
       const eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
-
       setProgress(Math.round(eased * 100));
-
       if (p < 1) {
         rafId = requestAnimationFrame(tick);
       } else {
@@ -32,20 +31,21 @@ export default function ScreenLoader() {
         }, 400);
       }
     };
-
     rafId = requestAnimationFrame(tick);
-
     return () => {
       cancelAnimationFrame(rafId);
       if (timeoutId) clearTimeout(timeoutId);
       document.body.style.overflow = "";
     };
-  }, []);
+  }, [mounted]);
+
+  if (!mounted) return null;
 
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
+          key={"screen-loader"}
           initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
@@ -54,7 +54,6 @@ export default function ScreenLoader() {
           className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-10 bg-black"
         >
           <WatchSVG progress={progress} />
-
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,7 +64,6 @@ export default function ScreenLoader() {
               Tek<span className="text-orange">Glove</span>
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,7 +79,6 @@ export default function ScreenLoader() {
                 }}
               />
             </div>
-
             <span className="font-mono text-[0.55rem] tracking-[0.2em] text-white/30">
               {String(progress).padStart(3, "0")}
             </span>

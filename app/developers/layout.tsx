@@ -6,6 +6,10 @@ export const metadata: Metadata = {
     "Build with the KNK ecosystem. Gesture APIs, haptic libraries, device SDKs, and firmware tools designed for builders and innovators.",
 };
 
-export default function DevelopersLayout({ children }: { children: React.ReactNode }) {
+export default function DevelopersLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }

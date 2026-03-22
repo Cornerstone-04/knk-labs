@@ -6,6 +6,10 @@ export const metadata: Metadata = {
     "Be first in line. Join the KNK Labs priority waitlist for early access to Tek Glove and Echo Glove. No payment required.",
 };
 
-export default function WaitlistLayout({ children }: { children: React.ReactNode }) {
+export default function WaitlistLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return <>{children}</>;
 }
