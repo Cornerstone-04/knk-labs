@@ -1,10 +1,6 @@
+import { NavbarCtaProps } from "@/types";
 import Link from "next/link";
 import { LuArrowRight } from "react-icons/lu";
-
-type NavbarCtaProps = {
-  className?: string;
-  onClick?: () => void;
-};
 
 export const NavbarCta = ({ className = "", onClick }: NavbarCtaProps) => {
   return (

@@ -1,12 +1,7 @@
 "use client";
 
+import { AboutExpertiseRowProps } from "@/types";
 import { motion } from "motion/react";
-
-type AboutExpertiseRowProps = {
-  index: number;
-  title: string;
-  description: string;
-};
 
 export const AboutExpertiseRow = ({
   index,
