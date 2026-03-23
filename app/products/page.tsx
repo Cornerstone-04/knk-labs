@@ -5,43 +5,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { products, bundle } from "@/lib/data";
 import { LuArrowRight } from "react-icons/lu";
+import { ComponentHeader } from "@/components/ui/component-header";
 
 export default function ProductsPage() {
   return (
     <div className="bg-bg pt-16">
       {/* Header */}
-      <div className="border-b border-border px-6 pt-20 pb-16 md:px-12">
-        <div className="mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
-          >
-            KNK Labs
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-heading text-[clamp(3rem,9vw,7rem)] font-black uppercase text-white leading-[0.9]"
-          >
-            Two Gloves.
-            <br />
-            <span className="text-orange">One Ecosystem.</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 font-sans text-[0.9rem] leading-[1.8] text-white/45 max-w-[50ch]"
-          >
-            Tek Glove and Echo Glove — two distinct products built on the same
-            intelligent wearable platform. Each designed for a different kind of
-            human-machine interaction.
-          </motion.p>
-        </div>
-      </div>
+      <ComponentHeader
+        eyebrow="KNK Labs"
+        title="Two Gloves."
+        accentText="One Ecosystem."
+        description="Tek Glove and Echo Glove — two distinct products built on the same intelligent wearable platform. Each designed for a different kind of human-machine interaction."
+      />
 
       {/* Product rows */}
       {products.map((p, i) => {

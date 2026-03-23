@@ -24,9 +24,7 @@ export default function ProductPage({
       {/* ── HERO ── */}
       <section className="border-b border-border px-6 pt-24 pb-0 md:px-12">
         <div className="mx-auto max-w-7xl">
-          {/* 1. Add a Grid container that stacks on mobile and splits on Large screens */}
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-12">
-            {/* 2. Wrap all your text/buttons in a single column */}
             <div className="flex flex-col">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
@@ -80,9 +78,8 @@ export default function ProductPage({
               </motion.div>
             </div>
 
-            {/* 3. Hero image column */}
             <motion.div
-              initial={{ opacity: 0, x: 24 }} // Changed Y to X for a slight horizontal entrance
+              initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 0.9,
@@ -90,7 +87,7 @@ export default function ProductPage({
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="relative bg-surface overflow-hidden flex items-center justify-center rounded-2xl"
-              style={{ minHeight: "450px" }} // Increased height for desktop side-by-side
+              style={{ minHeight: "450px" }}
             >
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(249,115,22,0.08)_0%,transparent_65%)] pointer-events-none" />
               <motion.div
@@ -105,14 +102,13 @@ export default function ProductPage({
                 <Image
                   src={product.images.hero}
                   alt={product.name}
-                  width={600} // Slightly larger for desktop
+                  width={600}
                   height={600}
                   className="object-contain max-h-100 lg:max-h-125 w-auto"
                   priority
                   sizes="(max-width: 1024px) 80vw, 50vw"
                 />
               </motion.div>
-              {/* Subtle shadow overlay */}
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/20 to-transparent pointer-events-none z-20" />
             </motion.div>
           </div>
@@ -380,12 +376,12 @@ export default function ProductPage({
               <br />
               <span className="text-orange">{product.name}?</span>
             </h2>
-              <Link
-                href="/waitlist"
-                className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
-              >
-                Join the Waitlist <LuArrowRight />
-              </Link>
+            <Link
+              href="/waitlist"
+              className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            >
+              Join the Waitlist <LuArrowRight />
+            </Link>
           </motion.div>
         </div>
       </section>

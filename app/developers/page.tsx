@@ -4,33 +4,17 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { developers } from "@/lib/data";
 import { LuArrowRight } from "react-icons/lu";
+import { ComponentHeader } from "@/components/ui/component-header";
 
 export default function DevelopersPage() {
   return (
     <div className="bg-bg pt-16">
       {/* Header */}
-      <div className="border-b border-border px-6 pt-20 pb-16 md:px-12">
-        <div className="mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
-          >
-            Developer Hub
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-heading text-[clamp(3rem,9vw,7rem)] font-black uppercase text-white leading-[0.9]"
-          >
-            Build the
-            <br />
-            <span className="text-orange">Next Thing.</span>
-          </motion.h1>
-        </div>
-      </div>
+      <ComponentHeader
+        eyebrow="Developer Hub"
+        title="Build the"
+        accentText="Next Thing"
+      />
 
       {/* Intro */}
       <section className="border-b border-border px-6 py-24 md:px-12">
