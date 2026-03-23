@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { WatchSVG } from "./watch-svg";
 
-export default function ScreenLoader() {
+export default function PageLoader() {
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
   const [mounted, setMounted] = useState(false);

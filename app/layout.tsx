@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/Footer";
 import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
 import { Toaster } from "sonner";
-import ScreenLoader from "@/components/ui/page-loader";
+import PageLoader from "@/components/ui/loader/page-loader";
 
 const barlow = Barlow_Condensed({
   variable: "--font-barlow",
@@ -60,13 +60,13 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body>
-        <ScreenLoader />
+        <PageLoader />
         <Navbar />
         <main>{children}</main>
         <Footer />
         <Toaster
           theme="dark"
-          position="bottom-right"
+          position="top-right"
           toastOptions={{
             style: {
               background: "#0a0a0a",
