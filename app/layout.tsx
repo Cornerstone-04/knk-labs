@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/Footer";
 import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
 import { Toaster } from "sonner";

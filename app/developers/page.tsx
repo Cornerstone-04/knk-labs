@@ -10,7 +10,6 @@ import {
 export default function DevelopersPage() {
   return (
     <div className="bg-bg pt-16">
-      {/* Header */}
       <DevelopersHeader />
       <DevelopersIntro />
       <DevelopersTools />
