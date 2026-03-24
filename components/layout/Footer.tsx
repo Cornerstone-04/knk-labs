@@ -83,10 +83,10 @@ export default function Footer() {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-center justify-between border-t border-border px-6 py-4 md:px-12"
       >
-        <p className="font-mono text-[0.6rem] tracking-widest text-white/20">
+        <p className="font-mono text-[0.6rem] text-left tracking-widest text-white/20">
           © {new Date().getFullYear()} KNK Labs. All rights reserved.
         </p>
-        <p className="font-mono text-[0.6rem] tracking-widest text-white/20">
+        <p className="font-mono text-[0.6rem] text-right tracking-widest text-white/20">
           Makers of Tek Glove & Echo Glove
         </p>
       </motion.div>

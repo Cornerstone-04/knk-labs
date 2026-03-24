@@ -46,14 +46,14 @@ export const BundleSecction = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="flex items-center justify-center bg-surface px-8 py-16"
+          className="flex items-center justify-center bg-bg px-8 py-16"
         >
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           >
             <Image
-              src="/images/knk_dual_int_cutout.png"
+              src="/images/knk_dual_angle_cutout.png"
               alt="KNK System — Tek Glove and Echo Glove"
               width={480}
               height={400}

@@ -26,8 +26,8 @@ export const products = [
       front: "/images/tekglove_front_cutout.png",
       angle: "/images/tekglove_angle_cutout.png",
       hero: "/images/knk_tekgloves_cutout.png",
-      full: "/images/tekglove-front.jpg",
-      extra: "/images/tekglove-angle.jpg",
+      full: "/images/tekglove-front.png",
+      extra: "/images/tekglove-angle.png",
     },
     image: "/images/tekglove_front_cutout.png",
 

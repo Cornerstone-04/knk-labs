@@ -29,7 +29,7 @@ export function NavbarProductsDropdown({
     >
       <button
         onClick={() => dropdownAction((prev) => !prev)}
-        className={`flex h-full cursor-pointer items-center gap-1.5 border-none bg-transparent p-0 font-sans text-[0.78rem] leading-none tracking-[0.05em] transition-colors duration-200 ${
+        className={`flex h-full cursor-pointer items-center gap-1.5 border-none bg-transparent p-0 font-sans text-[0.78rem]  tracking-[0.05em] transition-colors duration-200 ${
           active || dropdown ? "text-white" : "text-white/50 hover:text-white"
         }`}
       >

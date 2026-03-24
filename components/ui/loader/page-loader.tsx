@@ -61,7 +61,7 @@ export default function PageLoader() {
             className="text-center"
           >
             <div className="font-heading text-[1.4rem] font-extrabold uppercase tracking-[0.2em] text-white">
-              Tek<span className="text-orange">Glove</span>
+              KNK<span className="text-orange">Labs</span>
             </div>
           </motion.div>
           <motion.div

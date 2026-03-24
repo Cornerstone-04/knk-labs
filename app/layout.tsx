@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "KNK Labs",
     images: [
       {
-        url: "https://knk-labs.vercel.app/knk_og_image.png",
+        url: "https://knk-labs.vercel.app/knk_og_image.png?v=2",
         width: 1200,
         height: 630,
         alt: "TekGlove — The world's first therapy glove combining EMS, TENS, vibration and heat.",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: "KNK Labs — Innovation at Your Fingertips",
     description:
       "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
-    images: ["https://knk-labs.vercel.app/knk_og_image.png"],
+    images: ["https://knk-labs.vercel.app/knk_og_image.png?v=2"],
   },
   robots: { index: true, follow: true },
 };
