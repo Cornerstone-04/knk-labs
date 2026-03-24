@@ -55,9 +55,9 @@ export const BundleSecction = () => {
             <Image
               src="/images/knk_dual_angle_cutout.png"
               alt="KNK System — Tek Glove and Echo Glove"
-              width={480}
-              height={400}
-              className="object-contain max-w-full"
+              width={1200}
+              height={900}
+              className="h-auto w-full object-contain"
             />
           </motion.div>
         </motion.div>

@@ -98,7 +98,7 @@ export default function RootLayout({
       <body>
         {/*<PageLoader />*/}
         <Navbar />
-        <main>{children}</main>
+        <main className="relative min-h-screen">{children}</main>
         <Footer />
         <Toaster
           theme="dark"

@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "motion/react";
 import { usePathname } from "next/navigation";
 import { NavbarLogo } from "./navbar-logo";
 import { NavbarDesktop } from "./navbar-desktop";
@@ -54,11 +59,16 @@ export default function Navbar() {
 
         <NavbarCta className="hidden md:inline-flex" />
 
-        <NavbarMobileToggle open={open} btnAction={() => setOpen((prev) => !prev)} />
+        <NavbarMobileToggle
+          open={open}
+          btnAction={() => setOpen((prev) => !prev)}
+        />
       </motion.nav>
 
       <AnimatePresence>
-        {open && <NavbarMobileMenu pathname={pathname} closeAction={closeAll} />}
+        {open && (
+          <NavbarMobileMenu pathname={pathname} closeAction={closeAll} />
+        )}
       </AnimatePresence>
     </>
   );

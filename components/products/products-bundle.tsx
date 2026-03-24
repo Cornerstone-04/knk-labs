@@ -63,7 +63,7 @@ export const ProductsBundle = () => {
               alt="KNK System Bundle"
               width={480}
               height={400}
-              className="max-w-full object-contain"
+              className="w-full h-auto max-w-full object-contain"
             />
           </motion.div>
         </motion.div>
