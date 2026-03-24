@@ -86,30 +86,32 @@ export default function ProductPage({
                 delay: 0.4,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative bg-surface overflow-hidden flex items-center justify-center rounded-2xl"
-              style={{ minHeight: "450px" }}
+              className="relative flex min-h-125 items-center justify-center overflow-hidden rounded-2xl bg-bg lg:min-h-155"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(249,115,22,0.08)_0%,transparent_65%)] pointer-events-none" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(249,115,22,0.08)_0%,transparent_65%)]" />
+
+              <div className="pointer-events-none absolute bottom-[6%] left-1/2 z-0 h-24 w-[58%] -translate-x-1/2 rounded-full bg-orange/20 blur-3xl lg:h-32" />
+
               <motion.div
-                animate={{ y: [0, -12, 0] }}
+                animate={{ y: [0, -12, 0], scale: [1, 1.015, 1] }}
                 transition={{
-                  duration: 5,
+                  duration: 5.5,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="relative z-10 py-12"
+                className="relative z-10 h-90 w-full max-w-180 px-6 sm:h-105 lg:h-130 lg:px-10"
               >
                 <Image
                   src={product.images.hero}
                   alt={product.name}
-                  width={600}
-                  height={600}
-                  className="object-contain max-h-100 lg:max-h-125 w-auto"
+                  fill
                   priority
-                  sizes="(max-width: 1024px) 80vw, 50vw"
+                  sizes="(max-width: 640px) 88vw, (max-width: 1024px) 70vw, 42vw"
+                  className="object-contain"
                 />
               </motion.div>
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-black/20 to-transparent pointer-events-none z-20" />
+
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-24 bg-linear-to-t from-black/20 to-transparent" />
             </motion.div>
           </div>
         </div>
