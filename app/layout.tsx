@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/Footer";
-import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
+import { Barlow_Condensed, Inter, DM_Mono, Geist } from "next/font/google";
 import { Toaster } from "sonner";
 import PageLoader from "@/components/ui/loader/page-loader";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const barlow = Barlow_Condensed({
   variable: "--font-barlow",
@@ -25,13 +28,17 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://knk-labs.vercel.app"),
   title: {
     default: "KNK Labs — Innovation at Your Fingertips",
     template: "%s | KNK Labs",
   },
   description:
     "KNK Labs builds advanced wearable technology engineered to enhance performance, elevate safety, and redefine human–machine interaction. Makers of Tek Glove and Echo Glove.",
-  metadataBase: new URL("https://knk-labs.vercel.app"),
+  applicationName: "KNK Labs",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Echo Glove",
     "KNK Labs",
@@ -64,10 +71,10 @@ export const metadata: Metadata = {
     siteName: "KNK Labs",
     images: [
       {
-        url: "https://knk-labs.vercel.app/knk_og_image.png?v=2",
+        url: "https://knk-labs.vercel.app/knk_og_image.png",
         width: 1200,
         height: 630,
-        alt: "TekGlove — The world's first therapy glove combining EMS, TENS, vibration and heat.",
+        alt: "KNK Labs — Advanced wearable technology for athletes, engineers, and innovators.",
       },
     ],
   },
@@ -76,9 +83,12 @@ export const metadata: Metadata = {
     title: "KNK Labs — Innovation at Your Fingertips",
     description:
       "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
-    images: ["https://knk-labs.vercel.app/knk_og_image.png?v=2"],
+    images: ["https://knk-labs.vercel.app/knk_og_image.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -89,27 +99,35 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
+      className={cn(
+        barlow.variable,
+        inter.variable,
+        dmMono.variable,
+        "font-sans",
+        geist.variable,
+      )}
       data-scroll-behavior="smooth"
     >
-      <body>
+      <body className="relative">
         <PageLoader />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <Toaster
-          theme="dark"
-          position="top-right"
-          toastOptions={{
-            style: {
-              background: "#0a0a0a",
-              border: "1px solid #1a1a1a",
-              color: "#ffffff",
-              fontFamily: "var(--font-dm-mono)",
-              fontSize: "0.75rem",
-            },
-          }}
-        />
+        <div className="relative min-h-screen">
+          <Navbar />
+          <main className="relative">{children}</main>
+          <Footer />
+          <Toaster
+            theme="dark"
+            position="top-right"
+            toastOptions={{
+              style: {
+                background: "#0a0a0a",
+                border: "1px solid #1a1a1a",
+                color: "#ffffff",
+                fontFamily: "var(--font-dm-mono)",
+                fontSize: "0.75rem",
+              },
+            }}
+          />
+        </div>
       </body>
     </html>
   );

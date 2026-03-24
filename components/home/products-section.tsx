@@ -59,6 +59,8 @@ export const ProductsSection = () => {
                   src={p.images.full}
                   alt={p.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="eager"
                   className="object-contain brightness-90 transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 font-mono text-xxs tracking-[0.15em] uppercase text-black bg-orange px-2.5 py-1 transition-colors duration-300 group-hover:bg-white">

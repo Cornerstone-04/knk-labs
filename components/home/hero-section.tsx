@@ -108,12 +108,20 @@ export const HeroSection = () => {
           >
             <div className="relative">
               <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[60%] h-[30%] bg-orange/15 blur-3xl rounded-full pointer-events-none" />
-              <Image
+              {/*<Image
                 src="/images/knk_dual_angle_cutout.png"
                 alt="Tek Glove and Echo Glove — The KNK System"
                 width={560}
                 height={480}
                 className="object-contain max-w-full relative z-10"
+                priority
+              />*/}
+              <Image
+                src="/images/knk_dual_angle_cutout.png"
+                alt="Tek Glove and Echo Glove — The KNK System"
+                width={1200}
+                height={900}
+                className="h-auto w-full object-contain z-10"
                 priority
               />
             </div>

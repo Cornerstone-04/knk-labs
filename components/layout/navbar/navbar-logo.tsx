@@ -13,7 +13,7 @@ export const NavbarLogo = ({ onClick }: NavbarLogoProps) => {
         alt="KNK Labs"
         width={100}
         height={50}
-        className="h-12.5 w-auto object-contain"
+        className="h-12 w-auto object-contain"
       />
       <span className="font-heading text-[1.1rem] font-black uppercase tracking-[0.15em] text-white">
         KNK<span className="text-orange">Labs</span>

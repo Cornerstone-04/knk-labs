@@ -1,7 +1,7 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
-import { WatchSVG } from "./watch-svg";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function PageLoader() {
   const [visible, setVisible] = useState(true);
@@ -12,16 +12,21 @@ export default function PageLoader() {
 
   useEffect(() => {
     if (!mounted) return;
+
     document.body.style.overflow = "hidden";
+
     const start = performance.now();
     const duration = 2200;
     let rafId = 0;
     let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
     const tick = (now: number) => {
       const elapsed = now - start;
       const p = Math.min(elapsed / duration, 1);
       const eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+
       setProgress(Math.round(eased * 100));
+
       if (p < 1) {
         rafId = requestAnimationFrame(tick);
       } else {
@@ -31,7 +36,9 @@ export default function PageLoader() {
         }, 400);
       }
     };
+
     rafId = requestAnimationFrame(tick);
+
     return () => {
       cancelAnimationFrame(rafId);
       if (timeoutId) clearTimeout(timeoutId);
@@ -45,30 +52,38 @@ export default function PageLoader() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          key={"screen-loader"}
+          key="screen-loader"
           initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
             transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-10 bg-black"
+          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-8 bg-black"
         >
-          <WatchSVG progress={progress} />
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
-            <div className="font-heading text-[1.4rem] font-extrabold uppercase tracking-[0.2em] text-white">
-              KNK<span className="text-orange">Labs</span>
-            </div>
+            <motion.div
+              animate={{ opacity: [0.7, 1, 0.7] }}
+              transition={{
+                duration: 1.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="font-heading text-[clamp(2rem,6vw,4rem)] font-extrabold uppercase tracking-[0.18em] text-white"
+            >
+              KNK <span className="text-orange">Labs</span>
+            </motion.div>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="flex w-30 flex-col items-center gap-2"
+            transition={{ delay: 0.25 }}
+            className="flex w-32 flex-col items-center gap-2"
           >
             <div className="relative h-px w-full overflow-hidden bg-white/10">
               <motion.div
@@ -79,8 +94,9 @@ export default function PageLoader() {
                 }}
               />
             </div>
+
             <span className="font-mono text-[0.55rem] tracking-[0.2em] text-white/30">
-              {String(progress).padStart(3, "0")}
+              {`${String(progress).padStart(3, "0")}%`}
             </span>
           </motion.div>
         </motion.div>
