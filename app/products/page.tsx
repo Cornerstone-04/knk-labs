@@ -10,7 +10,7 @@ import {
 
 export default function ProductsPage() {
   return (
-    <div className="bg-bg pt-16 overflow-hidden">
+    <div className="bg-bg pt-16 overflow-x-hidden">
       <ProductsHero />
       {products.map((product, index) => (
         <ProductRow key={product.slug} product={product} index={index} />

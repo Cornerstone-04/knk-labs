@@ -58,6 +58,7 @@ export const BundleSecction = () => {
               width={1200}
               height={900}
               className="h-auto w-full object-contain"
+              loading="eager"
             />
           </motion.div>
         </motion.div>
