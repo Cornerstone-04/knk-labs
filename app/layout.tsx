@@ -96,7 +96,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body>
-        <PageLoader />
+        {/*<PageLoader />*/}
         <Navbar />
         <main>{children}</main>
         <Footer />

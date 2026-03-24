@@ -1,12 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "motion/react";
+import { useState } from "react";
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { usePathname } from "next/navigation";
 import { NavbarLogo } from "./navbar-logo";
 import { NavbarDesktop } from "./navbar-desktop";
@@ -17,21 +12,13 @@ import { NavbarMobileMenu } from "./navbar-mobile-menu";
 export default function Navbar() {
   const pathname = usePathname();
 
-  const [mounted, setMounted] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
 
   const { scrollY } = useScroll();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (!mounted) return;
-
     const prev = scrollY.getPrevious() ?? 0;
     setScrolled(latest > 20);
 
@@ -44,7 +31,6 @@ export default function Navbar() {
 
   const closeAll = () => {
     setOpen(false);
-    setDropdown(false);
   };
 
   return (
@@ -64,25 +50,15 @@ export default function Navbar() {
       >
         <NavbarLogo onClick={closeAll} />
 
-        <NavbarDesktop
-          pathname={pathname}
-          dropdown={dropdown}
-          setDropdown={setDropdown}
-          closeAll={closeAll}
-        />
+        <NavbarDesktop pathname={pathname} closeAction={closeAll} />
 
         <NavbarCta className="hidden md:inline-flex" />
 
-        <NavbarMobileToggle
-          open={open}
-          btnAction={() => setOpen((prev) => !prev)}
-        />
+        <NavbarMobileToggle open={open} btnAction={() => setOpen((prev) => !prev)} />
       </motion.nav>
 
       <AnimatePresence>
-        {open && (
-          <NavbarMobileMenu pathname={pathname} closeAction={closeAll} />
-        )}
+        {open && <NavbarMobileMenu pathname={pathname} closeAction={closeAll} />}
       </AnimatePresence>
     </>
   );
