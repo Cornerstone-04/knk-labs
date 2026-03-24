@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { navLinks, products } from "@/lib/data";
+import { LuArrowRight } from "react-icons/lu";
 
 type NavbarDesktopProps = {
   pathname: string;
@@ -49,10 +50,10 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
                       <Link
                         href="/products"
                         onClick={closeAction}
-                        className="flex items-center justify-between rounded-sm border-b border-white/5 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-white/40 no-underline transition-colors hover:bg-white/5 hover:text-white"
+                        className="group flex items-center justify-between rounded-sm border-b border-white/5 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-white/40 no-underline transition-colors hover:bg-white/5 hover:text-white"
                       >
                         <span>All Products</span>
-                        <span>→</span>
+                        <LuArrowRight className="text-xxs text-white/20 transition-all group-hover:translate-x-0.5" />
                       </Link>
                     </NavigationMenuLink>
 
@@ -72,9 +73,7 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
                             </p>
                           </div>
 
-                          <span className="text-[10px] text-white/20 transition-all group-hover:translate-x-0.5 group-hover:text-orange">
-                            →
-                          </span>
+                          <LuArrowRight className="text-xxs text-white/20 transition-all group-hover:translate-x-0.5 group-hover:text-orange" />
                         </Link>
                       </NavigationMenuLink>
                     ))}
