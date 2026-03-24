@@ -56,10 +56,10 @@ export const ProductsSection = () => {
             >
               <div className="relative aspect-square bg-[#0a0a0a] overflow-hidden">
                 <Image
-                  src={p.image}
+                  src={p.images.full}
                   alt={p.name}
                   fill
-                  className="object-cover brightness-90 transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-contain brightness-90 transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4 font-mono text-xxs tracking-[0.15em] uppercase text-black bg-orange px-2.5 py-1 transition-colors duration-300 group-hover:bg-white">
                   {p.tag}
