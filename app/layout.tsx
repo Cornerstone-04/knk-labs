@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/Footer";
-import { Barlow_Condensed, Inter, DM_Mono } from "next/font/google";
+import { Barlow_Condensed, Inter, DM_Mono, Geist } from "next/font/google";
 import { Toaster } from "sonner";
 import PageLoader from "@/components/ui/loader/page-loader";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const barlow = Barlow_Condensed({
   variable: "--font-barlow",
@@ -89,7 +92,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlow.variable} ${inter.variable} ${dmMono.variable}`}
+      className={cn(barlow.variable, inter.variable, dmMono.variable, "font-sans", geist.variable)}
       data-scroll-behavior="smooth"
     >
       <body>
