@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion} from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { LuArrowRight } from "react-icons/lu";
 import { motion, useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { useRef } from "react";
@@ -123,6 +122,7 @@ export const HeroSection = () => {
                 height={900}
                 className="h-auto w-full object-contain z-10"
                 priority
+                loading="eager"
               />
             </div>
           </motion.div>
