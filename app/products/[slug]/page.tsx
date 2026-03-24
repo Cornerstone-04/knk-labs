@@ -193,7 +193,7 @@ export default function ProductPage({
                   }}
                 >
                   <Image
-                    src={product.image}
+                    src={product.images.angle}
                     alt={product.name}
                     width={420}
                     height={420}

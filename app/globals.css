@@ -6,9 +6,9 @@
 
 @theme inline {
     /*custom fonts*/
-    --font-sans: var(--font-sans);
+    --font-sans: "Inter", sans-serif;
     --font-mono: "DM Mono", monospace;
-    --font-heading: var(--font-sans);
+    --font-heading: "Barlow Condensed", sans-serif;
 
     /*custom font size*/
     --text-xxs: 0.625rem;
