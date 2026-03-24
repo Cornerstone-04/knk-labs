@@ -109,6 +109,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body className="relative">
+        <PageLoader />
         <div className="relative min-h-screen">
           <Navbar />
           <main className="relative">{children}</main>
