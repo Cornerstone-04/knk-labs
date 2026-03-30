@@ -25,14 +25,14 @@ export const HeroSection = () => {
         className="relative z-10 w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-24 pb-16"
       >
         <div>
-          <motion.p
+          {/*<motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-6"
           >
             King Krown Labs — Wearable Technology
-          </motion.p>
+          </motion.p>*/}
 
           <h1 className="font-heading font-black text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] text-white mb-6">
             {["Innovation", "at Your"].map((word, i) => (

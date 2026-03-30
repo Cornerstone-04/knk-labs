@@ -21,7 +21,7 @@ export const products = [
     name: "Tek Glove",
     hand: "Left Hand",
     tagline: "Control the Future. Feel the Data.",
-    desc: "Tek Glove sits on your left hand, mounting your Apple Watch on the dorsal side for instant visibility without obstructing wrist mobility. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, it turns your dominant data hand into a high-performance command system.",
+    desc: "Tek Glove sits on your left hand, mounting your Smart Watch on the dorsal side for instant visibility without obstructing wrist mobility. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, it turns your dominant data hand into a high-performance command system.",
     images: {
       front: "/images/tekglove_front_cutout.png",
       angle: "/images/tekglove_angle_cutout.png",
@@ -57,8 +57,8 @@ export const products = [
       },
       {
         id: "03",
-        title: "Dorsal-Side Apple Watch Dock",
-        desc: "Tek Glove introduces a precision-moulded Apple Watch mount on the dorsal side of the hand, providing instant visibility without obstructing wrist mobility or grip.",
+        title: "Dorsal-Side Smart Watch Dock",
+        desc: "Tek Glove introduces a precision-moulded Smart Watch mount on the dorsal side of the hand, providing instant visibility without obstructing wrist mobility or grip.",
         bullets: [
           "Secure magnetic + elastic docking",
           "Seamless Apple Health + Tek OS syncing",
@@ -168,7 +168,7 @@ export const about = {
     },
     {
       title: "Integrated Device Docking",
-      desc: "Precision-engineered mounts for Apple Watch and Bluetooth headsets — keeping your devices secure, visible, and accessible.",
+      desc: "Precision-engineered mounts for Smart Watch and Bluetooth headsets — keeping your devices secure, visible, and accessible.",
     },
   ],
 };

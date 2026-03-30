@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "therapy glove",
     "EMS glove",
     "TENS glove",
-    "Apple Watch glove",
+    "Smart Watch glove",
     "wearable therapy",
     "arthritis glove",
     "recovery glove",

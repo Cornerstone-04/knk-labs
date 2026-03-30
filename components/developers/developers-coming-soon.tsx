@@ -21,9 +21,9 @@ export const DevelopersComingSoon = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange">
+          {/*<div className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange">
             Coming Soon
-          </div>
+          </div>*/}
 
           <h2 className="mb-6 font-heading text-[clamp(2rem,4vw,3rem)] font-black text-white">
             Full SDK Access

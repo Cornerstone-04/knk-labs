@@ -37,9 +37,9 @@ export const DeveloperStrip = () => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="border border-white/5 bg-surface p-10"
         >
-          <div className="mb-6 font-mono text-xxs uppercase tracking-[0.2em] text-orange">
+          {/*<div className="mb-6 font-mono text-xxs uppercase tracking-[0.2em] text-orange">
             Coming Soon
-          </div>
+          </div>*/}
           <ul className="space-y-4">
             {[
               "Gesture & Haptic API",

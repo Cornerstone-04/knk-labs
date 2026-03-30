@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import Image from "next/image";
 
 export default function PageLoader() {
   const [visible, setVisible] = useState(true);
@@ -73,8 +74,15 @@ export default function PageLoader() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="font-heading text-[clamp(2rem,6vw,4rem)] font-extrabold uppercase tracking-[0.18em] text-white"
+              className="flex items-center justify-center font-heading text-[clamp(2rem,6vw,4rem)] font-extrabold uppercase tracking-[0.18em] text-white"
             >
+              <Image
+                src="/knk-logo-white.png"
+                alt="KNK Labs"
+                width={200}
+                height={100}
+                className="h-25 w-auto object-contain"
+              />
               KNK <span className="text-orange">Labs</span>
             </motion.div>
           </motion.div>
