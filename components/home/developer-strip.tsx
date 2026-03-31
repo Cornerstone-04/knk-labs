@@ -12,7 +12,7 @@ export const DeveloperStrip = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-4 font-mono text-xxs tracking-[0.3em] uppercase text-orange">
+          <div className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange">
             For Builders
           </div>
           <h2 className="mb-6 font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white">
@@ -25,7 +25,7 @@ export const DeveloperStrip = () => {
           </p>
           <Link
             href="/developers"
-            className="inline-flex items-center gap-2 border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200"
+            className="inline-flex items-center gap-2 border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold normal-case tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200"
           >
             Visit Developer Hub <LuArrowRight />
           </Link>

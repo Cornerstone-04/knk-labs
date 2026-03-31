@@ -14,7 +14,7 @@ export const ProductsCta = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-6 font-mono text-xxs uppercase tracking-[0.3em] text-orange">
+          <p className="mb-6 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
             Limited Availability
           </p>
 
@@ -26,7 +26,7 @@ export const ProductsCta = () => {
 
           <Link
             href="/waitlist"
-            className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
           >
             Join the Waitlist <LuArrowRight />
           </Link>

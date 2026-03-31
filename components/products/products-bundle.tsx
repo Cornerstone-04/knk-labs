@@ -16,7 +16,7 @@ export const ProductsBundle = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange">
+          <div className="mb-4 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
             The Bundle
           </div>
 
@@ -41,7 +41,7 @@ export const ProductsBundle = () => {
 
           <Link
             href="/waitlist"
-            className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
           >
             Join the Waitlist <LuArrowRight />
           </Link>

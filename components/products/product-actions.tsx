@@ -19,14 +19,14 @@ export const ProductActions = ({ slug }: ProductActionsProps) => {
     >
       <Link
         href={`/products/${slug}`}
-        className="inline-flex items-center gap-2 border border-white/20 px-8 py-[0.85rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white no-underline transition-all duration-200 hover:border-white/60"
+        className="inline-flex items-center gap-2 border border-white/20 px-8 py-[0.85rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-white no-underline transition-all duration-200 hover:border-white/60"
       >
         Learn More <LuArrowRight />
       </Link>
 
       <Link
         href="/waitlist"
-        className="inline-block bg-orange px-8 py-[0.85rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+        className="inline-block bg-orange px-8 py-[0.85rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
       >
         Join Waitlist
       </Link>

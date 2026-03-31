@@ -13,7 +13,7 @@ export const AboutIntro = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-8 font-mono text-xxs uppercase tracking-[0.3em] text-white/25">
+          <div className="mb-8 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
             Who We Are
           </div>
 
@@ -28,7 +28,7 @@ export const AboutIntro = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          <div className="mb-8 font-mono text-xxs uppercase tracking-[0.3em] text-white/25">
+          <div className="mb-8 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
             Our Mission
           </div>
 

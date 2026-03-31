@@ -12,7 +12,7 @@ export const ExpertiseStrip = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-4 font-mono text-xxs tracking-[0.3em] uppercase text-orange"
+          className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange"
         >
           Built on
         </motion.div>
@@ -58,7 +58,7 @@ export const ExpertiseStrip = () => {
         >
           <Link
             href="/about"
-            className="inline-flex items-center gap-2 font-mono text-xxs tracking-[0.15em] uppercase text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-white hover:border-white/50 transition-all duration-200"
+            className="inline-flex items-center gap-2 font-mono text-xxs tracking-[0.15em] normal-case text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-white hover:border-white/50 transition-all duration-200"
           >
             See All Expertise <LuArrowRight />
           </Link>

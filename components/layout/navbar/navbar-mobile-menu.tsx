@@ -46,14 +46,14 @@ export const NavbarMobileMenu = ({
                 className="group flex items-center justify-between py-5 no-underline"
               >
                 <span
-                  className={`font-heading text-[clamp(2rem,8vw,3rem)] font-black uppercase leading-none transition-colors duration-200 ${
+                  className={`font-heading text-[clamp(2rem,8vw,3rem)] font-black capitalize leading-none transition-colors duration-200 ${
                     active ? "text-orange" : "text-white/85"
                   }`}
                 >
                   {label}
                 </span>
 
-                <span className="font-mono text-xxs uppercase tracking-[0.2em] text-white/20 transition-colors duration-200 group-hover:text-orange">
+                <span className="font-mono text-xxs capitalize tracking-[0.2em] text-white/20 transition-colors duration-200 group-hover:text-orange">
                   0{i + 1}
                 </span>
               </Link>
@@ -68,7 +68,7 @@ export const NavbarMobileMenu = ({
                       className="group/sub flex items-center gap-3 no-underline"
                     >
                       <span className="h-px w-4 shrink-0 bg-white/10" />
-                      <span className="font-heading text-[1.3rem] font-bold uppercase text-white/50 transition-colors duration-200 group-hover/sub:text-orange">
+                      <span className="font-heading text-[1.3rem] font-bold capitalize text-white/50 transition-colors duration-200 group-hover/sub:text-orange">
                         {product.name}
                       </span>
                     </Link>
@@ -90,7 +90,7 @@ export const NavbarMobileMenu = ({
           onClick={closeAction}
           className="inline-flex w-full justify-center px-6 py-4 text-center text-[0.85rem]"
         />
-        <p className="text-center font-mono text-xxs uppercase tracking-[0.2em] text-white/20">
+        <p className="text-center font-mono text-xxs lowercase tracking-[0.2em] text-white/20">
           knklabs.com
         </p>
       </motion.div>

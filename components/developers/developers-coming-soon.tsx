@@ -47,7 +47,7 @@ export const DevelopersComingSoon = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="border border-white/5 bg-surface p-10"
         >
-          <div className="mb-4 font-mono text-xxs uppercase tracking-[0.2em] text-orange">
+          <div className="mb-4 font-mono text-xxs normal-case tracking-[0.2em] text-orange">
             Early Access
           </div>
 
@@ -68,7 +68,7 @@ export const DevelopersComingSoon = () => {
 
           <Link
             href="/waitlist"
-            className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90"
+            className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-90"
           >
             Join the Waitlist <LuArrowRight />
           </Link>

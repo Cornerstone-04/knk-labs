@@ -69,7 +69,7 @@ export default function Footer() {
           </a>
           <Link
             href="/waitlist"
-            className="inline-flex items-center gap-2 bg-orange px-4 py-2 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            className="inline-flex items-center gap-2 bg-orange px-4 py-2 font-sans text-[0.7rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
           >
             Join Waitlist <LuArrowRight />
           </Link>

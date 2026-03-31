@@ -81,13 +81,13 @@ export const HeroSection = () => {
           >
             <Link
               href="/waitlist"
-              className="font-sans font-semibold text-[0.8rem] tracking-[0.08em] uppercase bg-orange text-black px-8 py-[0.9rem] no-underline transition-opacity duration-200 hover:opacity-85"
+              className="font-sans font-semibold text-[0.8rem] tracking-[0.08em] normal-case bg-orange text-black px-8 py-[0.9rem] no-underline transition-opacity duration-200 hover:opacity-85"
             >
               Join the Waitlist
             </Link>
             <Link
               href="/products"
-              className="font-sans font-medium text-[0.8rem] tracking-[0.08em] uppercase text-white/60 border border-white/15 px-8 py-[0.9rem] no-underline transition-all duration-200 hover:text-white hover:border-white/40"
+              className="font-sans font-medium text-[0.8rem] tracking-[0.08em] normal-case text-white/60 border border-white/15 px-8 py-[0.9rem] no-underline transition-all duration-200 hover:text-white hover:border-white/40"
             >
               Explore Products
             </Link>

@@ -12,7 +12,7 @@ export const CTAStrip = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-6">
+          <p className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-6">
             Limited Availability
           </p>
           <h2 className="font-heading font-black text-[clamp(2.5rem,8vw,6rem)] text-white mb-6">
@@ -26,7 +26,7 @@ export const CTAStrip = () => {
           </p>
           <Link
             href="/waitlist"
-            className="font-sans font-semibold text-[0.85rem] tracking-[0.08em] uppercase bg-orange text-black px-10 py-4 inline-flex items-center gap-2 no-underline transition-opacity duration-200 hover:opacity-85"
+            className="font-sans font-semibold text-[0.85rem] tracking-[0.08em] normal-case bg-orange text-black px-10 py-4 inline-flex items-center gap-2 no-underline transition-opacity duration-200 hover:opacity-85"
           >
             Join the Waitlist <LuArrowRight />
           </Link>

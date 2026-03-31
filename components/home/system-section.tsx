@@ -12,7 +12,7 @@ export const SystemSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-4 font-mono text-xxs tracking-[0.3em] uppercase text-orange">
+          <div className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange">
             The KNK System
           </div>
           <h2 className="font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white leading-none">
@@ -40,7 +40,7 @@ export const SystemSection = () => {
           </p>
           <Link
             href="/about"
-            className="border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200 inline-flex items-center gap-2"
+            className="border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold normal-case tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200 inline-flex items-center gap-2"
           >
             About KNK Labs <LuArrowRight />
           </Link>

@@ -74,7 +74,7 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.15 }}
-            className="mb-3 font-mono text-xxs uppercase tracking-[0.2em] text-orange"
+            className="mb-3 font-mono text-xxs normal-case tracking-[0.2em] text-orange"
           >
             {product.tag}
           </motion.div>
@@ -94,7 +94,7 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="mb-8 font-mono text-xxs uppercase tracking-[0.2em] text-orange/60"
+            className="mb-8 font-mono text-xxs normal-case tracking-[0.2em] text-orange/60"
           >
             {product.tagline}
           </motion.p>

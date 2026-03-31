@@ -14,7 +14,7 @@ export const BundleSecction = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="mb-4 font-mono text-xxs tracking-[0.3em] uppercase text-orange">
+          <div className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange">
             The Bundle
           </div>
           <h2 className="mb-6 font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white">
@@ -35,7 +35,7 @@ export const BundleSecction = () => {
           </div>
           <Link
             href="/waitlist"
-            className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+            className="inline-flex items-center gap-2 bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
           >
             Join the Waitlist <LuArrowRight />
           </Link>

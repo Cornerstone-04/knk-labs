@@ -1,6 +1,6 @@
 "use client";
 
-import { motion} from "motion/react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -30,7 +30,7 @@ export default function ProductPage({
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-4"
+                className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-4"
               >
                 {product.tag}
               </motion.p>
@@ -52,7 +52,7 @@ export default function ProductPage({
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.35 }}
-                className="font-mono text-xxs uppercase tracking-[0.2em] text-orange/60 mb-10"
+                className="font-mono text-xxs normal-case tracking-[0.2em] text-orange/60 mb-10"
               >
                 {product.tagline}
               </motion.p>
@@ -65,13 +65,13 @@ export default function ProductPage({
               >
                 <Link
                   href="/waitlist"
-                  className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+                  className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
                 >
                   Join the Waitlist
                 </Link>
                 <Link
                   href="/products"
-                  className="inline-block border border-white/15 px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
+                  className="inline-block border border-white/15 px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
                 >
                   All Products
                 </Link>
@@ -126,7 +126,7 @@ export default function ProductPage({
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="mb-8 font-mono text-xxs uppercase tracking-[0.3em] text-white/25">
+            <div className="mb-8 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
               Overview
             </div>
             <p className="font-sans text-[1rem] leading-[1.9] text-white/55">
@@ -136,7 +136,7 @@ export default function ProductPage({
               <Link
                 href="https://tekglove.co.uk"
                 target="_blank"
-                className="inline-flex items-center gap-2 font-mono text-xxs tracking-[0.2em] uppercase text-orange border-b border-orange/30 pb-1 hover:border-orange transition-all"
+                className="inline-flex items-center gap-2 font-mono text-xxs tracking-[0.2em] normal-case text-orange border-b border-orange/30 pb-1 hover:border-orange transition-all"
               >
                 Explore Technical Documentation{" "}
                 <LuArrowRight className="w-3 h-3" />
@@ -149,7 +149,7 @@ export default function ProductPage({
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <div className="mb-8 font-mono text-xxs uppercase tracking-[0.3em] text-white/25">
+            <div className="mb-8 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
               Key Capabilities
             </div>
             <div className="space-y-0">
@@ -261,7 +261,7 @@ export default function ProductPage({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
+              className="mb-4 font-mono text-xxs normal-case tracking-[0.3em] text-orange"
             >
               Why the Back of the Hand?
             </motion.div>
@@ -308,7 +308,7 @@ export default function ProductPage({
               transition={{ duration: 0.5 }}
               className="mb-10 flex items-center justify-between"
             >
-              <div className="font-mono text-xxs uppercase tracking-[0.3em] text-orange">
+              <div className="font-mono text-xxs normal-case tracking-[0.3em] text-orange">
                 Related Gear
               </div>
               <div className="h-px flex-1 bg-border ml-8 hidden md:block" />
@@ -338,7 +338,7 @@ export default function ProductPage({
                     </div>
                   </div>
 
-                  <div className="p-5 flex items-center justify-between gap-4">
+                  <div className="p-5 flex items-end justify-between gap-4">
                     <div>
                       <h3 className="font-heading font-bold text-[1.1rem] text-white uppercase leading-tight">
                         {p.name}
@@ -349,7 +349,7 @@ export default function ProductPage({
                     </div>
                     <Link
                       href={`/products/${p.slug}`}
-                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest uppercase text-orange border-b border-orange/0 pb-0.5 no-underline hover:border-orange transition-all duration-200 shrink-0"
+                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest normal-case text-orange border-b border-orange/0 pb-0.5 no-underline hover:border-orange transition-all duration-200 shrink-0"
                     >
                       View <LuArrowRight />
                     </Link>
@@ -370,7 +370,7 @@ export default function ProductPage({
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-6">
+            <p className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-6">
               Limited Availability
             </p>
             <h2 className="font-heading font-black text-[clamp(2rem,6vw,4.5rem)] text-white mb-6">
@@ -380,7 +380,7 @@ export default function ProductPage({
             </h2>
             <Link
               href="/waitlist"
-              className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+              className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
             >
               Join the Waitlist <LuArrowRight />
             </Link>

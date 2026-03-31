@@ -37,7 +37,7 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
               <NavigationMenuItem key={href} className="">
                 <NavigationMenuTrigger
                   className={cn(
-                    "h-auto bg-transparent px-4 py-2 font-sans text-[0.78rem] tracking-[0.05em] uppercase transition-colors hover:bg-transparent focus:bg-transparent data-active:bg-transparent data-[state=open]:bg-transparent",
+                    "h-auto bg-transparent px-4 py-2 font-sans text-[0.78rem] tracking-[0.05em] capitalize transition-colors hover:bg-transparent focus:bg-transparent data-active:bg-transparent data-[state=open]:bg-transparent",
                     active ? "text-white" : "text-white/50 hover:text-white",
                   )}
                 >
@@ -50,7 +50,7 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
                       <Link
                         href="/products"
                         onClick={closeAction}
-                        className="group flex items-center justify-between rounded-sm border-b border-white/5 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-white/40 no-underline transition-colors hover:bg-white/5 hover:text-white"
+                        className="group flex items-center justify-between rounded-sm border-b border-white/5 px-4 py-3 font-mono text-[10px] capitalize tracking-[0.15em] text-white/40 no-underline transition-colors hover:bg-white/5 hover:text-white"
                       >
                         <span>All Products</span>
                         <LuArrowRight className="text-xxs text-white/20 transition-all group-hover:translate-x-0.5" />
@@ -65,10 +65,10 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
                           className="group flex items-center justify-between rounded-sm border-b border-white/5 px-4 py-4 no-underline transition-colors hover:bg-white/5 last:border-b-0"
                         >
                           <div>
-                            <p className="font-heading text-[0.85rem] font-bold uppercase leading-tight text-white transition-colors group-hover:text-orange">
+                            <p className="font-heading text-[0.85rem] font-bold capitalize leading-tight text-white transition-colors group-hover:text-orange">
                               {product.name}
                             </p>
-                            <p className="mt-1 font-mono text-[9px] uppercase tracking-widest text-white/30">
+                            <p className="mt-1 font-mono text-[9px] capitalize tracking-widest text-white/30">
                               {product.tag}
                             </p>
                           </div>
@@ -92,7 +92,7 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
                   href={href}
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    "h-auto bg-transparent px-4 py-2 font-sans text-[0.78rem] tracking-[0.05em] uppercase no-underline transition-colors hover:bg-transparent focus:bg-transparent",
+                    "h-auto bg-transparent px-4 py-2 font-sans text-[0.78rem] tracking-[0.05em] capitalize no-underline transition-colors hover:bg-transparent focus:bg-transparent",
                     active ? "text-white" : "text-white/50 hover:text-white",
                   )}
                 >

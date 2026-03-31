@@ -13,7 +13,7 @@ export const ProductsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-4 font-mono text-xxs tracking-[0.3em] uppercase text-orange"
+          className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange"
         >
           The Gloves
         </motion.div>
@@ -37,7 +37,7 @@ export const ProductsSection = () => {
           >
             <Link
               href="/products"
-              className="font-mono text-xxs tracking-[0.15em] uppercase text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-white hover:border-white/50 transition-all duration-200 hidden md:inline-flex md:items-center md:gap-2 "
+              className="font-mono text-xxs tracking-[0.15em] normal-case text-white/40 border-b border-white/20 pb-0.5 no-underline hover:text-white hover:border-white/50 transition-all duration-200 hidden md:inline-flex md:items-center md:gap-2 "
             >
               View All <LuArrowRight />
             </Link>
@@ -71,7 +71,7 @@ export const ProductsSection = () => {
                 <h3 className="font-heading font-bold text-[1.6rem] text-white mb-1">
                   {p.name}
                 </h3>
-                <p className="font-mono text-xxs uppercase tracking-[0.15em] text-orange/60 mb-4">
+                <p className="font-mono text-xxs normal-case tracking-[0.15em] text-orange/60 mb-4">
                   {p.tagline}
                 </p>
                 <p className="font-sans text-[0.78rem] text-white/45 leading-[1.7] mb-6 line-clamp-3">
@@ -79,7 +79,7 @@ export const ProductsSection = () => {
                 </p>
                 <Link
                   href={`/products/${p.slug}`}
-                  className="font-mono text-xxs tracking-[0.15em] uppercase text-orange border-b border-orange/40 pb-0.5 no-underline hover:border-orange transition-colors duration-200 inline-flex items-center gap-2"
+                  className="font-mono text-xxs tracking-[0.15em] normal-case text-orange border-b border-orange/40 pb-0.5 no-underline hover:border-orange transition-colors duration-200 inline-flex items-center gap-2"
                 >
                   Learn More <LuArrowRight />
                 </Link>

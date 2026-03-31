@@ -12,7 +12,7 @@ export const DevelopersTools = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
+          className="mb-4 font-mono text-xxs normal-case tracking-[0.3em] text-orange"
         >
           Resources
         </motion.div>

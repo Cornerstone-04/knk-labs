@@ -20,7 +20,7 @@ export function ComponentHeader({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
+          className="mb-4 font-mono text-xxs normal-case tracking-[0.3em] text-orange"
         >
           {eyebrow}
         </motion.div>
