@@ -57,10 +57,10 @@ export const products = [
       },
       {
         id: "03",
-        title: "Dorsal-Side Smart Watch Dock",
+        title: "Dorsal-Side Smart Watch Mount",
         desc: "Tek Glove introduces a precision-moulded Smart Watch mount on the dorsal side of the hand, providing instant visibility without obstructing wrist mobility or grip.",
         bullets: [
-          "Secure magnetic + elastic docking",
+          "Secure magnetic + elastic mounting",
           // "Seamless Apple Health + Tek OS syncing",
           "Visible during high-speed activity",
           "Designed for awareness without distraction",
@@ -113,8 +113,8 @@ export const products = [
       },
       {
         id: "03",
-        title: "Bluetooth Headset Dock",
-        desc: "Echo Glove includes a sleek micro Bluetooth headset dock, allowing you to store, charge, and auto-pair your headset directly inside the glove.",
+        title: "Bluetooth Headset Mount",
+        desc: "Echo Glove includes a sleek micro Bluetooth headset mount, allowing you to store, charge, and auto-pair your headset directly inside the glove.",
         bullets: [
           "Built-in charging cradle",
           // "Instant pairing with Echo OS",
@@ -131,7 +131,7 @@ export const bundle = {
   name: "KNK System",
   tag: "Bundle",
   tagline: "The Complete Hand.",
-  desc: "Tek Glove on your left. Echo Glove on your right. Together they form a complete wearable system — data and control on one hand, communication and awareness on the other. Buy both and get the full KNK experience.",
+  desc: "Tek Glove on your left. Echo Glove on your right. Together they form a complete wearable system, with data and control on one hand, communication and awareness on the other. Buy both and get the full KNK experience.",
   image: "/images/knk_dual.png",
   includes: ["Tek Glove (Left Hand)", "Echo Glove (Right Hand)"],
 };
@@ -152,8 +152,7 @@ export const about = {
     },
     {
       title: "Personal Security",
-      desc: "Direct control of robotic systems and equipment through natural hand gestures, with low-latency response.",
-      // Preventing theft and loss of personal devices with secure, integrated docking solutions, stealth anti-tamper features, and real-time location tracking.
+      desc: "Secure device integration that reduces theft and loss through a low-profile, stealth-oriented design.",
     },
     {
       title: "Predictive Analytics",
@@ -161,7 +160,7 @@ export const about = {
     },
     {
       title: "AR/VR Interaction",
-      desc: "Seamless input for augmented and virtual reality environments — no controller needed, just your hand.",
+      desc: "Seamless input for augmented and virtual reality environments with no controller needed, just your hand.",
     },
     {
       title: "Haptic Communication",

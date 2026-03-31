@@ -19,7 +19,7 @@ export const DeveloperStrip = () => {
             Build With KNK.
           </h2>
           <p className="mb-8 font-sans text-[0.9rem] leading-[1.85] text-white/50">
-            Gesture APIs, haptic libraries, device SDKs, and firmware tools —
+            Gesture APIs, haptic libraries, device SDKs, and firmware tools,
             designed for developers and innovators building the next generation
             of human–machine interaction.
           </p>

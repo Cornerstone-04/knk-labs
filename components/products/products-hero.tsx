@@ -6,7 +6,7 @@ export const ProductsHero = () => {
       eyebrow="KNK Labs"
       title="Two Gloves."
       accentText="One Ecosystem."
-      description="Tek Glove and Echo Glove — two distinct products built on the same intelligent wearable platform. Each designed for a different kind of human-machine interaction."
+      description="Tek Glove and Echo Glove. Two distinct products built on the same intelligent wearable platform. Each designed for a different kind of human-machine interaction."
     />
   );
 };

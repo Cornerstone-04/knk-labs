@@ -54,37 +54,27 @@ export default function PageLoader() {
       {visible && (
         <motion.div
           key="screen-loader"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
             transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
           }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-8 bg-black"
+          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-8 bg-black"
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.75 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{
-              opacity: 0,
-              scale: 0.85,
-              rotate: 540,
-              transition: {
-                duration: 0.8,
-                ease: [0.16, 1, 0.3, 1],
-              },
-            }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center"
           >
             <motion.div
-              animate={{ opacity: [0.75, 1, 0.75] }}
+              animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{
                 duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center font-heading text-[clamp(2rem,6vw,4rem)] font-extrabold normal-case tracking-[0.18em] text-white"
             >
               <Image
                 src="/knk-logo-white.png"

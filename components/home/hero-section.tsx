@@ -117,7 +117,7 @@ export const HeroSection = () => {
               />*/}
               <Image
                 src="/images/knk_dual_angle_cutout.png"
-                alt="Tek Glove and Echo Glove — The KNK System"
+                alt="KNK Gloves — Tek Glove and Echo Glove"
                 width={1200}
                 height={900}
                 className="h-auto w-full object-contain z-10"

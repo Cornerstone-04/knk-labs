@@ -15,13 +15,10 @@ export default function NotFound() {
           <p className="font-mono text-xxs normal-case tracking-[0.3em] text-orange mb-6">
             404 — Not Found
           </p>
-          <h1 className="font-heading font-black text-[clamp(3rem,12vw,8rem)] leading-none text-white mb-4">
+          <h1 className="font-heading font-black text-[clamp(3rem,12vw,8rem)] normal-case leading-none text-white mb-4">
             Lost
             <br />
-            <span
-              className="text-transparent"
-              style={{ WebkitTextStroke: "2px rgba(255,255,255,0.15)" }}
-            >
+            <span className="text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.15)]">
               Signal.
             </span>
           </h1>

@@ -37,8 +37,7 @@ export const DevelopersIntro = () => {
           </div>
 
           <p className="font-sans text-[1rem] leading-[1.9] text-white/55">
-            Gesture APIs, haptic libraries, device SDKs, and firmware tools —
-            everything you need to build the next generation of human–machine
+            Gesture APIs, haptic libraries, device SDKs, and firmware tools. Everything you need to build the next generation of human–machine
             interaction on the KNK platform.
           </p>
         </motion.div>

@@ -1,43 +1,33 @@
-import { motion } from "motion/react";
+"use client";
 
-const MARQUEE_ITEMS = [
-  "Left Hand · Tek Glove",
-  "Right Hand · Echo Glove",
-  "Smart Watch Dock",
-  "Haptic Feedback",
-  "Gesture Intelligence",
+import Marquee from "react-fast-marquee";
+
+const ITEMS = [
   "One System. Two Gloves.",
   "Left Hand · Tek Glove",
   "Right Hand · Echo Glove",
-  "Smart Watch Dock",
+  "Smart Watch Mount",
   "Haptic Feedback",
   "Gesture Intelligence",
-  "One System. Two Gloves.",
+  "Predictive Analytics",
+  "AR/VR Interaction",
+  "Personal Security",
 ];
 
 export const MarqueeStrip = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
-      className="border-b border-border bg-surface overflow-hidden py-5"
-    >
-      <motion.div
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="flex gap-16 whitespace-nowrap w-max"
-      >
-        {MARQUEE_ITEMS.map((t, i) => (
+    <div className="overflow-hidden border-b border-border bg-surface py-5">
+      <Marquee autoFill speed={25} gradient={false} pauseOnHover={false}>
+        {ITEMS.map((item, i) => (
           <span
-            key={i}
-            className="font-mono text-xxs tracking-[0.25em] normal-case text-white/30 shrink-0"
+            key={`${item}-${i}`}
+            className="mr-16 shrink-0 font-mono text-xxs tracking-[0.25em] normal-case text-white/50"
           >
-            <span className="text-orange mr-4">✦</span>
-            {t}
+            <span className="mr-4 text-orange">✦</span>
+            {item}
           </span>
         ))}
-      </motion.div>
-    </motion.div>
+      </Marquee>
+    </div>
   );
 };
