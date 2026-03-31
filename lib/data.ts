@@ -67,7 +67,7 @@ export const products = [
         ],
       },
     ],
-    dockReasons: [
+    mountReasons: [
       "Clear line-of-sight during motion",
       "No interference with wrist rotation",
       "Ideal for athletes, engineers, and field operators",
@@ -123,7 +123,7 @@ export const products = [
         ],
       },
     ],
-    dockReasons: [],
+    mountReasons: [],
   },
 ];
 

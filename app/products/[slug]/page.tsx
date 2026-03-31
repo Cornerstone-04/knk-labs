@@ -253,7 +253,7 @@ export default function ProductPage({
       </section>
 
       {/* ── DOCK REASONS — if any ── */}
-      {product.dockReasons.length > 0 && (
+      {product.mountReasons.length > 0 && (
         <section className="border-b border-border px-6 py-24 md:px-12 bg-surface">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -275,7 +275,7 @@ export default function ProductPage({
               Designed for Motion.
             </motion.h2>
             <div className="border-t border-border">
-              {product.dockReasons.map((r, i) => (
+              {product.mountReasons.map((r, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -10 }}

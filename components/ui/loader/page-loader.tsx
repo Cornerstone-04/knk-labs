@@ -81,10 +81,32 @@ export default function PageLoader() {
                 alt="KNK Labs"
                 width={200}
                 height={100}
-                className="h-25 w-auto object-contain"
+                loading="eager"
+                className="h-auto w-auto object-contain"
               />
             </motion.div>
           </motion.div>
+
+          {/* <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="flex w-32 flex-col items-center gap-2"
+          >
+            <div className="relative h-px w-full overflow-hidden bg-white/10">
+              <motion.div
+                className="absolute top-0 left-0 h-full bg-orange"
+                style={{
+                  width: `${progress}%`,
+                  transition: "width 0.05s linear",
+                }}
+              />
+            </div>
+
+            <span className="font-mono text-[0.55rem] tracking-[0.2em] text-white/30">
+              {`${String(progress).padStart(3, "0")}%`}
+            </span>
+          </motion.div> */}
         </motion.div>
       )}
     </AnimatePresence>
