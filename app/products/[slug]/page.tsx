@@ -86,11 +86,11 @@ export default function ProductPage({
                 delay: 0.4,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative flex min-h-125 items-center justify-center overflow-hidden rounded-2xl bg-bg lg:min-h-155"
+              className="relative flex min-h-125 items-center justify-center overflow-hidden bg-bg lg:min-h-155"
             >
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(249,115,22,0.08)_0%,transparent_65%)]" />
+              {/* <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(249,115,22,0.08)_0%,transparent_65%)]" /> */}
 
-              <div className="pointer-events-none absolute bottom-[6%] left-1/2 z-0 h-24 w-[58%] -translate-x-1/2 rounded-full bg-orange/20 blur-3xl lg:h-32" />
+              <div className="pointer-events-none absolute bottom-[6%] left-1/2 z-0 h-30 w-[58%] -translate-x-1/2 rounded-full bg-orange/20 blur-3xl lg:h-32" />
 
               <motion.div
                 animate={{ y: [0, -12, 0], scale: [1, 1.015, 1] }}
@@ -183,7 +183,7 @@ export default function ProductPage({
           <div className="hidden md:flex items-start border-r border-border">
             <div className="sticky top-0 h-svh w-full flex items-center justify-center bg-surface">
               <div className="relative">
-                <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(249,115,22,0.08)_0%,transparent_65%)] pointer-events-none" />
+                <div className="absolute inset-0 blur-md bg-[radial-gradient(circle,rgba(249,115,22,0.08)_0%,transparent_75%)] pointer-events-none" />
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{
