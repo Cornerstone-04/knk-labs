@@ -23,7 +23,7 @@ export const ProductsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading font-black text-[clamp(2.5rem,6vw,5rem)] text-white"
+            className="font-heading font-black normal-case text-[clamp(2.5rem,6vw,5rem)] text-white"
           >
             Two Gloves.
             <br />
@@ -63,12 +63,12 @@ export const ProductsSection = () => {
                   loading="eager"
                   className="object-contain brightness-90 transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4 font-mono text-xxs tracking-[0.15em] uppercase text-black bg-orange px-2.5 py-1 transition-colors duration-300 group-hover:bg-white">
+                <div className="absolute top-4 left-4 font-mono text-xxs tracking-[0.15em] normal-case text-black bg-orange px-2.5 py-1 transition-colors duration-300 group-hover:bg-white">
                   {p.tag}
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="font-heading font-bold text-[1.6rem] text-white mb-1">
+                <h3 className="font-heading font-bold text-[1.6rem] normal-case text-white mb-1">
                   {p.name}
                 </h3>
                 <p className="font-mono text-xxs normal-case tracking-[0.15em] text-orange/60 mb-4">

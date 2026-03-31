@@ -72,7 +72,7 @@ export function WaitlistForm({ successAction }: WaitlistFormProps) {
       <button
         type="submit"
         disabled={isDisabled}
-        className={`border-none px-8 py-4 font-sans text-[0.85rem] font-semibold uppercase tracking-[0.08em] text-black transition-opacity ${
+        className={`border-none px-8 py-4 font-sans text-[0.85rem] font-semibold normal-case tracking-[0.08em] text-black transition-opacity ${
           isDisabled
             ? "cursor-not-allowed bg-orange/40"
             : "cursor-pointer bg-orange hover:opacity-85"

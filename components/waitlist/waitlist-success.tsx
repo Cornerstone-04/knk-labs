@@ -11,7 +11,7 @@ export const WaitlistSuccess = () => {
     >
       <div className="mb-6 text-[3rem]">✦</div>
 
-      <h2 className="mb-4 font-heading text-[2.5rem] font-black uppercase text-white">
+      <h2 className="mb-4 font-heading text-[2.5rem] font-black normal-case text-white">
         You're on the list.
       </h2>
 

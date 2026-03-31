@@ -14,7 +14,7 @@ export const WaitlistProductPreference = ({
 }: WaitlistProductPreferenceProps) => {
   return (
     <div>
-      <label className="mb-4 block font-mono text-xxs uppercase tracking-[0.2em] text-white/30">
+      <label className="mb-4 block font-mono text-xxs normal-case tracking-[0.2em] text-white/30">
         Product Preference *
       </label>
 
@@ -27,7 +27,7 @@ export const WaitlistProductPreference = ({
               key={option.value}
               type="button"
               onClick={() => changeAction(option.value)}
-              className={`border px-5 py-2.5 font-mono text-xxs uppercase tracking-[0.15em] transition-all duration-200 ${
+              className={`border px-5 py-2.5 font-mono text-xxs normal-case tracking-[0.15em] transition-all duration-200 ${
                 selected
                   ? "border-orange bg-orange/10 text-orange"
                   : "border-border bg-transparent text-white/40"

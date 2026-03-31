@@ -14,7 +14,7 @@ export const AboutCta = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="mb-6 font-heading text-[clamp(2rem,6vw,4.5rem)] font-black text-white">
+          <h2 className="mb-6 normal-case font-heading text-[clamp(2rem,6vw,4.5rem)] font-black text-white">
             Ready to Wear
             <br />
             <span className="text-orange">the Future?</span>

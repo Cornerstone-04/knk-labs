@@ -21,7 +21,7 @@ export const ExpertiseStrip = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white mb-16"
+          className="font-heading normal-case font-black text-[clamp(2rem,5vw,4rem)] text-white mb-16"
         >
           Core Technologies
         </motion.h2>
@@ -39,7 +39,7 @@ export const ExpertiseStrip = () => {
               <div className="mb-4 font-mono text-xxs tracking-[0.2em] text-orange">
                 0{i + 1}
               </div>
-              <h3 className="mb-3 font-heading font-bold text-[1.3rem] text-white uppercase">
+              <h3 className="mb-3 font-heading font-bold text-[1.3rem] text-white normal-case">
                 {item.title}
               </h3>
               <p className="font-sans text-[0.8rem] leading-[1.75] text-white/40">

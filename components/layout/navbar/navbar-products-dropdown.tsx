@@ -57,7 +57,7 @@ export function NavbarProductsDropdown({
             <Link
               href="/products"
               onClick={closeAction}
-              className="flex items-center justify-between border-b border-white/5 px-5 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-white/40 no-underline transition-colors duration-150 hover:bg-white/5 hover:text-white"
+              className="flex items-center justify-between border-b border-white/5 px-5 py-3 font-mono text-[10px] normal-case tracking-[0.15em] text-white/40 no-underline transition-colors duration-150 hover:bg-white/5 hover:text-white"
             >
               All Products
               <LuArrowRight />
@@ -71,10 +71,10 @@ export function NavbarProductsDropdown({
                 className="group flex items-center justify-between border-b border-white/5 px-5 py-4 no-underline transition-colors duration-150 hover:bg-white/5 last:border-0"
               >
                 <div>
-                  <p className="font-heading text-[0.85rem] font-bold uppercase leading-tight text-white transition-colors duration-150 group-hover:text-orange">
+                  <p className="font-heading text-[0.85rem] font-bold normal-case leading-tight text-white transition-colors duration-150 group-hover:text-orange">
                     {product.name}
                   </p>
-                  <p className="mt-1 font-mono text-[9px] uppercase tracking-widest text-white/30">
+                  <p className="mt-1 font-mono text-[9px] normal-case tracking-widest text-white/30">
                     {product.tag}
                   </p>
                 </div>

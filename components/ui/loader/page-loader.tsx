@@ -54,27 +54,37 @@ export default function PageLoader() {
       {visible && (
         <motion.div
           key="screen-loader"
-          initial={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           exit={{
             opacity: 0,
             transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-8 bg-black"
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-8 bg-black"
         >
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, scale: 0.75 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{
+              opacity: 0,
+              scale: 0.85,
+              rotate: 540,
+              transition: {
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1],
+              },
+            }}
             className="text-center"
           >
             <motion.div
-              animate={{ opacity: [0.7, 1, 0.7] }}
+              animate={{ opacity: [0.75, 1, 0.75] }}
               transition={{
                 duration: 1.8,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="flex items-center justify-center font-heading text-[clamp(2rem,6vw,4rem)] font-extrabold uppercase tracking-[0.18em] text-white"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/knk-logo-white.png"
@@ -83,29 +93,7 @@ export default function PageLoader() {
                 height={100}
                 className="h-25 w-auto object-contain"
               />
-              KNK <span className="text-orange">Labs</span>
             </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.25 }}
-            className="flex w-32 flex-col items-center gap-2"
-          >
-            <div className="relative h-px w-full overflow-hidden bg-white/10">
-              <motion.div
-                className="absolute top-0 left-0 h-full bg-orange"
-                style={{
-                  width: `${progress}%`,
-                  transition: "width 0.05s linear",
-                }}
-              />
-            </div>
-
-            <span className="font-mono text-[0.55rem] tracking-[0.2em] text-white/30">
-              {`${String(progress).padStart(3, "0")}%`}
-            </span>
           </motion.div>
         </motion.div>
       )}

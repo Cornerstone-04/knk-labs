@@ -84,7 +84,7 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-2 font-heading text-[clamp(2rem,5vw,3.5rem)] font-black uppercase leading-none text-white"
+            className="mb-2 font-heading text-[clamp(2rem,5vw,3.5rem)] font-black normal-case leading-none text-white"
           >
             {product.name}
           </motion.h2>

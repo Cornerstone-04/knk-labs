@@ -15,7 +15,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="mb-3 block font-heading text-[1.1rem] font-extrabold uppercase tracking-[0.15em] text-white">
+          <span className="mb-3 block font-heading text-[1.1rem] font-extrabold normal-case tracking-[0.15em] text-white">
             KNK<span className="text-orange">Labs</span>
           </span>
           <p className="max-w-[28ch] font-sans text-[0.78rem] leading-[1.7] text-white/40">
@@ -29,7 +29,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="mb-4 font-mono text-[0.6rem] uppercase tracking-[0.25em] text-white/25">
+          <div className="mb-4 font-mono text-[0.6rem] normal-case tracking-[0.25em] text-white/25">
             Navigation
           </div>
           <ul className="flex list-none flex-col gap-2">
@@ -58,7 +58,7 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="mb-4 font-mono text-[0.6rem] uppercase tracking-[0.25em] text-white/25">
+          <div className="mb-4 font-mono text-[0.6rem] normal-case tracking-[0.25em] text-white/25">
             Contact
           </div>
           <a

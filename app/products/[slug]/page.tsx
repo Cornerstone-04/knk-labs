@@ -43,7 +43,7 @@ export default function ProductPage({
                   delay: 0.2,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="font-heading font-black text-[clamp(3.5rem,7vw,9rem)] leading-none tracking-[-0.02em] text-white mb-4"
+                className="font-heading font-black text-[clamp(3.5rem,7vw,9rem)] normal-case leading-none tracking-[-0.02em] text-white mb-4"
               >
                 {product.name}
               </motion.h1>
@@ -165,7 +165,7 @@ export default function ProductPage({
                   <span className="font-mono text-xxs tracking-[0.2em] text-white/20 shrink-0">
                     {f.id}
                   </span>
-                  <span className="font-heading font-bold text-[1.1rem] text-white uppercase">
+                  <span className="font-heading font-bold text-[1.1rem] text-white normal-case">
                     {f.title}
                   </span>
                 </motion.div>
@@ -219,11 +219,11 @@ export default function ProductPage({
                   <span className="font-mono text-xxs tracking-[0.25em] text-white/20">
                     {f.id}
                   </span>
-                  <span className="font-mono text-xxs tracking-[0.15em] uppercase text-black bg-orange px-2 py-0.5">
+                  <span className="font-mono text-xxs tracking-[0.15em] normal-case text-black bg-orange px-2 py-0.5">
                     {f.title}
                   </span>
                 </div>
-                <h2 className="font-heading font-black text-[clamp(2rem,4vw,3rem)] text-white leading-none mb-6">
+                <h2 className="font-heading normal-case font-black text-[clamp(2rem,4vw,3rem)] text-white leading-none mb-6">
                   {f.title}
                 </h2>
                 <p className="font-sans text-[0.9rem] leading-[1.85] text-white/50 mb-8 max-w-[48ch]">
@@ -270,7 +270,7 @@ export default function ProductPage({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white mb-16"
+              className="font-heading font-black text-[clamp(2rem,5vw,4rem)] normal-case text-white mb-16"
             >
               Designed for Motion.
             </motion.h2>
@@ -333,17 +333,17 @@ export default function ProductPage({
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-contain p-4 brightness-90 transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 left-3 font-mono text-[10px] tracking-widest uppercase text-black bg-orange px-2 py-0.5">
+                    <div className="absolute top-3 left-3 font-mono text-[10px] tracking-widest normal-case text-black bg-orange px-2 py-0.5">
                       {p.tag}
                     </div>
                   </div>
 
                   <div className="p-5 flex items-end justify-between gap-4">
                     <div>
-                      <h3 className="font-heading font-bold text-[1.1rem] text-white uppercase leading-tight">
+                      <h3 className="font-heading font-bold text-[1.1rem] text-white normal-case leading-tight">
                         {p.name}
                       </h3>
-                      <p className="font-mono text-[9px] uppercase tracking-widest text-white/40 mt-1">
+                      <p className="font-mono text-[9px] normal-case tracking-widest text-white/40 mt-1">
                         {p.tagline}
                       </p>
                     </div>
@@ -373,7 +373,7 @@ export default function ProductPage({
             <p className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-6">
               Limited Availability
             </p>
-            <h2 className="font-heading font-black text-[clamp(2rem,6vw,4.5rem)] text-white mb-6">
+            <h2 className="font-heading normal-case font-black text-[clamp(2rem,6vw,4.5rem)] text-white mb-6">
               Ready to Experience
               <br />
               <span className="text-orange">{product.name}?</span>

@@ -17,7 +17,7 @@ export const BundleSecction = () => {
           <div className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange">
             The Bundle
           </div>
-          <h2 className="mb-6 font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white">
+          <h2 className="mb-6 font-heading font-black normal-case text-[clamp(2rem,5vw,4rem)] text-white">
             {bundle.tagline}
           </h2>
           <p className="mb-8 font-sans text-[0.9rem] leading-[1.85] text-white/50">
@@ -27,7 +27,7 @@ export const BundleSecction = () => {
             {bundle.includes.map((item) => (
               <span
                 key={item}
-                className="border border-white/10 px-3 py-1.5 font-mono text-xxs uppercase tracking-[0.15em] text-white/35"
+                className="border border-white/10 px-3 py-1.5 font-mono text-xxs normal-case tracking-[0.15em] text-white/35"
               >
                 {item}
               </span>

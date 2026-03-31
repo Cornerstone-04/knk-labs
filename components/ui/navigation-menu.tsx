@@ -63,7 +63,7 @@ function NavigationMenuItem({
 const navigationMenuTriggerStyle = cva(
   cn(
     "group inline-flex h-10 w-max items-center justify-center rounded-none bg-transparent px-4 py-2",
-    "font-sans text-[0.78rem] tracking-[0.05em] uppercase text-white/50",
+    "font-sans text-[0.78rem] tracking-[0.05em] normal-case text-white/50",
     "transition-colors duration-200",
     "hover:bg-transparent hover:text-white",
     "focus:bg-transparent focus:text-white focus:outline-none",
@@ -81,7 +81,11 @@ function NavigationMenuTrigger({
   return (
     <NavigationMenuPrimitive.Trigger
       data-slot="navigation-menu-trigger"
-      className={cn(navigationMenuTriggerStyle(), "gap-1.5 cursor-pointer", className)}
+      className={cn(
+        navigationMenuTriggerStyle(),
+        "gap-1.5 cursor-pointer",
+        className,
+      )}
       {...props}
     >
       {children}

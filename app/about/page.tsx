@@ -11,7 +11,6 @@ export default function AboutPage() {
   return (
     <div className="bg-bg pt-16">
       <AboutHero />
-
       <AboutIntro />
       <AboutExpertise />
       <AboutCta />

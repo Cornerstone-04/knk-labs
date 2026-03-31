@@ -10,7 +10,7 @@ export const WaitlistHero = () => {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange"
+        className="mb-4 font-mono text-xxs normal-case tracking-[0.3em] text-orange"
       >
         Limited Availability
       </motion.div>
@@ -19,7 +19,7 @@ export const WaitlistHero = () => {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="mb-4 font-heading text-[clamp(3rem,9vw,6rem)] font-black uppercase leading-[0.9] text-white"
+        className="mb-4 font-heading text-[clamp(3rem,9vw,6rem)] font-black normal-case leading-[0.9] text-white"
       >
         Be First.
         <br />

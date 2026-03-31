@@ -29,12 +29,12 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-mono text-xxs tracking-[0.3em] uppercase text-orange mb-6"
+            className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-6"
           >
             King Krown Labs — Wearable Technology
           </motion.p>*/}
 
-          <h1 className="font-heading font-black text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] text-white mb-6">
+          <h1 className="font-heading font-black normal-case text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] text-white mb-6">
             {["Innovation", "at Your"].map((word, i) => (
               <motion.span
                 key={word}
@@ -134,7 +134,7 @@ export const HeroSection = () => {
         style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [1, 0]) }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none z-10"
       >
-        <span className="font-mono text-xxs tracking-[0.25em] uppercase text-white/25">
+        <span className="font-mono text-xxs tracking-[0.25em] normal-case text-white/25">
           Scroll
         </span>
         <motion.div

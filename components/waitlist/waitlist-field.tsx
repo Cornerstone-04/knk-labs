@@ -7,7 +7,7 @@ type WaitlistFieldProps = {
 export const WaitlistField = ({ label, ...props }: WaitlistFieldProps) => {
   return (
     <div>
-      <label className="mb-2 block font-mono text-xxs uppercase tracking-[0.2em] text-white/30">
+      <label className="mb-2 block font-mono text-xxs normal-case tracking-[0.2em] text-white/30">
         {label}
       </label>
 

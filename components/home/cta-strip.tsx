@@ -15,7 +15,7 @@ export const CTAStrip = () => {
           <p className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-6">
             Limited Availability
           </p>
-          <h2 className="font-heading font-black text-[clamp(2.5rem,8vw,6rem)] text-white mb-6">
+          <h2 className="font-heading normal-case font-black text-[clamp(2.5rem,8vw,6rem)] text-white mb-6">
             Be First.
             <br />
             <span className="text-orange">Be Ahead.</span>

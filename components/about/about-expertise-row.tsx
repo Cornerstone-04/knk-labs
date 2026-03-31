@@ -20,7 +20,7 @@ export const AboutExpertiseRow = ({
         {String(index + 1).padStart(2, "0")}
       </span>
 
-      <span className="font-heading text-[clamp(1.1rem,2.5vw,1.6rem)] font-bold uppercase leading-none text-white transition-colors duration-200 group-hover:text-orange">
+      <span className="font-heading text-[clamp(1.1rem,2.5vw,1.6rem)] font-bold normal-case leading-none text-white transition-colors duration-200 group-hover:text-orange">
         {title}
       </span>
 

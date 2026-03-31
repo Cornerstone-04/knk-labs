@@ -23,7 +23,7 @@ export const ProductFeatures = ({ features }: ProductFeaturesProps) => {
       {features.map((feature) => (
         <span
           key={feature.id}
-          className="border border-white/10 px-3 py-1.5 font-mono text-xxs uppercase tracking-[0.15em] text-white/35"
+          className="border border-white/10 px-3 py-1.5 font-mono text-xxs normal-case tracking-[0.15em] text-white/35"
         >
           {feature.title}
         </span>

@@ -22,7 +22,7 @@ export const StatsSection = () => {
           <span className="font-heading font-black text-[clamp(2.5rem,6vw,4.5rem)] leading-none text-white">
             <AnimatedCounter value={s.value} suffix={s.suffix} />
           </span>
-          <span className="font-mono text-xxs tracking-[0.2em] uppercase text-white/30">
+          <span className="font-mono text-xxs tracking-[0.2em] normal-case text-white/30">
             {s.label}
           </span>
         </motion.div>

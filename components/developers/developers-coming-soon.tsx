@@ -21,7 +21,7 @@ export const DevelopersComingSoon = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          {/*<div className="mb-4 font-mono text-xxs uppercase tracking-[0.3em] text-orange">
+          {/*<div className="mb-4 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
             Coming Soon
           </div>*/}
 

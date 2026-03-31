@@ -31,7 +31,7 @@ export const MarqueeStrip = () => {
         {MARQUEE_ITEMS.map((t, i) => (
           <span
             key={i}
-            className="font-mono text-xxs tracking-[0.25em] uppercase text-white/30 shrink-0"
+            className="font-mono text-xxs tracking-[0.25em] normal-case text-white/30 shrink-0"
           >
             <span className="text-orange mr-4">✦</span>
             {t}

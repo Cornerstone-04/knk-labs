@@ -2,7 +2,7 @@ export const site = {
   name: "KNK Labs",
   tagline: "Innovation at Your Fingertips",
   description:
-    "Two gloves. Two hands. One seamless system. KNK Labs engineers intelligent wearables that extend human capability — Tek Glove for your left hand, Echo Glove for your right.",
+    "Two gloves. Two hands. One seamless system. KNK Labs engineers intelligent wearables that extend human capability. Tek Glove for your left hand, Echo Glove for your right.",
   url: "https://knk.vercel.app",
   email: "hello@knklabs.com",
 };
@@ -11,7 +11,7 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
-  { href: "/developers", label: "Developers" },
+  // { href: "/developers", label: "Developers" },
   { href: "/waitlist", label: "Join Waitlist" },
 ];
 
@@ -23,13 +23,13 @@ export const products = [
     tagline: "Control the Future. Feel the Data.",
     desc: "Tek Glove sits on your left hand, mounting your Smart Watch on the dorsal side for instant visibility without obstructing wrist mobility. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, it turns your dominant data hand into a high-performance command system.",
     images: {
-      front: "/images/tekglove_front_cutout.png",
-      angle: "/images/tekglove_angle_cutout.png",
+      front: "/images/knk_tekgloves_cutout.png",
+      angle: "/images/knk_tekgloves_cutout.png",
       hero: "/images/knk_tekgloves_cutout.png",
-      full: "/images/tekglove-front.png",
-      extra: "/images/tekglove-angle.png",
+      full: "/images/knk_tekgloves.png",
+      extra: "/images/knk_tekgloves.png",
     },
-    image: "/images/tekglove_front_cutout.png",
+    image: "/images/knk_tekgloves_cutout.png",
 
     tag: "Left Hand",
     features: [
@@ -61,7 +61,7 @@ export const products = [
         desc: "Tek Glove introduces a precision-moulded Smart Watch mount on the dorsal side of the hand, providing instant visibility without obstructing wrist mobility or grip.",
         bullets: [
           "Secure magnetic + elastic docking",
-          "Seamless Apple Health + Tek OS syncing",
+          // "Seamless Apple Health + Tek OS syncing",
           "Visible during high-speed activity",
           "Designed for awareness without distraction",
         ],
@@ -79,7 +79,7 @@ export const products = [
     name: "Echo Glove",
     hand: "Right Hand",
     tagline: "Speak Less. Sense More. Work Smarter.",
-    desc: "Echo Glove sits on your right hand, purpose-built for communication. Haptic alerts, voice commands, and a built-in Bluetooth headset dock make it the silent, always-ready communication layer of the KNK system — ideal for environments where clarity and discretion matter.",
+    desc: "Echo Glove sits on your right hand, purpose-built for communication. Haptic alerts, voice commands, and a built-in Bluetooth headset make it the silent, always-ready communication layer of the KNK system, ideal for environments where clarity and discretion matter.",
     image: "/images/echo_glove_cutout.png",
     images: {
       front: "/images/echo_glove_cutout.png",
@@ -117,7 +117,7 @@ export const products = [
         desc: "Echo Glove includes a sleek micro Bluetooth headset dock, allowing you to store, charge, and auto-pair your headset directly inside the glove.",
         bullets: [
           "Built-in charging cradle",
-          "Instant pairing with Echo OS",
+          // "Instant pairing with Echo OS",
           "Discreet communication",
           "Perfect for security staff, engineers, and field operatives",
         ],
@@ -148,11 +148,12 @@ export const about = {
     },
     {
       title: "Biometric Tracking",
-      desc: "Continuous monitoring of heart rate, motion, and performance metrics — embedded directly into the glove.",
+      desc: "Continuous monitoring of heart rate, motion, and performance metrics, embedded directly into the glove.",
     },
     {
-      title: "Robotics Interfacing",
+      title: "Personal Security",
       desc: "Direct control of robotic systems and equipment through natural hand gestures, with low-latency response.",
+      // Preventing theft and loss of personal devices with secure, integrated docking solutions, stealth anti-tamper features, and real-time location tracking.
     },
     {
       title: "Predictive Analytics",
@@ -165,10 +166,6 @@ export const about = {
     {
       title: "Haptic Communication",
       desc: "Multi-zone vibration feedback that delivers directional cues, silent alerts, and contextual signals through the glove.",
-    },
-    {
-      title: "Integrated Device Docking",
-      desc: "Precision-engineered mounts for Smart Watch and Bluetooth headsets — keeping your devices secure, visible, and accessible.",
     },
   ],
 };

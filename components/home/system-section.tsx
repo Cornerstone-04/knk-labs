@@ -15,7 +15,7 @@ export const SystemSection = () => {
           <div className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange">
             The KNK System
           </div>
-          <h2 className="font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white leading-none">
+          <h2 className="font-heading font-black text-[clamp(2rem,5vw,4rem)] normal-case text-white leading-none">
             One Hand
             <br />
             Wasn't Enough.
@@ -29,8 +29,8 @@ export const SystemSection = () => {
         >
           <p className="font-sans text-[0.95rem] leading-[1.9] text-white/55 mb-6">
             At KNK Labs, we engineer intelligent wearables that merge human
-            capability with machine precision. Our flagship products — Tek Glove
-            and Echo Glove — are designed to work together as a complete system,
+            capability with machine precision. Our flagship products, Tek Glove
+            and Echo Glove, are designed to work together as a complete system,
             each glove assigned to a hand with a specific purpose.
           </p>
           <p className="font-sans text-[0.95rem] leading-[1.9] text-white/55 mb-8">

@@ -12,7 +12,7 @@ export default function NotFound() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="font-mono text-xxs uppercase tracking-[0.3em] text-orange mb-6">
+          <p className="font-mono text-xxs normal-case tracking-[0.3em] text-orange mb-6">
             404 — Not Found
           </p>
           <h1 className="font-heading font-black text-[clamp(3rem,12vw,8rem)] leading-none text-white mb-4">
@@ -31,13 +31,13 @@ export default function NotFound() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href="/"
-              className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
+              className="inline-block bg-orange px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
             >
               Go Home
             </Link>
             <Link
               href="/products"
-              className="inline-block border border-white/15 px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
+              className="inline-block border border-white/15 px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold normal-case tracking-[0.08em] text-white/60 no-underline transition-all duration-200 hover:border-white/40 hover:text-white"
             >
               View Products
             </Link>

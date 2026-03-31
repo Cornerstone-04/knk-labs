@@ -15,7 +15,7 @@ export const DeveloperStrip = () => {
           <div className="mb-4 font-mono text-xxs tracking-[0.3em] normal-case text-orange">
             For Builders
           </div>
-          <h2 className="mb-6 font-heading font-black text-[clamp(2rem,5vw,4rem)] text-white">
+          <h2 className="mb-6 font-heading normal-case font-black text-[clamp(2rem,5vw,4rem)] text-white">
             Build With KNK.
           </h2>
           <p className="mb-8 font-sans text-[0.9rem] leading-[1.85] text-white/50">
@@ -23,12 +23,12 @@ export const DeveloperStrip = () => {
             designed for developers and innovators building the next generation
             of human–machine interaction.
           </p>
-          <Link
+          {/* <Link
             href="/developers"
             className="inline-flex items-center gap-2 border-b border-orange/40 pb-0.5 font-sans text-[0.78rem] font-semibold normal-case tracking-[0.08em] text-orange no-underline hover:border-orange transition-colors duration-200"
           >
             Visit Developer Hub <LuArrowRight />
-          </Link>
+          </Link> */}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
@@ -37,13 +37,14 @@ export const DeveloperStrip = () => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="border border-white/5 bg-surface p-10"
         >
-          {/*<div className="mb-6 font-mono text-xxs uppercase tracking-[0.2em] text-orange">
+          {/*<div className="mb-6 font-mono text-xxs normal-case tracking-[0.2em] text-orange">
             Coming Soon
           </div>*/}
           <ul className="space-y-4">
             {[
               "Gesture & Haptic API",
               "Hardware SDK",
+              "Software Development",
               "Robotics Integration Guides",
               "Developer Community",
               "Sample Code Libraries",

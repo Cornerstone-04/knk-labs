@@ -7,7 +7,11 @@ type NavbarLogoProps = {
 
 export const NavbarLogo = ({ onClick }: NavbarLogoProps) => {
   return (
-    <Link href="/" onClick={onClick} className="no-underline inline-flex items-center">
+    <Link
+      href="/"
+      onClick={onClick}
+      className="no-underline inline-flex items-center"
+    >
       <Image
         src="/knk-logo-white.png"
         alt="KNK Labs"
@@ -15,7 +19,7 @@ export const NavbarLogo = ({ onClick }: NavbarLogoProps) => {
         height={50}
         className="h-12 w-auto object-contain"
       />
-      <span className="font-heading text-[1.1rem] font-black uppercase tracking-[0.15em] text-white">
+      <span className="font-heading text-[1.1rem] font-black normal-case tracking-[0.15em] text-white">
         KNK<span className="text-orange">Labs</span>
       </span>
     </Link>

@@ -20,7 +20,7 @@ export const ProductsBundle = () => {
             The Bundle
           </div>
 
-          <h2 className="mb-6 font-heading text-[clamp(2rem,5vw,4rem)] font-black text-white">
+          <h2 className="mb-6 font-heading text-[clamp(2rem,5vw,4rem)] normal-case font-black text-white">
             {bundle.tagline}
           </h2>
 
@@ -32,7 +32,7 @@ export const ProductsBundle = () => {
             {bundle.includes.map((item) => (
               <span
                 key={item}
-                className="border border-white/10 px-3 py-1.5 font-mono text-xxs uppercase tracking-[0.15em] text-white/35"
+                className="border border-white/10 px-3 py-1.5 font-mono text-xxs normal-case tracking-[0.15em] text-white/35"
               >
                 {item}
               </span>

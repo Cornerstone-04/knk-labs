@@ -23,7 +23,7 @@ export const AboutExpertise = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-16 font-heading text-[clamp(2rem,5vw,4rem)] font-black text-white"
+          className="mb-16 font-heading text-[clamp(2rem,5vw,4rem)] font-black text-white normal-case"
         >
           Our Expertise
         </motion.h2>
