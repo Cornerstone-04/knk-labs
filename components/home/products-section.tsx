@@ -27,7 +27,7 @@ export const ProductsSection = () => {
           >
             Two Gloves.
             <br />
-            One Ecosystem.
+            <span className="text-orange">One Ecosystem.</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0 }}

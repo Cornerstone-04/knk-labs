@@ -121,7 +121,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading normal-case tracking-[0.04em];
+    @apply font-heading normal-case leading-[0.9em];
   }
   ::selection {
     @apply text-white bg-[rgba(249,115,22,0.3)];

@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const STATS = [
   { value: 2, suffix: "", label: "Gloves" },
-  { value: 7, suffix: "+", label: "Core Technologies" },
+  { value: 6, suffix: "", label: "Core Technologies" },
   { value: 2025, suffix: "", label: "Launch Year" },
 ];
 
