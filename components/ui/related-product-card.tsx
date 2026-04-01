@@ -27,7 +27,7 @@ export const RelatedProductCard = ({
       >
         <div className="relative aspect-21/9 bg-surface overflow-hidden">
           <Image
-            src={product.images.hero}
+            src={product.images.front}
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"

@@ -103,6 +103,14 @@ export default function ProductPage({
                 }}
                 className="relative z-10 h-90 w-full max-w-180 px-6 sm:h-105 lg:h-130 lg:px-10"
               >
+                {/*<video
+                  src={product.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="h-full w-full object-contain brightness-90 transition-transform duration-700 ease-out group-hover:scale-105"
+                />*/}
                 <Image
                   src={product.images.hero}
                   alt={product.name}

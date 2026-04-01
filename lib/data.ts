@@ -22,15 +22,15 @@ export const products = [
     hand: "Left Hand",
     tagline: "Control the Future. Feel the Data.",
     desc: "Tek Glove sits on your left hand, mounting your Smart Watch on the dorsal side for instant visibility without obstructing wrist mobility. With millimetre-accurate gesture tracking, embedded biometrics, and seamless device integration, it turns your dominant data hand into a high-performance command system.",
+    image: "/images/knk_tekglove1.png",
     images: {
-      front: "/images/knk_tekgloves_cutout.png",
-      angle: "/images/knk_tekgloves_cutout.png",
-      hero: "/images/knk_tekgloves_cutout.png",
+      front: "/images/knk_tekglove1.png",
+      angle: "/images/knk_tekglove_angle.png",
+      hero: "/images/knk_tekglove_angle2.png",
       full: "/images/knk_tekgloves.png",
       extra: "/images/knk_tekgloves.png",
     },
-    image: "/images/knk_tekgloves_cutout.png",
-
+    video: "/videos/tek_glove.mp4",
     tag: "Left Hand",
     features: [
       {
@@ -80,14 +80,16 @@ export const products = [
     hand: "Right Hand",
     tagline: "Speak Less. Sense More. Work Smarter.",
     desc: "Echo Glove sits on your right hand, purpose-built for communication. Haptic alerts, voice commands, and a built-in Bluetooth headset make it the silent, always-ready communication layer of the KNK system, ideal for environments where clarity and discretion matter.",
-    image: "/images/echo_glove_cutout.png",
+    image: "/images/knk_echo.png",
     images: {
       front: "/images/echo_glove_cutout.png",
-      angle: "/images/echo_glove_cutout.png",
-      hero: "/images/echo_glove_cutout.png",
+      angle: "/images/knk_echo_angle2.png",
+      hero: "/images/knk_echo_angle1.png",
       full: "/images/echo_glove.png",
-      extra: "/images/echo_glove_cutout.png",
+      extra: "/images/knk_echo.png",
     },
+    video: "/videos/echo_glove.mp4",
+
     tag: "Right Hand",
     features: [
       {
