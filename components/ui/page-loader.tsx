@@ -59,7 +59,7 @@ export default function PageLoader() {
             opacity: 0,
             transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-8 bg-black"
+          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-2 bg-black"
         >
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -74,7 +74,7 @@ export default function PageLoader() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="flex items-center justify-center font-heading text-[clamp(2rem,6vw,4rem)] font-extrabold normal-case tracking-[0.18em] text-white"
+              className="flex items-center justify-center"
             >
               <Image
                 src="/knk-logo-white.png"
@@ -93,7 +93,7 @@ export default function PageLoader() {
             transition={{ delay: 0.25 }}
             className="flex w-75 flex-col items-center gap-2"
           >
-            <div className="relative h-0.5 w-full overflow-hidden bg-white/10">
+            <div className="relative h-1 w-full overflow-hidden bg-white/10">
               <motion.div
                 className="absolute top-0 left-0 h-full bg-orange"
                 style={{
