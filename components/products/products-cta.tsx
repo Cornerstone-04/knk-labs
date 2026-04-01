@@ -1,37 +1,16 @@
 "use client";
 
-import { motion } from "motion/react";
-import Link from "next/link";
-import { LuArrowRight } from "react-icons/lu";
+import { CTASection, CTATitle } from "../ui/cta-section";
 
 export const ProductsCta = () => {
   return (
-    <section className="px-6 py-24 text-center">
-      <div className="mx-auto max-w-2xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <p className="mb-6 font-mono text-xxs normal-case tracking-[0.3em] text-orange">
-            Limited Availability
-          </p>
-
-          <h2 className="mb-6 font-heading text-[clamp(2rem,6vw,4.5rem)] normal-case font-black text-white">
-            Ready to Experience
-            <br />
-            <span className="text-orange">the Future?</span>
-          </h2>
-
-          <Link
-            href="/waitlist"
-            className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
-          >
-            Join the Waitlist <LuArrowRight />
-          </Link>
-        </motion.div>
-      </div>
-    </section>
+    <CTASection
+      label="Limited Availability"
+      title={
+        <CTATitle firstLine="Ready to Experience" secondLine="the Future?" />
+      }
+      buttonText="Join the Waitlist"
+      href="/waitlist"
+    />
   );
 };

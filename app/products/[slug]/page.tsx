@@ -7,6 +7,8 @@ import { notFound } from "next/navigation";
 import { products } from "@/lib/data";
 import { use, useRef } from "react";
 import { LuArrowRight } from "react-icons/lu";
+import { CTASection, CTATitle } from "@/components/ui/cta-section";
+import { RelatedProductCard } from "@/components/ui/related-product-card";
 
 export default function ProductPage({
   params,
@@ -317,76 +319,24 @@ export default function ProductPage({
             {/* Changed to grid-cols-2 on tablet and grid-cols-3 on desktop if needed */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {otherProducts.map((p, i) => (
-                <motion.div
-                  key={p.slug}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="group bg-bg border border-border overflow-hidden flex flex-col"
-                >
-                  <div className="relative aspect-21/9 bg-surface overflow-hidden">
-                    <Image
-                      src={p.images.hero} // Using the standard cutout for consistency
-                      alt={p.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-contain p-4 brightness-90 transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute top-3 left-3 font-mono text-[10px] tracking-widest normal-case text-black bg-orange px-2 py-0.5">
-                      {p.tag}
-                    </div>
-                  </div>
-
-                  <div className="p-5 flex items-end justify-between gap-4">
-                    <div>
-                      <h3 className="font-heading font-bold text-[1.1rem] text-white normal-case leading-tight">
-                        {p.name}
-                      </h3>
-                      <p className="font-mono text-[9px] normal-case tracking-widest text-white/40 mt-1">
-                        {p.tagline}
-                      </p>
-                    </div>
-                    <Link
-                      href={`/products/${p.slug}`}
-                      className="inline-flex items-center gap-2 font-mono text-[10px] tracking-widest normal-case text-orange border-b border-orange/0 pb-0.5 no-underline hover:border-orange transition-all duration-200 shrink-0"
-                    >
-                      View <LuArrowRight />
-                    </Link>
-                  </div>
-                </motion.div>
+                <RelatedProductCard key={p.slug} product={p} index={i} />
               ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* ── CTA ── */}
-      <section className="px-6 py-24 text-center">
-        <div className="max-w-2xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <p className="font-mono text-xxs tracking-[0.3em] normal-case text-orange mb-6">
-              Limited Availability
-            </p>
-            <h2 className="font-heading normal-case font-black text-[clamp(2rem,6vw,4.5rem)] text-white mb-6">
-              Ready to Experience
-              <br />
-              <span className="text-orange">{product.name}?</span>
-            </h2>
-            <Link
-              href="/waitlist"
-              className="inline-flex items-center gap-2 bg-orange px-10 py-4 font-sans text-[0.85rem] font-semibold normal-case tracking-[0.08em] text-black no-underline transition-opacity duration-200 hover:opacity-85"
-            >
-              Join the Waitlist <LuArrowRight />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      <CTASection
+        label="Limited Availability"
+        title={
+          <CTATitle
+            firstLine="Ready to Experience"
+            secondLine={`${product.name}?`}
+          />
+        }
+        buttonText="Join the Waitlist"
+        href="/waitlist"
+      />
     </div>
   );
 }

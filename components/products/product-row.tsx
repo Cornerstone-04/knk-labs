@@ -29,9 +29,8 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
   const isEven = index % 2 === 0;
 
   return (
-    <section className="border-b border-border overflow-y-hidden">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
-        <motion.div
+    <section className="border-b border-border overflow-x-hidden">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 overflow-hidden">        <motion.div
           initial={{ opacity: 0, x: isEven ? -30 : 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
