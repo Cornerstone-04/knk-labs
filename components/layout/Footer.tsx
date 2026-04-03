@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { navLinks, site } from "@/lib/data";
 import { LuArrowRight } from "react-icons/lu";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -15,9 +16,19 @@ export default function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <span className="mb-3 block font-heading text-[1.1rem] font-extrabold normal-case tracking-[0.15em] text-white">
-            KNK<span className="text-orange">Labs</span>
-          </span>
+          <div className="inline-flex items-center gap-3">
+            <Image
+              src="/knk-logo-white-2.png"
+              alt="KNK Labs"
+              width={100}
+              height={50}
+              loading="eager"
+              className="h-8 w-auto object-contain"
+            />
+            <span className="font-heading text-[1.1rem] font-black normal-case tracking-[0.15em] text-white">
+              KNK<span className="text-orange">Labs</span>
+            </span>
+          </div>
           <p className="max-w-[28ch] font-sans text-[0.78rem] leading-[1.7] text-white/40">
             Innovation at Your Fingertips.
           </p>

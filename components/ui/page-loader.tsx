@@ -59,14 +59,10 @@ export default function PageLoader() {
             opacity: 0,
             transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
           }}
-          className="fixed inset-0 z-9999 flex flex-col items-center justify-center gap-2 bg-black"
+          className="fixed inset-0 z-9999 flex items-center justify-center bg-black"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center"
-          >
+          <div className="flex w-35 flex-col items-center gap-4 md:w-40">
+            {/* Logo */}
             <motion.div
               animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{
@@ -74,39 +70,40 @@ export default function PageLoader() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="flex items-center justify-center"
+              className="flex w-full items-center justify-center"
             >
               <Image
-                src="/knk-logo-white.png"
+                src="/knk-logo-white-2.png"
                 alt="KNK Labs"
-                width={200}
-                height={100}
+                width={300}
+                height={150}
                 loading="eager"
-                className="h-auto w-auto object-contain"
+                className="h-auto w-full object-contain"
               />
             </motion.div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.25 }}
-            className="flex w-75 flex-col items-center gap-2"
-          >
-            <div className="relative h-1 w-full overflow-hidden bg-white/10">
-              <motion.div
-                className="absolute top-0 left-0 h-full bg-orange"
-                style={{
-                  width: `${progress}%`,
-                  transition: "width 0.05s linear",
-                }}
-              />
-            </div>
+            {/* Progress */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.25 }}
+              className="flex w-full flex-col items-center gap-2"
+            >
+              <div className="relative h-0.5 md:h-1 w-full overflow-hidden bg-white/10">
+                <motion.div
+                  className="absolute top-0 left-0 h-full bg-orange"
+                  style={{
+                    width: `${progress}%`,
+                    transition: "width 0.05s linear",
+                  }}
+                />
+              </div>
 
-            <span className="font-mono text-xs-plus font-medium tracking-[0.2em] text-white/30">
-              {`${String(progress).padStart(3, "0")}%`}
-            </span>
-          </motion.div>
+              <span className="font-mono text-xs font-medium tracking-[0.2em] text-white/30">
+                {`${String(progress).padStart(3, "0")}%`}
+              </span>
+            </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
