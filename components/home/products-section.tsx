@@ -24,7 +24,7 @@ export const ProductsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading font-black normal-case text-[clamp(2.5rem,6vw,5rem)] text-white"
+            className="font-heading font-black normal-case text-[clamp(2rem,5vw,4rem)] text-white"
           >
             Two Gloves.
             <br />

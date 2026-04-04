@@ -8,7 +8,7 @@ import { bundle } from "@/lib/data";
 
 export const ProductsBundle = () => {
   return (
-    <section className="border-b border-border bg-surface px-6 py-24 md:px-12">
+    <section className="border-b border-border bg-surface/30 px-6 py-24 md:px-12">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 md:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

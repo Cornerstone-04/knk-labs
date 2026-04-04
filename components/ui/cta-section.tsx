@@ -44,7 +44,7 @@ export const CTASection = ({
             className={`font-heading normal-case font-black text-white mb-6 leading-none ${
               size === "large"
                 ? "text-[clamp(2.5rem,8vw,6rem)]"
-                : "text-[clamp(2rem,6vw,4.5rem)]"
+                : "text-[clamp(2rem,5vw,4rem)]"
             }`}
           >
             {title}

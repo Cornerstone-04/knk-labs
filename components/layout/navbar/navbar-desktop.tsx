@@ -24,7 +24,7 @@ export function NavbarDesktop({ pathname, closeAction }: NavbarDesktopProps) {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <NavigationMenu className="hidden md:flex">
+    <NavigationMenu className="hidden md:flex relative">
       <NavigationMenuList className="gap-2">
         {navLinks.slice(0, -1).map(({ href, label }) => {
           const productsLink = label === "Products";

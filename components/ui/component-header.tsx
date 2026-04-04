@@ -29,7 +29,7 @@ export function ComponentHeader({
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-heading text-[clamp(3rem,9vw,7rem)] font-black normal-case leading-[0.9] text-white"
+          className="font-heading text-[clamp(2rem,8vw,6rem)] font-black normal-case leading-[0.9] text-white"
         >
           {title}
           {accentText && (

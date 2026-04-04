@@ -110,7 +110,7 @@ export default function RootLayout({
     >
       <body className="relative overflow-x-hidden">
         <PageLoader />
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen overflow-x-hidden">
           <Navbar />
           <main className="relative">{children}</main>
           <Footer />

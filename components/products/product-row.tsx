@@ -30,7 +30,8 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
 
   return (
     <section className="border-b border-border overflow-x-hidden">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 overflow-hidden">        <motion.div
+      <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 overflow-hidden">
+        <motion.div
           initial={{ opacity: 0, x: isEven ? -30 : 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -58,7 +59,6 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
             />
           </motion.div>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, x: isEven ? 30 : -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -83,7 +83,7 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-2 font-heading text-[clamp(2rem,5vw,3.5rem)] font-black normal-case leading-none text-white"
+            className="mb-2 font-heading text-[clamp(2rem,4vw,3rem)] md:text-[clamp(2rem,5vw,3.5rem)] font-black normal-case leading-none text-white"
           >
             {product.name}
           </motion.h2>

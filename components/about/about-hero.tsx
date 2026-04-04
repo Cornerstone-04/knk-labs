@@ -6,7 +6,6 @@ export const AboutHero = () => {
       eyebrow="About Us"
       title="Built for the"
       accentText="Bold."
-      
     />
   );
 };

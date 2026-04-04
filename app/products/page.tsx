@@ -15,7 +15,6 @@ export default function ProductsPage() {
       {products.map((product, index) => (
         <ProductRow key={product.slug} product={product} index={index} />
       ))}
-
       <ProductsBundle />
       <ProductsCta />
     </div>

@@ -15,14 +15,14 @@ export const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-svh flex items-center overflow-hidden border-b border-border"
+      className="relative min-h-[88svh] md:min-h-svh flex items-end overflow-hidden border-b border-border"
     >
       <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.07)_0%,transparent_65%)] z-0" />
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-[linear-gradient(to_top,#000_0%,transparent_100%)] z-1" />
 
       <motion.div
         style={{ opacity: heroOpacity, y: heroY }}
-        className="relative z-10 w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-24 pb-16"
+        className="relative z-10 w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-24 pb-12"
       >
         <div>
           {/*<motion.p
@@ -34,7 +34,7 @@ export const HeroSection = () => {
             King Krown Labs — Wearable Technology
           </motion.p>*/}
 
-          <h1 className="font-heading font-black normal-case text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] text-white mb-6">
+          <h1 className="font-heading font-black normal-case text-[clamp(3rem,8vw,8rem)] md:text-[clamp(3.5rem,10vw,8rem)] leading-[0.9] tracking-[-0.02em] text-white mb-6">
             {["Innovation", "at Your"].map((word, i) => (
               <motion.span
                 key={word}
@@ -105,7 +105,7 @@ export const HeroSection = () => {
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="relative">
+            <div className="relative max-w-[80%] mx-auto md:max-w-full">
               <div className="absolute bottom-[-10%] left-1/2 -translate-x-1/2 w-[60%] h-[30%] bg-orange/15 blur-3xl rounded-full pointer-events-none" />
               {/*<Image
                 src="/images/knk_dual_angle_cutout.png"
