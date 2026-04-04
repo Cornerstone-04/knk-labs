@@ -6,6 +6,7 @@ import { Barlow_Condensed, Inter, DM_Mono, Geist } from "next/font/google";
 import { Toaster } from "sonner";
 import PageLoader from "@/components/ui/page-loader";
 import { cn } from "@/lib/utils";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -110,10 +111,11 @@ export default function RootLayout({
     >
       <body className="relative overflow-x-hidden">
         <PageLoader />
-        <div className="relative min-h-screen overflow-x-hidden">
+        <div className="relative min-h-screen">
           <Navbar />
           <main className="relative">{children}</main>
           <Footer />
+          <ScrollToTop />
           <Toaster
             theme="dark"
             position="top-right"
