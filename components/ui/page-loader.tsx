@@ -77,7 +77,7 @@ export default function PageLoader() {
                 alt="KNK Labs"
                 width={300}
                 height={150}
-                loading="eager"
+                priority
                 className="h-auto w-full object-contain"
               />
             </motion.div>
