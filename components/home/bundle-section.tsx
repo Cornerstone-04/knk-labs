@@ -53,7 +53,7 @@ export const BundleSecction = () => {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           >
             <Image
-              src="/images/knk_dual_int_cutout.png"
+              src="/images/knk_glove_int_cutout.png"
               alt="KNK System — Tek Glove and Echo Glove"
               width={1200}
               height={900}

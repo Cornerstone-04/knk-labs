@@ -25,7 +25,7 @@ export const products = [
     image: "/images/knk_tekglove1.png",
     images: {
       front: "/images/knk_tekglove1.png",
-      angle: "/images/knk_tekglove_angle.png",
+      angle: "/images/knk_tekglove_flat.png",
       hero: "/images/knk_tekglove_angle2.png",
       full: "/images/knk_tekgloves.png",
       extra: "/images/knk_tekgloves.png",
@@ -89,7 +89,6 @@ export const products = [
       extra: "/images/knk_echo.png",
     },
     video: "/videos/echo_glove.mp4",
-
     tag: "Right Hand",
     features: [
       {
