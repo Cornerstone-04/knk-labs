@@ -72,12 +72,11 @@ export default function PageLoader() {
               }}
               className="flex w-full items-center justify-center"
             >
-              <Image
+              <img
                 src="/knk-logo-white-2.png"
                 alt="KNK Labs"
                 width={300}
                 height={150}
-                priority
                 className="h-auto w-full object-contain"
               />
             </motion.div>
