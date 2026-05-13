@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/Footer";
 import { Barlow_Condensed, Inter, DM_Mono, Geist } from "next/font/google";
 import { Toaster } from "sonner";
-import PageLoader from "@/components/ui/page-loader";
+import PageLoader from "@/components/layout/page-loader";
 import { cn } from "@/lib/utils";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
@@ -61,18 +61,18 @@ export const metadata: Metadata = {
     "Keniye Koroye",
     "wearable technology UK",
   ],
-  authors: [{ name: "Keniye Koroye", url: "https://knk-labs.vercel.app" }],
+  authors: [{ name: "Keniye Koroye", url: "https://www.knklabs.co.uk" }],
   creator: "Keniye Koroye",
   openGraph: {
     type: "website",
-    url: "https://knk-labs.vercel.app",
+    url: "https://www.knklabs.co.uk",
     title: "KNK Labs — Innovation at Your Fingertips",
     description:
       "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
     siteName: "KNK Labs",
     images: [
       {
-        url: "https://knk-labs.vercel.app/knk_og_image.png",
+        url: "https://www.knklabs.co.uk/knk_og_image.png",
         width: 1200,
         height: 630,
         alt: "KNK Labs — Advanced wearable technology for athletes, engineers, and innovators.",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     title: "KNK Labs — Innovation at Your Fingertips",
     description:
       "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
-    images: ["https://knk-labs.vercel.app/knk_og_image.png"],
+    images: ["https://www.knklabs.co.uk/knk_og_image.png"],
   },
   robots: {
     index: true,
