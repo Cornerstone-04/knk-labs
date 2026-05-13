@@ -10,7 +10,7 @@ type PopGloveHeroProps = {
 
 export function PopGloveHero({ onConfigureClick }: PopGloveHeroProps) {
   return (
-    <section className="border-b border-border px-6 pt-24 pb-0 md:px-12">
+    <section className="border-b border-border px-6 pt-24 pb-0 md:px-12 min">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col">
@@ -71,7 +71,7 @@ export function PopGloveHero({ onConfigureClick }: PopGloveHeroProps) {
               <button
                 type="button"
                 onClick={onConfigureClick}
-                className="inline-block cursor-pointer border border-white/15 bg-transparent px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-white/60 transition-all duration-200 hover:border-white/40 hover:text-white"
+                className="inline-block border border-white/15 bg-transparent px-8 py-[0.9rem] font-sans text-[0.8rem] font-semibold tracking-[0.08em] text-white/60  hover:border-white/40 hover:text-white"
               >
                 Configure Your Glove
               </button>

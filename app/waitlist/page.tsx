@@ -8,6 +8,7 @@ import {
 } from "@/components/waitlist";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { WaitlistTabs } from "@/components/waitlist/waitlist-tabs";
 
 export default function WaitlistPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,29 +16,10 @@ export default function WaitlistPage() {
   return (
     <div className="min-h-svh bg-bg pt-16">
       {/* Standard Waitlist Section */}
-      <div className="px-6 py-10 border-b border-white/5">
-        <div className="mx-auto max-w-4xl px-4">
+      <div className="px-6 md:px-12 py-10 border-b border-white/5">
+        <div className="mx-auto max-w-7xl">
           <WaitlistHero />
-
-          {submitted ? (
-            <WaitlistSuccess />
-          ) : (
-            <WaitlistForm successAction={() => setSubmitted(true)} />
-          )}
-        </div>
-      </div>
-
-      {/* P.O.P Glove Pre-Order Section */}
-      <div className="px-6 py-10">
-        <div className="mx-auto max-w-5xl px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <PopGlovePreorder />
-          </motion.div>
+          <WaitlistTabs />
         </div>
       </div>
     </div>

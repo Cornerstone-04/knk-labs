@@ -30,7 +30,7 @@ export const popGloveColours = [
     hex: "#F5F5F5",
     accent: "#1e3a5f",
     edition: "Modern Clean",
-    image: "/images/pop-glove/arctic-white-navy.jpg",
+    image: "/images/pop-glove/arctic-white-navy-2.jpg",
   },
   {
     id: "05",
