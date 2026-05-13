@@ -135,8 +135,8 @@
   ::-webkit-scrollbar-thumb {
     @apply bg-orange;
   }
-  a {
-    @apply text-inherit no-underline cursor-pointer;
+  a, button {
+    @apply text-inherit no-underline cursor-pointer outline-none transition-all ease-linear;
   }
 }
 
