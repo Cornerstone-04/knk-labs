@@ -6,6 +6,7 @@ export const popGloveColours = [
     hex: "#1a1a2e",
     accent: "#3b82f6",
     edition: "Signature Pop Royal",
+    image: "/images/pop-glove/royal-black-blue.jpg",
   },
   {
     id: "02",
@@ -13,6 +14,7 @@ export const popGloveColours = [
     hex: "#8B6343",
     accent: "#C0C0C0",
     edition: "Classic Luxury",
+    image: "/images/pop-glove/cognac-tan-silver.jpg",
   },
   {
     id: "03",
@@ -20,6 +22,7 @@ export const popGloveColours = [
     hex: "#DC2626",
     accent: "#0a0a0a",
     edition: "Motorsport",
+    image: "/images/pop-glove/redline-crimson-black.jpg",
   },
   {
     id: "04",
@@ -27,6 +30,7 @@ export const popGloveColours = [
     hex: "#F5F5F5",
     accent: "#1e3a5f",
     edition: "Modern Clean",
+    image: "/images/pop-glove/arctic-white-navy.jpg",
   },
   {
     id: "05",
@@ -34,6 +38,7 @@ export const popGloveColours = [
     hex: "#111111",
     accent: "#22c55e",
     edition: "Hypercar Energy",
+    image: "/images/pop-glove/carbon-black-neon-green.jpg",
   },
   {
     id: "06",
@@ -41,6 +46,7 @@ export const popGloveColours = [
     hex: "#64748b",
     accent: "#f97316",
     edition: "Performance Utility",
+    image: "/images/pop-glove/slate-grey-orange.jpg",
   },
   {
     id: "07",
@@ -48,6 +54,7 @@ export const popGloveColours = [
     hex: "#1e3a5f",
     accent: "#ca8a04",
     edition: "Executive Premium",
+    image: "/images/pop-glove/navy-gold.jpg",
   },
   {
     id: "08",
@@ -55,8 +62,9 @@ export const popGloveColours = [
     hex: "#4a5329",
     accent: "#1a1a1a",
     edition: "Tactical Lifestyle",
+    image: "/images/pop-glove/olive-matte-black.jpg",
   },
-];
+] as const;
 
 // Watch orientation rule: IDs 01 and 02 = sideways clock face, 03–08 = upright
 export const SIDEWAYS_IDS = ["01", "02"];
@@ -135,8 +143,8 @@ export const popGloveHistory = {
   eyebrow: "The Origin",
   headline: "Why the P.O.P Glove?",
   body: [
-    "The driving glove has always been more than protection — it is a statement. From the perforated leather of classic motorsport to the padded palms of modern racing, every great glove has served both function and identity.",
-    "The P.O.P Glove was born from a simple question: what if the glove could tell time? Inspired by the elegance of the AP Swatch Pop Royal, KNK Labs set out to create something like the driving gloves of the golden era — whether you're gripping the wheel of a golf cart or a supercar, the P.O.P Glove puts time exactly where you need it.",
+    "The driving glove has always been more than protection, it is a statement. From the perforated leather of classic motorsport to the padded palms of modern racing, every great glove has served both function and identity.",
+    "The P.O.P Glove was born from a simple question: what if the glove could tell time? Inspired by the elegance of the AP Swatch Pop Royal, KNK Labs set out to create something like the driving gloves of the golden era. Whether you're gripping the wheel of a golf cart or a supercar, the P.O.P Glove puts time exactly where you need it.",
     "P.O.P = Time at the point you need it most. Not on your wrist. Not on the dashboard. On your hand, in your line of sight, always.",
   ],
 };

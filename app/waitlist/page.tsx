@@ -15,8 +15,8 @@ export default function WaitlistPage() {
   return (
     <div className="min-h-svh bg-bg pt-16">
       {/* Standard Waitlist Section */}
-      <div className="px-6 py-20 border-b border-white/5">
-        <div className="mx-auto max-w-2xl px-4">
+      <div className="px-6 py-10 border-b border-white/5">
+        <div className="mx-auto max-w-4xl px-4">
           <WaitlistHero />
 
           {submitted ? (
@@ -28,7 +28,7 @@ export default function WaitlistPage() {
       </div>
 
       {/* P.O.P Glove Pre-Order Section */}
-      <div className="px-6 py-24">
+      <div className="px-6 py-10">
         <div className="mx-auto max-w-5xl px-4">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
