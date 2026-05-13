@@ -29,7 +29,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://knk-labs.vercel.app"),
+  metadataBase: new URL("https://www.knklabs.co.uk"),
   title: {
     default: "KNK Labs — Innovation at Your Fingertips",
     template: "%s | KNK Labs",
