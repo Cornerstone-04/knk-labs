@@ -153,6 +153,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                   src={selectedColour.image}
                   alt={`${selectedColour.name} P.O.P Glove`}
                   fill
+                  priority
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 70vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />

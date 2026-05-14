@@ -27,7 +27,7 @@ export function PopGloveFeatures() {
                   alt="P.O.P Glove features"
                   width={420}
                   height={420}
-                  className="relative z-10 h-auto w-full object-contain"
+                  className="relative z-10 h-auto w-full max-w-70 object-contain md:max-w-85 lg:max-w-105"
                 />
               </motion.div>
             </div>
