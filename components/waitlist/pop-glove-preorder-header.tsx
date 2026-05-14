@@ -24,7 +24,8 @@ export function PopGlovePreorderHeader() {
         <span className="font-semibold text-orange">
           {preorderDiscount}% off
         </span>{" "}
-        the full retail price. Limited to 8 editions.
+        the full retail price. Limited to 8 full-finger editions + 1 fingerless
+        edition.
       </p>
     </div>
   );

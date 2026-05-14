@@ -64,10 +64,19 @@ export const popGloveColours = [
     edition: "Tactical Lifestyle",
     image: "/images/pop-glove/olive-matte-black.jpg",
   },
+  {
+    id: "09",
+    name: "Stealth Black",
+    hex: "#1A1A1A",
+    accent: "#444444",
+    edition: "Fingerless Edition",
+    image: "/images/pop-glove/fingerless-black.jpg",
+  },
 ] as const;
 
 // Watch orientation rule: IDs 01 and 02 = sideways clock face, 03–08 = upright
-export const SIDEWAYS_IDS = ["01", "02"];
+export const SIDEWAYS_IDS = ["01", "02"] as const;
+export const sidewaysIdSet = new Set<string>(SIDEWAYS_IDS);
 
 // Hand selector data
 export const handOptions = {
@@ -85,7 +94,13 @@ export const handOptions = {
     availableColourIds: ["03", "04", "05", "06", "07", "08"], // 6 colourways
     style: "Full Finger",
   },
-};
+  fingerless: {
+    label: "Fingerless",
+    description: "Half-finger performance edition with dual-hand construction.",
+    availableColourIds: ["09"],
+    style: "Half Finger",
+  },
+} as const;
 
 // Glove styles
 export const gloveStyles = [
