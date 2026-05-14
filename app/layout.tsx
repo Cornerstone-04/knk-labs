@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     siteName: "KNK Labs",
     images: [
       {
-        url: "https://www.knklabs.co.uk/knk_og_image.png",
+        url: "https://www.knklabs.co.uk/og-image-v2.png",
         width: 1200,
         height: 630,
         alt: "KNK Labs — Advanced wearable technology for athletes, engineers, and innovators.",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     title: "KNK Labs — Innovation at Your Fingertips",
     description:
       "Makers of Tek Glove and Echo Glove. Advanced wearable technology for athletes, engineers, and innovators.",
-    images: ["https://www.knklabs.co.uk/knk_og_image.png"],
+    images: ["https://www.knklabs.co.uk/og-image-v2.png"],
   },
   robots: {
     index: true,
