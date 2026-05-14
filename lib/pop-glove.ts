@@ -299,3 +299,62 @@ export const productAnatomy = [
     desc: "Premium materials and precision stitching create a secure fit that adapts to your wrist size. Reinforced snap closures for reliability.",
   },
 ];
+
+// How To Wear Section
+export const howToWear = {
+  eyebrow: "Designed Around Royal Pop",
+  headline: "How To Wear The P.O.P Glove",
+  intro: "The P.O.P Glove was engineered specifically around the Audemars Piguet x Swatch Royal Pop collection. This is not a glove with a watch attached—it's a unified system where the pocket watch becomes your driving interface.",
+  
+  royalPopSpotlight: {
+    eyebrow: "The Inspiration",
+    headline: "Audemars Piguet x Swatch Royal Pop",
+    body: [
+      "The Royal Pop collection represents a cultural moment in horology—a collaboration between two horological titans that reimagined what a pocket watch can be. At 40mm, the bioceramic pocket watch carries the legacy of precision watchmaking into a modern, wearable format.",
+      "When KNK Labs first encountered the Royal Pop, the vision was clear: this wasn't meant for a pocket or a chain. It belonged on the hand. On the exact point where a driver needs to see time. On the dorsal surface where natural line of sight meets steering control.",
+      "The P.O.P Glove is the answer to that vision. A fusion of driving culture, horology, and engineering.",
+    ],
+  },
+
+  dockingSteps: [
+    {
+      number: "01",
+      title: "Remove the Royal Pop",
+      description: "Take the pocket watch from its holder or detach from its chain. The Royal Pop is designed for rapid deployment.",
+    },
+    {
+      number: "02",
+      title: "Align with the Cradle",
+      description: "Position the watch face toward the dorsal surface. The precision-engineered cradle guides the 40mm bezel into position seamlessly.",
+    },
+    {
+      number: "03",
+      title: "Snap Into Place",
+      description: "Press the watch firmly into the quick-lock mount. You'll feel the satisfying click as the proprietary mechanism engages.",
+    },
+    {
+      number: "04",
+      title: "Secure & Drive",
+      description: "Verify the watch sits flush against your hand. The shock-absorbing mount now protects the timepiece while delivering perfect visibility.",
+    },
+  ],
+
+  experiencePoints: [
+    {
+      title: "Perfect Visibility",
+      description: "Time appears in your natural line of sight, exactly where your eyes go when hands are on the wheel. No wrist rotation. No dashboard glare. Pure clarity.",
+    },
+    {
+      title: "Unified System",
+      description: "The glove and watch become one wearable system. Every element—the leather, the cradle, the quick-release—works in harmony to create a seamless experience.",
+    },
+    {
+      title: "Motorsport Heritage",
+      description: "Inspired by the golden age of racing, where drivers needed instant time reference without losing focus. Now reimagined for modern luxury driving.",
+    },
+    {
+      title: "Horological Respect",
+      description: "The Royal Pop isn't compromised. It's elevated. The shock-absorbing mount protects this mechanical masterpiece while transforming it into a performance instrument.",
+    },
+  ],
+};

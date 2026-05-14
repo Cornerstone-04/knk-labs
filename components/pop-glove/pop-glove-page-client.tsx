@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { PopGloveHero } from "./pop-glove-hero";
 import { PopGloveHistory } from "./pop-glove-history";
+import { PopGloveHowToWear } from "./pop-glove-how-to-wear";
 // import { PopGloveStyles } from "./pop-glove-styles";
 import { PopGloveConfigurator } from "./pop-glove-configurator";
 import { PopGloveFeatures } from "./pop-glove-features";
@@ -22,6 +23,7 @@ export function PopGlovePageClient() {
     <main className="bg-bg text-white">
       <PopGloveHero onConfigureClick={scrollToConfigurator} />
       <PopGloveHistory />
+      <PopGloveHowToWear />
       {/* <PopGloveStyles /> */}
       <PopGloveConfigurator ref={configuratorRef} />
       <PopGloveFeatures />
