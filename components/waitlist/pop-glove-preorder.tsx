@@ -7,6 +7,7 @@ import {
   popGloveColours,
   preorderDiscount,
   SIDEWAYS_IDS,
+  sidewaysIdSet,
 } from "@/lib/pop-glove";
 import { PopGlovePreorderSuccess } from "./pop-glove-preorder-success";
 import { PopGlovePreorderHeader } from "./pop-glove-preorder-header";
@@ -15,7 +16,7 @@ import { PopGloveColourSelector } from "./pop-glove-colour-selector";
 import { PopGloveConfigurationSummary } from "./pop-glove-configuration-summary";
 import { PopGlovePreorderForm } from "./pop-glove-preorder-form";
 
-type HandType = "left" | "right";
+type HandType = "left" | "right" | "fingerless";
 
 function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -36,7 +37,7 @@ export function PopGlovePreorder() {
     );
   }, [selectedColourId]);
 
-  const isClockSideways = SIDEWAYS_IDS.includes(selectedColour.id);
+  const isClockSideways = sidewaysIdSet.has(selectedColour.id);
 
   function handleHandChange(hand: HandType) {
     const firstAvailableColourId = handOptions[hand].availableColourIds[0];
@@ -46,7 +47,9 @@ export function PopGlovePreorder() {
   }
 
   function handleColourChange(colourId: string) {
-    if (!availableColourIds.includes(colourId)) return;
+    if (!(availableColourIds as readonly string[]).includes(colourId)) {
+      return;
+    }
 
     setSelectedColourId(colourId);
   }

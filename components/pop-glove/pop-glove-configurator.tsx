@@ -9,10 +9,10 @@ import {
   handOptions,
   popGloveColours,
   preorderDiscount,
-  SIDEWAYS_IDS,
+  sidewaysIdSet,
 } from "@/lib/pop-glove";
 
-type Hand = "left" | "right";
+type Hand = "left" | "right" | "fingerless";
 
 export const PopGloveConfigurator = forwardRef<HTMLElement>(
   function PopGloveConfigurator(_, ref) {
@@ -21,7 +21,9 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
 
     const availableColours = useMemo(() => {
       return popGloveColours.filter((colour) =>
-        handOptions[selectedHand].availableColourIds.includes(colour.id),
+        (
+          handOptions[selectedHand].availableColourIds as readonly string[]
+        ).includes(colour.id),
       );
     }, [selectedHand]);
 
@@ -29,7 +31,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
       popGloveColours.find((colour) => colour.id === selectedColourId) ??
       availableColours[0];
 
-    const isClockSideways = SIDEWAYS_IDS.includes(selectedColour.id);
+    const isClockSideways = sidewaysIdSet.has(selectedColour.id);
 
     function handleHandChange(hand: Hand) {
       const firstAvailableColour = handOptions[hand].availableColourIds[0];
@@ -41,15 +43,15 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
     return (
       <section
         ref={ref}
-        className="border-b border-border px-6 py-24 md:px-12 md:py-32"
+        className="border-b border-border px-6 py-12 md:px-12 md:py-24"
       >
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 gap-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="mb-20"
+            className=""
           >
             <p className="mb-4 font-mono text-xxs tracking-[0.3em] text-orange normal-case">
               Build Your P.O.P Glove
@@ -60,13 +62,13 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             </h2>
           </motion.div>
 
-          <div className="mb-20">
+          <div className="">
             <p className="mb-8 font-mono text-xxs tracking-widest text-white/50 normal-case">
               STEP 1: SELECT HAND
             </p>
 
             <div className="flex flex-wrap gap-4">
-              {(["left", "right"] as const).map((hand) => {
+              {(["left", "right", "fingerless"] as const).map((hand) => {
                 const isActive = selectedHand === hand;
 
                 return (
@@ -93,7 +95,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             </p>
           </div>
 
-          <div className="mb-24">
+          <div className="">
             <p className="mb-4 font-mono text-xxs tracking-[0.2em] text-white/20 normal-case">
               STEP 02 · COLOURWAY
             </p>
@@ -107,7 +109,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                     key={colour.id}
                     type="button"
                     onClick={() => setSelectedColourId(colour.id)}
-                    className={`group flex items-center gap-3 border px-4 py-3 text-left transition-all duration-300 ${
+                    className={`group flex items-center gap-3 border px-4 py-3 focus:ring-1 focus:ring-orange text-left transition-all duration-300 ${
                       isActive
                         ? "border-orange bg-orange/10"
                         : "border-border bg-surface/40 hover:border-white/30 hover:bg-white/3"
@@ -143,7 +145,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55 }}
-            className="grid grid-cols-1 gap-10 border-t border-white/10 pt-20 lg:grid-cols-3 lg:gap-16"
+            className="grid grid-cols-1 gap-10 border-t border-white/10 pt-16 lg:grid-cols-3 lg:gap-16"
           >
             <div>
               <div className="group relative aspect-square overflow-hidden border border-border bg-surface">
@@ -151,6 +153,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                   src={selectedColour.image}
                   alt={`${selectedColour.name} P.O.P Glove`}
                   fill
+                  priority
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 70vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />

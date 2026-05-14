@@ -45,6 +45,7 @@ export function PopGloveHistory() {
             src="/images/pop-glove/pop-mixed.jpg"
             alt="P.O.P Glove design concept"
             fill
+            loading="eager"
             sizes="(max-width: 640px) 88vw, (max-width: 1024px) 70vw, 45vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />

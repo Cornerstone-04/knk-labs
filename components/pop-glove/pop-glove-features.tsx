@@ -6,71 +6,86 @@ import { popGloveFeatures } from "@/lib/pop-glove";
 
 export function PopGloveFeatures() {
   return (
-    <section className="border-b border-border bg-surface px-6 py-24 md:px-12 md:py-32">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-24">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="sticky top-24 h-fit"
-        >
-          <div className="group relative aspect-5/7 overflow-hidden border border-border bg-bg">
-            <Image
-              src="/images/pop-glove/pop-design.jpg"
-              alt="P.O.P Glove features"
-              fill
-              sizes="(max-width: 1024px) 100vw, 40vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-            />
+    <section className="border-b border-border">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
+        <div className="flex items-start border-b border-border md:border-r md:border-b-0 px-8 md:px-0">
+          <div className="relative flex min-h-105 w-full items-center justify-center bg-[#f3ece5] md:sticky md:top-0 md:h-svh">
+            <div className="relative">
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(249,115,22,0.08)_0%,transparent_75%)] blur-md" />
+
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="mx-auto w-full max-w-70 md:max-w-85 lg:max-w-105"
+              >
+                <Image
+                  src="/images/pop-glove/pop-design-cutout.png"
+                  alt="P.O.P Glove features"
+                  width={420}
+                  height={420}
+                  className="relative z-10 h-auto w-full max-w-70 object-contain md:max-w-85 lg:max-w-105"
+                />
+              </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mb-12"
-          >
-            <p className="mb-4 font-mono text-xxs tracking-[0.3em] text-orange normal-case">
-              Engineering Excellence
-            </p>
+          {popGloveFeatures.map((feature, index) => (
+            <motion.div
+              key={feature.id}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="border-b border-border px-8 py-10 md:py-20 md:px-12"
+            >
+              <div className="mb-6 flex items-center gap-4">
+                <span className="font-mono text-xxs tracking-[0.25em] text-orange">
+                  {feature.id}
+                </span>
 
-            <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] font-black leading-tight tracking-[-0.02em] text-white normal-case">
-              Engineered for Excellence
-            </h2>
-          </motion.div>
+                <span className="bg-orange px-2 py-0.5 font-mono text-xxs tracking-[0.15em] text-black normal-case">
+                  {feature.title}
+                </span>
+              </div>
 
-          <div className="space-y-0">
-            {popGloveFeatures.map((feature, index) => (
-              <motion.article
-                key={feature.id}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.08 }}
-                className="border-b border-white/10 py-8 last:border-0"
-              >
-                <div className="flex items-start gap-6 md:gap-8">
-                  <span className="shrink-0 font-heading text-[1.5rem] font-black text-white/30 md:text-[2rem]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+              <h2 className="mb-6 font-heading text-[clamp(2rem,4vw,3rem)] font-black leading-none text-white normal-case">
+                {feature.title}
+              </h2>
 
-                  <div className="min-w-0 flex-1">
-                    <h3 className="mb-4 font-heading text-[1.1rem] font-bold text-white md:text-[1.25rem]">
-                      {feature.title}
-                    </h3>
+              <p className="md:mb-8 max-w-[48ch] font-sans text-[0.9rem] leading-[1.85] text-white/50">
+                {feature.desc}
+              </p>
 
-                    <p className="font-sans text-[0.92rem] leading-[1.9] text-white/55">
-                      {feature.desc}
-                    </p>
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
+              {"bullets" in feature && Array.isArray(feature.bullets) && (
+                <ul className="space-y-3">
+                  {feature.bullets.map((bullet, bulletIndex) => (
+                    <motion.li
+                      key={bullet}
+                      initial={{ opacity: 0, x: -8 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: bulletIndex * 0.06,
+                      }}
+                      className="flex items-start gap-3"
+                    >
+                      <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-orange" />
+                      <span className="font-sans text-[0.85rem] text-white/55">
+                        {bullet}
+                      </span>
+                    </motion.li>
+                  ))}
+                </ul>
+              )}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

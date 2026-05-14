@@ -3,15 +3,15 @@ export const popGloveColours = [
   {
     id: "01",
     name: "Royal Black / Blue",
-    hex: "#1a1a2e",
-    accent: "#3b82f6",
+    hex: "#080a08",
+    accent: "#002743",
     edition: "Signature Pop Royal",
     image: "/images/pop-glove/royal-black-blue.jpg",
   },
   {
     id: "02",
     name: "Cognac Tan / Silver",
-    hex: "#8B6343",
+    hex: "#8a460d",
     accent: "#C0C0C0",
     edition: "Classic Luxury",
     image: "/images/pop-glove/cognac-tan-silver.jpg",
@@ -19,16 +19,16 @@ export const popGloveColours = [
   {
     id: "03",
     name: "Redline Crimson / Black",
-    hex: "#DC2626",
-    accent: "#0a0a0a",
+    hex: "#7a1b06",
+    accent: "#101109",
     edition: "Motorsport",
     image: "/images/pop-glove/redline-crimson-black.jpg",
   },
   {
     id: "04",
     name: "Arctic White / Navy",
-    hex: "#F5F5F5",
-    accent: "#1e3a5f",
+    hex: "#e5dcd4",
+    accent: "#20272d",
     edition: "Modern Clean",
     image: "/images/pop-glove/arctic-white-navy-2.jpg",
   },
@@ -36,22 +36,22 @@ export const popGloveColours = [
     id: "05",
     name: "Carbon Black / Neon Green",
     hex: "#111111",
-    accent: "#22c55e",
+    accent: "#9d9a37",
     edition: "Hypercar Energy",
     image: "/images/pop-glove/carbon-black-neon-green.jpg",
   },
   {
     id: "06",
     name: "Slate Grey / Orange",
-    hex: "#64748b",
-    accent: "#f97316",
+    hex: "#4d4237",
+    accent: "#87430b",
     edition: "Performance Utility",
     image: "/images/pop-glove/slate-grey-orange.jpg",
   },
   {
     id: "07",
     name: "Navy / Gold",
-    hex: "#1e3a5f",
+    hex: "#222c36",
     accent: "#ca8a04",
     edition: "Executive Premium",
     image: "/images/pop-glove/navy-gold.jpg",
@@ -59,15 +59,24 @@ export const popGloveColours = [
   {
     id: "08",
     name: "Olive / Matte Black",
-    hex: "#4a5329",
+    hex: "#2f2c14",
     accent: "#1a1a1a",
     edition: "Tactical Lifestyle",
     image: "/images/pop-glove/olive-matte-black.jpg",
   },
+  {
+    id: "09",
+    name: "Stealth Black",
+    hex: "#1A1A1A",
+    accent: "#444444",
+    edition: "Fingerless Edition",
+    image: "/images/pop-glove/fingerless-black.jpg",
+  },
 ] as const;
 
 // Watch orientation rule: IDs 01 and 02 = sideways clock face, 03–08 = upright
-export const SIDEWAYS_IDS = ["01", "02"];
+export const SIDEWAYS_IDS = ["01", "02"] as const;
+export const sidewaysIdSet = new Set<string>(SIDEWAYS_IDS);
 
 // Hand selector data
 export const handOptions = {
@@ -85,7 +94,13 @@ export const handOptions = {
     availableColourIds: ["03", "04", "05", "06", "07", "08"], // 6 colourways
     style: "Full Finger",
   },
-};
+  fingerless: {
+    label: "Fingerless",
+    description: "Half-finger performance edition with dual-hand construction.",
+    availableColourIds: ["09"],
+    style: "Half Finger",
+  },
+} as const;
 
 // Glove styles
 export const gloveStyles = [

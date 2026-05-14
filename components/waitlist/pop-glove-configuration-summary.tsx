@@ -2,7 +2,7 @@
 
 import { handOptions, preorderDiscount } from "@/lib/pop-glove";
 
-type HandType = "left" | "right";
+type HandType = "left" | "right" | "fingerless";
 
 type PopGloveColour = {
   id: string;

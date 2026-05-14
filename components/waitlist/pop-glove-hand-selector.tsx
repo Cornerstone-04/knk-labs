@@ -1,6 +1,6 @@
 "use client";
 
-type HandType = "left" | "right";
+type HandType = "left" | "right" | "fingerless";
 
 type PopGloveHandSelectorProps = {
   selectedHand: HandType;
@@ -18,7 +18,7 @@ export function PopGloveHandSelector({
       </label>
 
       <div className="flex gap-3">
-        {(["left", "right"] as const).map((hand) => {
+        {(["left", "right", "fingerless"] as const).map((hand) => {
           const isSelected = selectedHand === hand;
 
           return (
@@ -32,7 +32,11 @@ export function PopGloveHandSelector({
                   : "border-white/20 text-white/60 hover:border-white/40"
               }`}
             >
-              {hand === "left" ? "Left" : "Right"} Hand
+              {hand === "left"
+                ? "Left Hand"
+                : hand === "right"
+                  ? "Right Hand"
+                  : "Fingerless"}
             </button>
           );
         })}
