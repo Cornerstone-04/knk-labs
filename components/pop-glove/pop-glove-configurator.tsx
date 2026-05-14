@@ -107,7 +107,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                     key={colour.id}
                     type="button"
                     onClick={() => setSelectedColourId(colour.id)}
-                    className={`group flex items-center gap-3 border px-4 py-3 text-left transition-all duration-300 ${
+                    className={`group flex items-center gap-3 border px-4 py-3 focus:ring-1 focus:ring-orange text-left transition-all duration-300 ${
                       isActive
                         ? "border-orange bg-orange/10"
                         : "border-border bg-surface/40 hover:border-white/30 hover:bg-white/3"
