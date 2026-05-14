@@ -20,10 +20,10 @@ export const NavbarMobileMenu = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-0 z-40 flex flex-col bg-black/97 pt-16 backdrop-blur-[20px] md:hidden"
+      className="fixed inset-0 z-40 flex w-full max-w-full flex-col overflow-x-hidden bg-black/97 pt-16 backdrop-blur-[20px] md:hidden"
       style={{ WebkitBackdropFilter: "blur(20px)" }}
     >
-      <div className="flex flex-1 flex-col overflow-y-auto px-6 pt-8">
+      <div className="flex min-w-0 flex-1 flex-col overflow-x-hidden overflow-y-auto px-6 pt-8">
         {navLinks.slice(0, -1).map(({ href, label }, i) => {
           const isProducts = label === "Products";
           const active =
@@ -31,8 +31,8 @@ export const NavbarMobileMenu = ({
           return (
             <motion.div
               key={href}
-              initial={{ opacity: 0, x: -16 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.3,
                 delay: 0.05 + i * 0.07,
@@ -43,10 +43,10 @@ export const NavbarMobileMenu = ({
               <Link
                 href={href}
                 onClick={closeAction}
-                className="group flex items-center justify-between py-5 no-underline"
+                className="group flex min-w-0 items-center justify-between gap-4 py-5 no-underline"
               >
                 <span
-                  className={`font-heading text-[clamp(2rem,8vw,3rem)] font-black capitalize leading-none transition-colors duration-200 ${
+                  className={`min-w-0 wrap-break-word font-heading text-[clamp(2rem,8vw,3rem)] font-black capitalize leading-none transition-colors duration-200 ${
                     active ? "text-orange" : "text-white/85"
                   }`}
                 >

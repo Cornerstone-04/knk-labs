@@ -34,31 +34,34 @@ export function PopGloveFeatures() {
           </div>
         </div>
 
-        <div>
+        <div className="min-w-0 overflow-x-clip">
+          {" "}
           {popGloveFeatures.map((feature, index) => (
             <motion.div
               key={feature.id}
               initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="border-b border-border px-8 py-10 md:py-20 md:px-12"
+              className="min-w-0 overflow-hidden border-b border-border px-6 py-10 md:px-12 md:py-20"
             >
-              <div className="mb-6 flex items-center gap-4">
+              <div className="mb-6 flex min-w-0 flex-wrap items-center gap-4">
+                {" "}
                 <span className="font-mono text-xxs tracking-[0.25em] text-orange">
                   {feature.id}
                 </span>
-
                 <span className="bg-orange px-2 py-0.5 font-mono text-xxs tracking-[0.15em] text-black normal-case">
                   {feature.title}
                 </span>
               </div>
 
-              <h2 className="mb-6 font-heading text-[clamp(2rem,4vw,3rem)] font-black leading-none text-white normal-case">
+              <h2 className="mb-6 max-w-full wrap-break-word font-heading text-[clamp(2rem,4vw,3rem)] font-black leading-none text-white normal-case">
+                {" "}
                 {feature.title}
               </h2>
 
-              <p className="md:mb-8 max-w-[48ch] font-sans text-[0.9rem] leading-[1.85] text-white/50">
+              <p className="max-w-full wrap-break-word font-sans text-[0.9rem] leading-[1.85] text-white/50 md:mb-8">
+                {" "}
                 {feature.desc}
               </p>
 

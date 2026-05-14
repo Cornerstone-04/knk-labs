@@ -44,7 +44,7 @@ export default function Navbar() {
         initial={{ y: 0, opacity: 0 }}
         animate={{ y: hidden ? "-100%" : 0, opacity: 1 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 right-0 left-0 z-50 flex h-16 items-center justify-between px-6 md:px-12 ${
+        className={`fixed top-0 left-0 right-0 z-50 box-border flex h-16 w-dvw max-w-dvw items-center justify-between overflow-x-clip px-6 md:px-12 ${
           scrolled || open
             ? "border-b border-white/6 bg-black/95 backdrop-blur-md"
             : "border-b-0 bg-transparent"
