@@ -2,13 +2,7 @@
 
 import { motion } from "motion/react";
 import { useMemo, useState } from "react";
-import {
-  handOptions,
-  popGloveColours,
-  preorderDiscount,
-  SIDEWAYS_IDS,
-  sidewaysIdSet,
-} from "@/lib/pop-glove";
+import { handOptions, popGloveColours, sidewaysIdSet } from "@/lib/pop-glove";
 import { PopGlovePreorderSuccess } from "./pop-glove-preorder-success";
 import { PopGlovePreorderHeader } from "./pop-glove-preorder-header";
 import { PopGloveHandSelector } from "./pop-glove-hand-selector";
