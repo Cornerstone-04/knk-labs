@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "P.O.P Glove | KNK Labs",
+  title: "P.O.P Glove",
   description:
     "The P.O.P Glove — a next-generation luxury driving glove with an integrated dorsal-mounted timepiece.",
   openGraph: {
-    title: "P.O.P Glove | KNK Labs",
+    title: "P.O.P Glove",
     description:
       "Luxury driving glove with an integrated dorsal-mounted timepiece.",
     url: "https://www.knklabs.co.uk/products/pop-glove",

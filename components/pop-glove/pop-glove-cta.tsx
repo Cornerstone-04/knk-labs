@@ -18,7 +18,7 @@ export function PopGloveCta({ onConfigureClick }: PopGloveCtaProps) {
           transition={{ duration: 0.7 }}
         >
           <h2 className="mb-8 font-heading text-[clamp(2rem,6vw,4rem)] font-black leading-tight tracking-[-0.02em] text-white normal-case">
-            Ready for the Future of Driving?
+            Ready for the Future of Watches?
           </h2>
 
           <p className="mx-auto mb-12 max-w-[55ch] font-sans text-[0.95rem] text-white/60">

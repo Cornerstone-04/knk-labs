@@ -20,7 +20,7 @@ export function PopGloveFeatures() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="mx-auto w-full max-w-70 md:max-w-85 lg:max-w-105"
+                className="mx-auto w-full max-w-70 md:max-w-85 lg:max-w-96"
               >
                 <Image
                   src="/images/pop-glove/pop-design-cutout.png"
@@ -35,7 +35,6 @@ export function PopGloveFeatures() {
         </div>
 
         <div className="min-w-0 overflow-x-clip">
-          {" "}
           {popGloveFeatures.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -45,10 +44,12 @@ export function PopGloveFeatures() {
               transition={{ duration: 0.6, delay: index * 0.08 }}
               className="min-w-0 overflow-hidden border-b border-border px-6 py-10 md:px-12 md:py-20"
             >
-              <div className="mb-6 flex min-w-0 flex-wrap items-center gap-4">
-                {" "}
+              <div className="mb-6 flex min-w-0 flex-wrap items-center gap-2">
                 <span className="font-mono text-xxs tracking-[0.25em] text-orange">
                   {feature.id}
+                </span>
+                <span className="font-mono text-xxs tracking-[0.15em] text-white/50">
+                  &middot;
                 </span>
                 <span className="bg-orange px-2 py-0.5 font-mono text-xxs tracking-[0.15em] text-black normal-case">
                   {feature.title}
@@ -56,12 +57,10 @@ export function PopGloveFeatures() {
               </div>
 
               <h2 className="mb-6 max-w-full wrap-break-word font-heading text-[clamp(2rem,4vw,3rem)] font-black leading-none text-white normal-case">
-                {" "}
                 {feature.title}
               </h2>
 
               <p className="max-w-full wrap-break-word font-sans text-[0.9rem] leading-[1.85] text-white/50 md:mb-8">
-                {" "}
                 {feature.desc}
               </p>
 
