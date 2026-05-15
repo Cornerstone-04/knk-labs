@@ -69,11 +69,11 @@ export function PopGlovePreorder() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.2 }}
-      className="border border-white/5 bg-surface p-8 md:p-12"
+      className="min-w-0 overflow-x-clip border border-white/5 bg-surface p-5 sm:p-8 md:p-12"
     >
       <PopGlovePreorderHeader />
 
-      <div className="grid gap-12 lg:grid-cols-2">
+      <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-12">
         <div className="flex flex-col gap-12">
           <PopGloveHandSelector
             selectedHand={selectedHand}

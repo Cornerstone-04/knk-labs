@@ -17,10 +17,9 @@ export function PopGlovePreorderForm({
   onSubmit,
 }: PopGlovePreorderFormProps) {
   return (
-    <div className="flex flex-col gap-8">
-      <div className="relative aspect-square overflow-hidden border border-white/10 bg-black/20">
+    <div className="flex min-w-0 flex-col gap-8">
+      <div className="relative aspect-square min-w-0 overflow-hidden border border-white/10 bg-black/20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(249,115,22,0.1),transparent)]" />
-
         <Image
           src={selectedColourImage}
           alt={`${selectedColourName} P.O.P Glove`}
