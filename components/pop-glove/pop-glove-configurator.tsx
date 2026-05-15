@@ -63,8 +63,8 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
           </motion.div>
 
           <div className="">
-            <p className="mb-8 font-mono text-xxs tracking-widest text-white/50 normal-case">
-              STEP 1: SELECT HAND
+            <p className="mb-4 font-mono text-xxs tracking-[0.2em] text-white/40 normal-case">
+              STEP 01 &middot; SELECT HAND
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -96,8 +96,8 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
           </div>
 
           <div className="">
-            <p className="mb-4 font-mono text-xxs tracking-[0.2em] text-white/20 normal-case">
-              STEP 02 · COLOURWAY
+            <p className="mb-4 font-mono text-xxs tracking-[0.2em] text-white/40 normal-case">
+              STEP 02 &middot; COLOURWAY
             </p>
 
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">

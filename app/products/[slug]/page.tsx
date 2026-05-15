@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/lib/data";
-import { use, useRef } from "react";
+import { use } from "react";
 import { LuArrowRight } from "react-icons/lu";
 import { CTASection, CTATitle } from "@/components/ui/cta-section";
 import { RelatedProductCard } from "@/components/ui/related-product-card";

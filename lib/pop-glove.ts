@@ -5,7 +5,7 @@ export const popGloveColours = [
     name: "Royal Black / Blue",
     hex: "#080a08",
     accent: "#002743",
-    edition: "Signature Pop Royal",
+    edition: "Signature Royal Pop",
     image: "/images/pop-glove/royal-black-blue.jpg",
   },
   {
@@ -121,7 +121,7 @@ export const popGloveFeatures = [
   {
     id: "01",
     title: "Dorsal Watch Integration",
-    desc: "A built-in structured cradle securely houses the AP Swatch Pop Royal, maintaining visibility and stability at the exact point of the driver's natural line of sight.",
+    desc: "A built-in structured cradle securely houses the AP Swatch Royal Pop, maintaining visibility and stability at the exact point of the driver's natural line of sight.",
   },
   {
     id: "02",
@@ -141,12 +141,12 @@ export const popGloveFeatures = [
   {
     id: "05",
     title: "Shock-Absorbing Mount",
-    desc: "Internal cushioning minimises vibration transfer from the wheel to the timepiece — protecting the watch during aggressive driving.",
+    desc: "Internal cushioning minimises vibration transfer from the wheel to the timepiece, protecting the watch during aggressive driving.",
   },
   {
     id: "06",
     title: "Touch Function Compatibility",
-    desc: "Designed for modern usability — navigate your dashboard, phone, or infotainment system without removing the glove.",
+    desc: "Designed for modern usability. Navigate your dashboard, phone, or infotainment system without removing the glove.",
   },
 ];
 
@@ -159,7 +159,7 @@ export const popGloveHistory = {
   headline: "Why the P.O.P Glove?",
   body: [
     "The driving glove has always been more than protection, it is a statement. From the perforated leather of classic motorsport to the padded palms of modern racing, every great glove has served both function and identity.",
-    "The P.O.P Glove was born from a simple question: what if the glove could tell time? Inspired by the elegance of the AP Swatch Pop Royal, KNK Labs set out to create something like the driving gloves of the golden era. Whether you're gripping the wheel of a golf cart or a supercar, the P.O.P Glove puts time exactly where you need it.",
+    "The P.O.P Glove was born from a simple question: what if the glove could tell time? Inspired by the elegance of the AP Swatch Royal Pop, KNK Labs set out to create something like the driving gloves of the golden era. Whether you're gripping the wheel of a golf cart or a supercar, the P.O.P Glove puts time exactly where you need it.",
     "P.O.P = Time at the point you need it most. Not on your wrist. Not on the dashboard. On your hand, in your line of sight, always.",
   ],
 };
@@ -185,7 +185,7 @@ export const drivingExperience = {
     },
     {
       title: "Touch Compatibility",
-      desc: "Modern driving demands multi-function interaction. Navigate, respond, control — all without removing the glove. Engineered for contemporary mobility.",
+      desc: "Modern driving demands multi-function interaction. Navigate, respond, control, all without removing the glove. Engineered for contemporary mobility.",
     },
   ],
 };
@@ -207,7 +207,7 @@ export const materialsAndCraft = {
     },
     {
       name: "Precision Stitching",
-      desc: "Every seam is hand-finished using traditional techniques. The stitching is both beautiful and functional — reinforced stress points ensure years of reliable performance.",
+      desc: "Every seam is hand-finished using traditional techniques. The stitching is both beautiful and functional, reinforced stress points ensure years of reliable performance.",
     },
     {
       name: "Shock-Absorbing Mount",
@@ -221,11 +221,11 @@ export const technicalInnovation = {
   eyebrow: "Engineering Excellence",
   headline: "Innovation Meets Precision",
   intro:
-    "The P.O.P Glove is not just beautiful — it's engineered. Every system has been tested, refined, and perfected for real-world driving conditions.",
+    "The P.O.P Glove is not just beautiful, it's engineered. Every system has been tested, refined, and perfected for real-world driving conditions.",
   specs: [
     {
       title: "Quick-Release Watch Mount",
-      desc: "Proprietary locking mechanism holds the Swatch Pop Royal securely during aggressive driving, yet releases smoothly for everyday wear.",
+      desc: "Proprietary locking mechanism holds the Swatch Royal Pop securely during aggressive driving, yet releases smoothly for everyday wear.",
     },
     {
       title: "Shock Absorption System",
@@ -263,7 +263,7 @@ export const lifestyle = {
     },
     {
       title: "Modern Horology",
-      desc: "The Swatch Pop Royal is a horological legend. Paired with the P.O.P Glove, it becomes something greater — a fusion of watchmaking and wearable design.",
+      desc: "The Swatch Royal Pop is a horological legend. Paired with the P.O.P Glove, it becomes something greater: a fusion of watchmaking and wearable design.",
     },
     {
       title: "Performance Identity",
@@ -276,7 +276,7 @@ export const lifestyle = {
 export const productAnatomy = [
   {
     label: "Dorsal Watch Cradle",
-    desc: "Custom-engineered mounting system secures the Swatch Pop Royal with precision. Shock-absorbing interior prevents movement and protects the timepiece.",
+    desc: "Custom-engineered mounting system secures the Swatch Royal Pop with precision. Shock-absorbing interior prevents movement and protects the timepiece.",
   },
   {
     label: "Premium Leather Upper",
@@ -305,7 +305,7 @@ export const howToWear = {
   eyebrow: "Designed Around Royal Pop",
   headline: "How To Wear The P.O.P Glove",
   intro:
-    "The P.O.P Glove was engineered specifically around the Audemars Piguet x Swatch Royal Pop collection. This is not a glove with a watch attached—it's a unified system where the pocket watch becomes your driving interface.",
+    "The P.O.P Glove was engineered specifically around the Audemars Piguet x Swatch Royal Pop collection. This is not a glove with a watch attached, it's a unified system where the pocket watch becomes your driving interface.",
 
   royalPopSpotlight: {
     eyebrow: "The Inspiration",
@@ -328,7 +328,7 @@ export const howToWear = {
       number: "02",
       title: "Align with the Cradle",
       description:
-        "Position the watch face toward the dorsal surface. The precision-engineered cradle guides the 40mm bezel into position seamlessly.",
+        "Position the watch face toward the dorsal surface from inside the glove. The precision-engineered cradle guides the 40mm bezel into position seamlessly.",
     },
     {
       number: "03",
