@@ -35,7 +35,13 @@ export function PopGloveConfigurationSummary({
         <SummaryRow label="Hand" value={handOptions[selectedHand].label} />
         <SummaryRow
           label="Watch Orientation"
-          value={isClockSideways ? "Sideways" : "Upright"}
+          value={
+            selectedHand === "fingerless"
+              ? "Dual-Hand Set"
+              : isClockSideways
+                ? "Sideways"
+                : "Upright"
+          }
         />
 
         <div className="flex items-center justify-between border-t border-white/10 pt-3">

@@ -20,7 +20,7 @@ export function PopGloveColourSelector({
         Colourway
       </label>
 
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+      <div className="grid grid-cols-3 gap-3  md:grid-cols-4">
         {popGloveColours.map((colour) => {
           const isAvailable = availableColourIds.includes(colour.id);
           const isSelected = colour.id === selectedColourId;
@@ -47,7 +47,7 @@ export function PopGloveColourSelector({
               }`}
             >
               <span
-                className="relative h-10 w-full shrink-0 border border-white/15"
+                className="relative h-10 w-10 shrink-0 border border-white/15"
                 style={{ backgroundColor: colour.hex }}
               >
                 <span
