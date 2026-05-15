@@ -116,7 +116,7 @@ export const gloveStyles = [
   },
 ];
 
-// Key features (6 items)
+// Key features (7 items)
 export const popGloveFeatures = [
   {
     id: "01",
@@ -130,21 +130,32 @@ export const popGloveFeatures = [
   },
   {
     id: "03",
+    title: "NFC Authentication Chip",
+    desc: "Every P.O.P Glove comes embedded with an NFC chip for instant verification of authenticity and ownership.",
+    bullets: [
+      "Tap or scan with your phone to authenticate your gloves instantly",
+      "Verifies originality and prevents counterfeit products",
+      "Secures your purchase with proof of authenticity",
+      "Creates a digital record tied to your specific glove",
+    ],
+  },
+  {
+    id: "04",
     title: "Premium Leather Craftsmanship",
     desc: "Soft, perforated leather ensures breathability, grip, and long-wear comfort across all sessions.",
   },
   {
-    id: "04",
+    id: "05",
     title: "Ergonomic Performance Fit",
     desc: "Pre-curved fingers and reinforced palm zones for enhanced steering control and reduced fatigue.",
   },
   {
-    id: "05",
+    id: "06",
     title: "Shock-Absorbing Mount",
     desc: "Internal cushioning minimises vibration transfer from the wheel to the timepiece, protecting the watch during aggressive driving.",
   },
   {
-    id: "06",
+    id: "07",
     title: "Touch Function Compatibility",
     desc: "Designed for modern usability. Navigate your dashboard, phone, or infotainment system without removing the glove.",
   },
