@@ -22,7 +22,7 @@ export const HeroSection = () => {
 
       <motion.div
         style={{ opacity: heroOpacity, y: heroY }}
-        className="relative z-10 w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-24 pb-12"
+        className="relative z-10 w-full px-6 md:px-12 2xl:px-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-24 pb-12"
       >
         <div>
           {/*<motion.p

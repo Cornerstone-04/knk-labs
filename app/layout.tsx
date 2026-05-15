@@ -90,6 +90,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: [
+    { rel: "icon", url: "/logo-orange.png" },
+    { rel: "apple-touch-icon", url: "/apple-touch-icon.png", sizes: "180x180" },
+    { rel: "icon", url: "/favicon-32x32.png", sizes: "32x32" },
+    { rel: "icon", url: "/favicon-16x16.png", sizes: "16x16" },
+  ],
 };
 
 export default function RootLayout({
