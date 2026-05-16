@@ -15,14 +15,15 @@ export const HeroSection = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[88svh] md:min-h-svh flex items-end overflow-hidden border-b border-border"
+      // min-h-[88svh] md:min-h-svh
+      className="relative  flex items-end overflow-hidden border-b border-border"
     >
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.07)_0%,transparent_65%)] z-0" />
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-[linear-gradient(to_top,#000_0%,transparent_100%)] z-1" />
+      {/* <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.07)_0%,transparent_65%)] z-0" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-[linear-gradient(to_top,#000_0%,transparent_100%)] z-1" /> */}
 
       <motion.div
         style={{ opacity: heroOpacity, y: heroY }}
-        className="relative z-10 w-full px-6 md:px-12 2xl:px-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-24 pb-12"
+        className="relative z-10 w-full px-6 md:px-12 2xl:px-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-24 pb-12"
       >
         <div>
           {/*<motion.p

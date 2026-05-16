@@ -8,6 +8,30 @@ export const PopGloveHeroSection = () => {
     <section className="overflow-x-clip border-b border-border bg-bg px-6 pt-28 pb-20 md:px-12 lg:pt-34 lg:pb-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="relative min-h-105 overflow-hidden border border-border bg-surface sm:min-h-130 lg:min-h-155"
+        >
+          <Image
+            src="/images/pop-glove/brown-pop-watch.jpg"
+            alt="P.O.P Glove"
+            fill
+            priority
+            sizes="(max-width: 1024px) 92vw, 58vw"
+            className="object-cover"
+          />
+
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-5 left-5 right-5 border-t border-white/10 pt-4 sm:bottom-8 sm:left-8 sm:right-8">
+            <p className="font-mono text-xxs tracking-[0.25em] text-orange normal-case">
+              P.O.P Glove · AP x Swatch Royal Pop
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -61,30 +85,6 @@ export const PopGloveHeroSection = () => {
             >
               Join Waitlist
             </Link>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative min-h-105 overflow-hidden border border-border bg-surface sm:min-h-130 lg:min-h-155"
-        >
-          <Image
-            src="/images/pop-glove/brown-pop-watch.jpg"
-            alt="P.O.P Glove"
-            fill
-            priority
-            sizes="(max-width: 1024px) 92vw, 58vw"
-            className="object-cover"
-          />
-
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
-
-          <div className="absolute bottom-5 left-5 right-5 border-t border-white/10 pt-4 sm:bottom-8 sm:left-8 sm:right-8">
-            <p className="font-mono text-xxs tracking-[0.25em] text-orange normal-case">
-              P.O.P Glove · AP x Swatch Royal Pop
-            </p>
           </div>
         </motion.div>
       </div>
