@@ -59,7 +59,7 @@ export function PopGloveHero({ onConfigureClick }: PopGloveHeroProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mb-16 flex flex-wrap gap-4 lg:mb-0"
+              className="flex flex-wrap gap-4 lg:mb-0"
             >
               <Link
                 href="/waitlist"

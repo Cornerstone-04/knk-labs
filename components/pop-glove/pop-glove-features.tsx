@@ -7,7 +7,7 @@ import { popGloveFeatures } from "@/lib/pop-glove";
 export function PopGloveFeatures() {
   return (
     <section className="overflow-x-clip border-b border-border bg-bg">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:px-10 lg:px-12 lg:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-6 md:px-10 lg:px-12 lg:py-24">
         <div className="mb-10 grid gap-10">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -53,7 +53,7 @@ export function PopGloveFeatures() {
               className="object-contain"
             />
 
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/5 md:via-black/20 to-transparent" />
 
             <div className="absolute bottom-5 left-5 right-5 sm:bottom-8 sm:left-8 sm:right-8">
               <p className="font-mono text-xxs tracking-[0.25em] text-orange normal-case">

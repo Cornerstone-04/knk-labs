@@ -7,7 +7,7 @@ import { TransformationPoints } from "./transformation-points";
 
 export function PopGloveHowToWear() {
   return (
-    <section className="overflow-x-clip border-b border-border px-5 py-20 sm:px-6 md:px-10 md:py-24 lg:px-12 lg:py-32">
+    <section className="overflow-x-clip border-b border-border px-5 py-16 sm:px-6 md:px-10 md:py-24 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <HowToWearIntro />
         <RoyalPopSpotlight />

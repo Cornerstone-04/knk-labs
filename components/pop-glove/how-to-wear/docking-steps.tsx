@@ -5,7 +5,7 @@ import { howToWear } from "@/lib/pop-glove";
 
 export function DockingSteps() {
   return (
-    <div className="mb-16 md:mb-32">
+    <div className="py-12 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

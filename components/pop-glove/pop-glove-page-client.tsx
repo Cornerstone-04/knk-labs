@@ -27,7 +27,7 @@ export function PopGlovePageClient() {
       {/* <PopGloveStyles /> */}
       <PopGloveConfigurator ref={configuratorRef} />
       <PopGloveFeatures />
-      <PopGloveCta onConfigureClick={scrollToConfigurator} />
+      <PopGloveCta />
     </main>
   );
 }

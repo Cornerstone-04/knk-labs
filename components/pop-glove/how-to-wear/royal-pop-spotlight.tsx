@@ -10,7 +10,7 @@ export function RoyalPopSpotlight() {
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
 
   return (
-    <div className="mx-auto mb-16 grid max-w-7xl grid-cols-1 items-start gap-10 border-b border-border pb-16 md:mb-24 md:gap-12 lg:grid-cols-2 lg:gap-20">
+    <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 border-b border-border py-12 md:py-24 md:gap-12 lg:grid-cols-2 lg:gap-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

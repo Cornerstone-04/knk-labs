@@ -6,7 +6,7 @@ import { popGloveHistory } from "@/lib/pop-glove";
 
 export function PopGloveHistory() {
   return (
-    <section className="border-b border-border px-6 py-24 md:px-12 md:py-32">
+    <section className="border-b border-border px-6 py-16 md:px-12 md:py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -39,10 +39,10 @@ export function PopGloveHistory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="group relative flex aspect-4/3 items-center justify-center overflow-hidden border border-border bg-surface"
+          className="group relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-surface"
         >
           <Image
-            src="/images/pop-glove/pop-options.png"
+            src="/images/pop-glove/pop-stadium.jpg"
             alt="P.O.P Glove design concept"
             fill
             loading="eager"

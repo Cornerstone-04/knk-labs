@@ -22,7 +22,7 @@ export function TransformationPoints() {
         </h3>
       </div>
 
-      <div className="grid grid-cols-1 gap-10 md:gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2 lg:gap-20">
         {howToWear.experiencePoints.map((point, index) => (
           <motion.div
             key={point.title}
@@ -30,7 +30,7 @@ export function TransformationPoints() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: index * 0.08 }}
-            className="min-w-0 border-l border-orange/30 pl-5 md:pl-6"
+            className="min-w-0 border-l border-orange/30 pl-5 py-2.5"
           >
             <h4 className="mb-4 wrap-break-word font-heading text-[1.15rem] font-bold tracking-[-0.01em] text-white">
               {point.title}
