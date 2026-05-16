@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { useMemo, useState } from "react";
 import { handOptions, popGloveColours, sidewaysIdSet } from "@/lib/pop-glove";
+import { useWaitlistSubmit } from "@/hooks/use-waitlist-submit";
 import { PopGlovePreorderSuccess } from "./pop-glove-preorder-success";
 import { PopGlovePreorderHeader } from "./pop-glove-preorder-header";
 import { PopGloveHandSelector } from "./pop-glove-hand-selector";
@@ -12,15 +13,12 @@ import { PopGlovePreorderForm } from "./pop-glove-preorder-form";
 
 type HandType = "left" | "right" | "fingerless";
 
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 export function PopGlovePreorder() {
   const [selectedHand, setSelectedHand] = useState<HandType>("right");
   const [selectedColourId, setSelectedColourId] = useState("03");
-  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const { loading, error, setError, submitWaitlist } = useWaitlistSubmit();
 
   const availableColourIds = handOptions[selectedHand].availableColourIds;
 
@@ -32,6 +30,13 @@ export function PopGlovePreorder() {
   }, [selectedColourId]);
 
   const isClockSideways = sidewaysIdSet.has(selectedColour.id);
+
+  const watchOrientation =
+    selectedHand === "fingerless"
+      ? "Dual-Hand Set"
+      : isClockSideways
+        ? "Sideways"
+        : "Upright";
 
   function handleHandChange(hand: HandType) {
     const firstAvailableColourId = handOptions[hand].availableColourIds[0];
@@ -51,12 +56,32 @@ export function PopGlovePreorder() {
   async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    const formData = new FormData(event.currentTarget);
+
+    const fullName = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const country = String(formData.get("country") ?? "").trim();
+
+    if (!fullName || !email || !country) {
+      setError("Please fill in all required fields.");
+      return;
+    }
+
     try {
-      setLoading(true);
-      await delay(600);
+      await submitWaitlist({
+        formType: "pop",
+        fullName,
+        email,
+        country,
+        selectedHand: handOptions[selectedHand].label,
+        selectedColour: selectedColour.name,
+        selectedStyle: handOptions[selectedHand].style,
+        watchOrientation,
+      });
+
       setSubmitted(true);
-    } finally {
-      setLoading(false);
+    } catch {
+      // error is already handled in hook
     }
   }
 
@@ -69,12 +94,21 @@ export function PopGlovePreorder() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.2 }}
-      className="min-w-0 overflow-x-clip border border-white/5 bg-surface p-5 sm:p-8 md:p-12"
+      className="min-w-0 overflow-x-clip border-t border-white/5 pt-10"
     >
       <PopGlovePreorderHeader />
 
-      <div className="grid min-w-0 gap-10 lg:grid-cols-2 lg:gap-12">
-        <div className="flex flex-col gap-12">
+      <div className="grid min-w-0 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+        <div className="min-w-0 lg:sticky lg:top-24 lg:self-start">
+          <PopGlovePreorderForm
+            loading={loading}
+            error={error}
+            selectedColourName={selectedColour.name}
+            selectedColourImage={selectedColour.image}
+            onSubmit={handleSubmit}
+          />
+        </div>
+        <div className="flex min-w-0 flex-col gap-10">
           <PopGloveHandSelector
             selectedHand={selectedHand}
             onHandChange={handleHandChange}
@@ -92,13 +126,6 @@ export function PopGlovePreorder() {
             isClockSideways={isClockSideways}
           />
         </div>
-
-        <PopGlovePreorderForm
-          loading={loading}
-          selectedColourName={selectedColour.name}
-          selectedColourImage={selectedColour.image}
-          onSubmit={handleSubmit}
-        />
       </div>
     </motion.div>
   );

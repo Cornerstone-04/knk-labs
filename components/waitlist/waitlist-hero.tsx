@@ -26,14 +26,14 @@ export const WaitlistHero = () => {
         <span className="text-orange">Be Ahead.</span>
       </motion.h1>
 
-      <motion.p
+      {/* <motion.p
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mb-4 font-sans text-[0.9rem] leading-[1.8] text-white/50"
       >
         {waitlist.subheadline}
-      </motion.p>
+      </motion.p> */}
 
       <motion.p
         initial={{ opacity: 0, y: 12 }}

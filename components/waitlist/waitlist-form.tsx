@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useState } from "react";
 import { waitlist } from "@/lib/data";
 import { ProductPref } from "@/types";
+import { useWaitlistSubmit } from "@/hooks/use-waitlist-submit";
 import { WaitlistField } from "./waitlist-field";
 import { WaitlistProductPreference } from "./waitlist-product-preference";
 
@@ -11,27 +12,43 @@ type WaitlistFormProps = {
   successAction: () => void;
 };
 
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 export function WaitlistForm({ successAction }: WaitlistFormProps) {
-  const [loading, setLoading] = useState(false);
   const [pref, setPref] = useState<ProductPref>("");
+  const { loading, error, setError, submitWaitlist } = useWaitlistSubmit();
 
-  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  async function handleSubmit(event: React.SyntheticEvent<HTMLFormElement>) {
+    event.preventDefault();
 
-    if (!pref) return;
+    if (!pref) {
+      setError("Please select a product preference.");
+      return;
+    }
+
+    const formData = new FormData(event.currentTarget);
+
+    const fullName = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const country = String(formData.get("country") ?? "").trim();
+
+    if (!fullName || !email || !country) {
+      setError("Please fill in all required fields.");
+      return;
+    }
 
     try {
-      setLoading(true);
-      await delay(600);
+      await submitWaitlist({
+        formType: "knk",
+        fullName,
+        email,
+        country,
+        productInterest: pref,
+      });
+
       successAction();
-    } finally {
-      setLoading(false);
+    } catch {
+      // error is already handled by the hook
     }
-  };
+  }
 
   const isDisabled = loading || !pref;
 
@@ -68,6 +85,12 @@ export function WaitlistForm({ successAction }: WaitlistFormProps) {
         required
         placeholder="Your country"
       />
+
+      {error && (
+        <p className="border border-red-500/20 bg-red-500/10 px-4 py-3 font-sans text-sm text-red-300">
+          {error}
+        </p>
+      )}
 
       <button
         type="submit"

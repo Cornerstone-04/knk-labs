@@ -1,7 +1,7 @@
 "use client";
 
-import { WaitlistHero } from "@/components/waitlist";
-import { WaitlistTabs } from "@/components/waitlist/waitlist-tabs";
+import { PopGlovePreorder, WaitlistHero } from "@/components/waitlist";
+// import { WaitlistTabs } from "@/components/waitlist/waitlist-tabs";
 
 export default function WaitlistPage() {
   return (
@@ -9,7 +9,9 @@ export default function WaitlistPage() {
       <div className="px-6 md:px-12 py-10 border-b border-white/5">
         <div className="mx-auto max-w-7xl">
           <WaitlistHero />
-          <WaitlistTabs />
+          <div className="mt-12">
+            <PopGlovePreorder />
+          </div>{" "}
         </div>
       </div>
     </div>

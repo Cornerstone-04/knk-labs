@@ -62,7 +62,7 @@ type SummaryRowProps = {
 
 function SummaryRow({ label, value }: SummaryRowProps) {
   return (
-    <div className="flex items-center justify-between gap-6">
+    <div className="flex items-center justify-between gap-6 text-sm">
       <span className="text-white/70">{label}</span>
       <span className="text-right font-semibold text-white">{value}</span>
     </div>
