@@ -7,4 +7,5 @@ export * from "./marquee-strip";
 export * from "./cta-strip";
 export * from "./developer-strip";
 export * from "./expertise-strip";
-export * from "./pop-glove-strip";
+export * from "./pop-glove-hero-section";
+export * from "./pop-glove-divider-strip";

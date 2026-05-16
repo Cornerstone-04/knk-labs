@@ -3,33 +3,56 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { LuArrowRight } from "react-icons/lu";
 
-export const PopGloveStrip = () => {
+export const PopGloveHeroSection = () => {
   return (
-    <section className="overflow-x-clip border-b border-border bg-bg px-6 py-24 md:px-12">
+    <section className="overflow-x-clip border-b border-border bg-bg px-6 pt-28 pb-20 md:px-12 lg:pt-34 lg:pb-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="relative min-h-105 overflow-hidden border border-border bg-surface sm:min-h-130 lg:min-h-155"
+        >
+          <Image
+            src="/images/pop-glove/brown-pop-watch.jpg"
+            alt="P.O.P Glove"
+            fill
+            priority
+            sizes="(max-width: 1024px) 92vw, 58vw"
+            className="object-cover"
+          />
+
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
+
+          <div className="absolute bottom-5 left-5 right-5 border-t border-white/10 pt-4 sm:bottom-8 sm:left-8 sm:right-8">
+            <p className="font-mono text-xxs tracking-[0.25em] text-orange normal-case">
+              P.O.P Glove · AP x Swatch Royal Pop
+            </p>
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="min-w-0"
         >
           <p className="mb-4 font-mono text-xxs tracking-[0.3em] text-orange normal-case">
-            New P.O.P Collection
+            KNK Labs · P.O.P Collection
           </p>
-          <motion.h2
+
+          <motion.h1
             initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading mb-6 font-black normal-case text-[clamp(2rem,5vw,4rem)] text-white"
+            className="mb-6 font-heading text-[clamp(3rem,8vw,7rem)] font-black leading-[0.88] text-white normal-case"
           >
             Time.
             <br />
             <span className="text-orange">Repositioned.</span>
-          </motion.h2>
+          </motion.h1>
 
-          <p className="mb-8 font-sans text-[0.9rem] leading-[1.85] text-white/50">
+          <p className="mb-8 max-w-[56ch] font-sans text-[0.95rem] leading-[1.9] text-white/50">
             The P.O.P Glove transforms the AP x Swatch Royal Pop into a
             driver-facing wearable interface — placing time directly where
             motion, control, and visibility meet.
@@ -62,30 +85,6 @@ export const PopGloveStrip = () => {
             >
               Join Waitlist
             </Link>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="relative min-h-105 overflow-hidden border border-border bg-surface sm:min-h-130 lg:min-h-155"
-        >
-          <Image
-            src="/images/pop-glove/brown-pop-watch.jpg"
-            alt="P.O.P Glove"
-            fill
-            sizes="(max-width: 1024px) 92vw, 58vw"
-            className="object-cover"
-          />
-
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/10 to-transparent" />
-
-          <div className="absolute bottom-5 left-5 right-5 border-t border-white/10 pt-4 sm:bottom-8 sm:left-8 sm:right-8">
-            <p className="font-mono text-xxs tracking-[0.25em] text-orange normal-case">
-              P.O.P Glove System
-            </p>
           </div>
         </motion.div>
       </div>

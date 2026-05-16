@@ -7,7 +7,8 @@ import {
   ExpertiseStrip,
   HeroSection,
   MarqueeStrip,
-  PopGloveStrip,
+  PopGloveDividerStrip,
+  PopGloveHeroSection,
   ProductsSection,
   StatsSection,
   SystemSection,
@@ -16,12 +17,13 @@ import {
 export default function HomePage() {
   return (
     <div className="bg-bg">
+      <PopGloveHeroSection />
+      <PopGloveDividerStrip />
       <HeroSection />
       <MarqueeStrip />
       <StatsSection />
       <SystemSection />
       <ProductsSection />
-      <PopGloveStrip />
       <BundleSecction />
       <ExpertiseStrip />
       <DeveloperStrip />
