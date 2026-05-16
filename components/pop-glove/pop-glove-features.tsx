@@ -8,7 +8,7 @@ export function PopGloveFeatures() {
   return (
     <section className="overflow-x-clip border-b border-border bg-bg">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 md:px-10 lg:px-12 lg:py-32">
-        <div className="mb-16 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="mb-10 grid gap-10">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,22 +19,22 @@ export function PopGloveFeatures() {
               Engineered for the Driver
             </p>
 
-            <h2 className="font-heading text-[clamp(2.5rem,7vw,6rem)] font-black leading-[0.9]  text-white normal-case">
+            <h2 className="font-heading text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-tight tracking-[-0.02em] text-white normal-case">
               Every Detail Has a Purpose.
             </h2>
           </motion.div>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-[58ch] font-sans text-[0.95rem] leading-[1.9] text-white/50 lg:justify-self-end"
+            className="max-w-[58ch] font-sans text-[0.95rem] leading-[1.9] text-white/50"
           >
             Built around visibility, control, and the Royal Pop watch system,
             the P.O.P Glove turns a driving accessory into a functional cockpit
             interface.
-          </motion.p>
+          </motion.p> */}
         </div>
 
         <motion.div

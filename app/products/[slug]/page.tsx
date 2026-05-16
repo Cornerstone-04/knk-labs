@@ -81,8 +81,8 @@ export default function ProductPage({
             </div>
 
             <motion.div
-              initial={{ opacity: 0, x: 24 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.9,
                 delay: 0.4,
@@ -131,8 +131,8 @@ export default function ProductPage({
       <section className="border-b border-border px-6 py-24 md:px-12">
         <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
@@ -154,8 +154,8 @@ export default function ProductPage({
             )}
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
@@ -219,8 +219,8 @@ export default function ProductPage({
             {product.features.map((f, i) => (
               <motion.div
                 key={f.id}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="border-b border-border px-8 md:px-12 py-20"
@@ -243,8 +243,8 @@ export default function ProductPage({
                   {f.bullets.map((b, bi) => (
                     <motion.li
                       key={bi}
-                      initial={{ opacity: 0, x: -8 }}
-                      whileInView={{ opacity: 1, x: 0 }}
+                      initial={{ opacity: 0, y: -8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: bi * 0.06 }}
                       className="flex items-start gap-3"
@@ -288,8 +288,8 @@ export default function ProductPage({
               {product.mountReasons.map((r, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
                   className="grid grid-cols-[60px_1fr] border-b border-border py-6"

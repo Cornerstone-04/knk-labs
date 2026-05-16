@@ -31,8 +31,8 @@ export const DevelopersTools = () => {
           {developers.tools.map((tool, i) => (
             <motion.div
               key={tool.label}
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
               className="group grid cursor-pointer grid-cols-1 border-b border-border py-6 transition-colors duration-200 hover:bg-bg/50 md:grid-cols-[280px_1fr]"

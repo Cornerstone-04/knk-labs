@@ -8,8 +8,8 @@ export const DevelopersIntro = () => {
     <section className="border-b border-border px-6 py-24 md:px-12">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-16 md:grid-cols-2">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
@@ -27,8 +27,8 @@ export const DevelopersIntro = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >

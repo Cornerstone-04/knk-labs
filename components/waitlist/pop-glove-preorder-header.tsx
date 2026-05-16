@@ -8,11 +8,11 @@ export function PopGlovePreorderHeader() {
       </p>
 
       <h2 className="mb-4 font-heading text-[clamp(1.75rem,4vw,2.75rem)] font-black normal-case leading-none text-white">
-        Join the P.O.P Glove Waitlist
+        Configure Your Glove
       </h2>
 
       <p className="max-w-2xl font-sans text-sm leading-relaxed text-white/45">
-        Fill in your details, then choose your preferred P.O.P Glove
+        Fill in your details and choose your preferred P.O.P Glove
         configuration. No payment is required today, we&apos;ll contact you when
         preorder access opens.
       </p>

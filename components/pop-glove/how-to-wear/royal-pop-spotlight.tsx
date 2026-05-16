@@ -53,7 +53,7 @@ export function RoyalPopSpotlight() {
         {shouldLoadVideo && (
           <>
             <video
-              src="/videos/pop-swatch.mp4"
+              src="/videos/pop-reveal.mp4"
               poster="/images/pop-glove/poster.jpg"
               loop
               muted
@@ -66,9 +66,9 @@ export function RoyalPopSpotlight() {
               }`}
             />
 
-            <div className="absolute bottom-4 left-4 right-4 text-sm text-orange font-sans font-black">
+            {/* <div className="absolute bottom-4 left-4 right-4 text-sm text-orange font-sans font-black">
               Video Credit: Hypebeast
-            </div>
+            </div> */}
           </>
         )}
       </motion.div>

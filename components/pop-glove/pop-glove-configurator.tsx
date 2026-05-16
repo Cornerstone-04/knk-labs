@@ -58,7 +58,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             </p>
 
             <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] font-black leading-tight tracking-[-0.02em] text-white normal-case">
-              Configure Your Colourway
+              Configure Your Glove
             </h2>
           </motion.div>
 
