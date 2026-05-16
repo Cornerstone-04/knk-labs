@@ -7,7 +7,6 @@ type PopGloveColour = {
   name: string;
   edition: string;
   hex: string;
-  accent: string;
 };
 
 type PopGloveConfigurationSummaryProps = {
