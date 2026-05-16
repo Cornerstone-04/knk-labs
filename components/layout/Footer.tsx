@@ -47,8 +47,8 @@ export default function Footer() {
             {navLinks.slice(0, -1).map(({ href, label }, i) => (
               <motion.li
                 key={href}
-                initial={{ opacity: 0, x: -8 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: -8 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.15 + i * 0.06 }}
               >

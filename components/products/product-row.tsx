@@ -32,8 +32,8 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
     <section className="border-b border-border overflow-x-hidden">
       <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: isEven ? -30 : 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className={`flex items-center justify-center bg-surface px-8 py-20 ${
@@ -60,8 +60,8 @@ export const ProductRow = ({ product, index }: ProductRowProps) => {
           </motion.div>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: isEven ? 30 : -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: isEven ? 30 : -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
           className={`flex flex-col justify-center px-8 py-20 md:px-12 ${

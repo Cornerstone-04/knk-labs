@@ -79,8 +79,8 @@ export function PopGloveHero({ onConfigureClick }: PopGloveHeroProps) {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
               delay: 0.4,

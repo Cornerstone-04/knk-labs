@@ -159,6 +159,11 @@ export const popGloveFeatures = [
     title: "Touch Function Compatibility",
     desc: "Designed for modern usability. Navigate your dashboard, phone, or infotainment system without removing the glove.",
   },
+  {
+    id: "08",
+    title: "Limited Edition Colourways",
+    desc: "Eight exclusive colour combinations inspired by motorsport and luxury design, each with its own unique character.",
+  },
 ];
 
 // Pre-order discount (used in CTA)

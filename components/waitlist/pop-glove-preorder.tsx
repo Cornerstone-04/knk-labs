@@ -99,7 +99,7 @@ export function PopGlovePreorder() {
       <PopGlovePreorderHeader />
 
       <div className="grid min-w-0 gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
-        <div className="min-w-0 lg:sticky lg:top-24 lg:self-start">
+        <div className="order-2 min-w-0 lg:order-1 lg:sticky lg:top-24 lg:self-start">
           <PopGlovePreorderForm
             loading={loading}
             error={error}
@@ -108,7 +108,8 @@ export function PopGlovePreorder() {
             onSubmit={handleSubmit}
           />
         </div>
-        <div className="flex min-w-0 flex-col gap-10">
+
+        <div className="order-1 flex min-w-0 flex-col gap-10 lg:order-2">
           <PopGloveHandSelector
             selectedHand={selectedHand}
             onHandChange={handleHandChange}
