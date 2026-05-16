@@ -61,7 +61,7 @@ export function RoyalPopSpotlight() {
               playsInline
               preload="metadata"
               onLoadedData={() => setVideoLoaded(true)}
-              className={`h-full w-full object-cover transition-all duration-500 group-hover:scale-105 ${
+              className={`h-full w-full object-contain transition-all duration-500 group-hover:scale-105 ${
                 videoLoaded ? "opacity-100" : "opacity-0"
               }`}
             />

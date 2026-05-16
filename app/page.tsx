@@ -7,6 +7,7 @@ import {
   ExpertiseStrip,
   HeroSection,
   MarqueeStrip,
+  PopGloveStrip,
   ProductsSection,
   StatsSection,
   SystemSection,
@@ -20,6 +21,7 @@ export default function HomePage() {
       <StatsSection />
       <SystemSection />
       <ProductsSection />
+      <PopGloveStrip />
       <BundleSecction />
       <ExpertiseStrip />
       <DeveloperStrip />
