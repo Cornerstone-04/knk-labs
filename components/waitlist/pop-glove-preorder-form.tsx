@@ -95,7 +95,7 @@ export function PopGlovePreorderForm({
         </button>
 
         <p className="text-center text-xs leading-relaxed text-white/35">
-          You’ll receive preorder updates when launch details are ready.
+          You&apos;ll receive preorder updates when launch details are ready.
         </p>
       </form>
     </div>

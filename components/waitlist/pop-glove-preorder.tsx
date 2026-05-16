@@ -94,7 +94,7 @@ export function PopGlovePreorder() {
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.2 }}
-      className="min-w-0 overflow-x-clip border-t border-white/5 pt-10"
+      className="min-w-0 overflow-x-clip border-t border-white/10 pt-10"
     >
       <PopGlovePreorderHeader />
 

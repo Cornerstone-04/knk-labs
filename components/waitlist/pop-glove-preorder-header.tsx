@@ -13,7 +13,7 @@ export function PopGlovePreorderHeader() {
 
       <p className="max-w-2xl font-sans text-sm leading-relaxed text-white/45">
         Fill in your details, then choose your preferred P.O.P Glove
-        configuration. No payment is required today — we’ll contact you when
+        configuration. No payment is required today, we&apos;ll contact you when
         preorder access opens.
       </p>
     </div>

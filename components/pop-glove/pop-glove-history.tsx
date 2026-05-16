@@ -39,10 +39,10 @@ export function PopGloveHistory() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="group relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-surface"
+          className="group relative flex aspect-4/3 items-center justify-center overflow-hidden border border-border bg-surface"
         >
           <Image
-            src="/images/pop-glove/pop-mixed.jpg"
+            src="/images/pop-glove/pop-options.png"
             alt="P.O.P Glove design concept"
             fill
             loading="eager"
