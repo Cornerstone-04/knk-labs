@@ -12,6 +12,7 @@ import {
   preorderDiscount,
   sidewaysIdSet,
 } from "@/lib/pop-glove";
+import { ConfigRow } from "../ui/config-row";
 
 export const PopGloveConfigurator = forwardRef<HTMLElement>(
   function PopGloveConfigurator(_, ref) {
@@ -99,7 +100,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
               STEP 02 &middot; COLOURWAY
             </p>
 
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-3 lg:grid-cols-6">
               {availableColours.map((colour) => {
                 const isActive = colour.id === selectedColour.id;
 
@@ -108,7 +109,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                     key={colour.id}
                     type="button"
                     onClick={() => setSelectedColourId(colour.id)}
-                    className={`group flex items-center gap-3 border px-4 py-3 focus:ring-1 focus:ring-orange text-left transition-all duration-300 ${
+                    className={`group flex items-center gap-3 border p-2 focus:ring-1 focus:ring-orange text-left transition-all duration-300 ${
                       isActive
                         ? "border-orange bg-orange/10"
                         : "border-border bg-surface/40 hover:border-white/30 hover:bg-white/3"
@@ -118,18 +119,18 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                       className="relative size-10 shrink-0 border border-white/15"
                       style={{ backgroundColor: colour.hex }}
                     >
-                      <span
+                      {/* <span
                         className="absolute bottom-1 right-1 size-3 border border-black/40"
                         style={{ backgroundColor: colour.accent }}
-                      />
+                      /> */}
                     </span>
 
                     <span className="min-w-0">
-                      <span className="block font-mono text-xxxs tracking-[0.18em] text-white/35">
+                      <span className="block font-mono text-xxs md:text-xs text-white/35">
                         {colour.id}
                       </span>
 
-                      <span className="block truncate font-sans text-[0.8rem] text-white/70 transition-colors group-hover:text-white">
+                      <span className="block truncate font-sans text-xs md:text-sm text-white/70 transition-colors group-hover:text-white">
                         {colour.name}
                       </span>
                     </span>
@@ -165,7 +166,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                   Selected Edition
                 </p>
 
-                <h3 className="mb-8 font-heading text-[clamp(1.5rem,3vw,2.5rem)] font-black leading-tight tracking-[-0.02em] text-white normal-case">
+                <h3 className="mb-8 font-heading text-[clamp(1.5rem,3vw,2.5rem)] font-black leading-tight text-white normal-case">
                   {selectedColour.edition}
                 </h3>
 
@@ -189,8 +190,8 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
 
             <div className="flex flex-col justify-between">
               <div>
-                <p className="mb-6 font-mono text-xxxs tracking-widest text-white/50 normal-case">
-                  READY TO ORDER?
+                <p className="mb-3 font-mono text-xxxs tracking-widest text-white/40 normal-case">
+                  Ready to Order
                 </p>
 
                 <p className="mb-8 font-sans text-[0.9rem] leading-relaxed text-white/60">
@@ -213,19 +214,3 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
     );
   },
 );
-
-type ConfigRowProps = {
-  label: string;
-  value: string;
-};
-
-function ConfigRow({ label, value }: ConfigRowProps) {
-  return (
-    <div>
-      <p className="mb-2 font-mono text-xxxs tracking-[0.05em] text-white/40">
-        {label}
-      </p>
-      <p className="font-sans text-[0.95rem] text-white">{value}</p>
-    </div>
-  );
-}
