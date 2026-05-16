@@ -2,7 +2,7 @@
 
 export function PopGlovePreorderHeader() {
   return (
-    <div className="mb-10 border-b border-white/10 pb-6">
+    <div className="mb-10">
       <p className="mb-3 font-mono text-xxs tracking-[0.25em] text-orange normal-case">
         P.O.P Glove Access
       </p>

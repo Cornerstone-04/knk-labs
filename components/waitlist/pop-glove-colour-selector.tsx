@@ -46,10 +46,10 @@ export function PopGloveColourSelector({
                   }`}
                   style={{ backgroundColor: colour.hex }}
                 >
-                  <span
+                  {/* <span
                     className="absolute bottom-1 right-1 size-3 border border-black/40"
                     style={{ backgroundColor: colour.accent }}
-                  />
+                  /> */}
 
                   {isSelected && (
                     <span className="absolute -right-1 -top-1 size-2 bg-orange" />
@@ -57,12 +57,12 @@ export function PopGloveColourSelector({
                 </span>
 
                 <span className="min-w-0">
-                  <span className="block font-mono text-xxxs tracking-[0.18em] text-white/35">
+                  <span className="block font-mono text-xxs md:text-xs tracking-[0.18em] text-white/35">
                     {colour.id}
                   </span>
 
                   <span
-                    className={`block truncate font-sans text-[0.8rem] transition-colors ${
+                    className={`block truncate font-sans text-xs md:text-sm transition-colors ${
                       isSelected
                         ? "text-white"
                         : "text-white/65 group-hover:text-white"
