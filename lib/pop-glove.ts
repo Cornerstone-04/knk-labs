@@ -1,3 +1,5 @@
+export type HandType = "left" | "right";
+
 // Glove colourways (8 total)
 export const popGloveColours = [
   {
@@ -6,7 +8,7 @@ export const popGloveColours = [
     hex: "#080a08",
     accent: "#002743",
     edition: "Signature Pop Royal",
-    image: "/images/pop-glove/lan-ba.jpg",
+    image: "/images/pop-glove/pop-cyan.jpg",
   },
   {
     id: "02",
@@ -14,7 +16,7 @@ export const popGloveColours = [
     hex: "#8a460d",
     accent: "#C0C0C0",
     edition: "Classic Luxury",
-    image: "/images/pop-glove/otg-roz.jpg",
+    image: "/images/pop-glove/pop-brown.jpg",
   },
   {
     id: "03",
@@ -22,7 +24,7 @@ export const popGloveColours = [
     hex: "#7a1b06",
     accent: "#101109",
     edition: "Motorsport Inspired",
-    image: "/images/pop-glove/otto-rosso.jpg",
+    image: "/images/pop-glove/pop-black.jpg",
   },
   {
     id: "04",
@@ -30,7 +32,7 @@ export const popGloveColours = [
     hex: "#e5dcd4",
     accent: "#20272d",
     edition: "Modern Clean",
-    image: "/images/pop-glove/blaue-acht.jpg",
+    image: "/images/pop-glove/pop-blue.jpg",
   },
   {
     id: "05",
@@ -38,7 +40,7 @@ export const popGloveColours = [
     hex: "#111111",
     accent: "#9d9a37",
     edition: "Hypercar Energy",
-    image: "/images/pop-glove/green-eight.jpg",
+    image: "/images/pop-glove/pop-green.jpg",
   },
   {
     id: "06",
@@ -46,7 +48,7 @@ export const popGloveColours = [
     hex: "#4d4237",
     accent: "#87430b",
     edition: "Performance Utility",
-    image: "/images/pop-glove/orenji-hachi.jpg",
+    image: "/images/pop-glove/pop-orange.jpg",
   },
   {
     id: "07",
@@ -54,7 +56,7 @@ export const popGloveColours = [
     hex: "#222c36",
     accent: "#ca8a04",
     edition: "Executive Premium",
-    image: "/images/pop-glove/huit-blanc.jpg",
+    image: "/images/pop-glove/pop-pink.jpg",
   },
   {
     id: "08",
@@ -62,15 +64,7 @@ export const popGloveColours = [
     hex: "#2f2c14",
     accent: "#1a1a1a",
     edition: "Tactical Lifestyle",
-    image: "/images/pop-glove/ocho-negro.jpg",
-  },
-  {
-    id: "09",
-    name: "Stealth Black",
-    hex: "#1A1A1A",
-    accent: "#444444",
-    edition: "Fingerless Edition",
-    image: "/images/pop-glove/ocho-negro.jpg",
+    image: "/images/pop-glove/pop-olive.jpg",
   },
 ] as const;
 
@@ -93,12 +87,6 @@ export const handOptions = {
       "Six colourways available. Full-finger construction with precision cradle.",
     availableColourIds: ["03", "04", "05", "06", "07", "08"], // 6 colourways
     style: "Full Finger",
-  },
-  fingerless: {
-    label: "Fingerless",
-    description: "Half-finger performance edition with dual-hand construction.",
-    availableColourIds: ["09"],
-    style: "Half Finger",
   },
 } as const;
 

@@ -2,7 +2,12 @@
 
 import { motion } from "motion/react";
 import { useMemo, useState } from "react";
-import { handOptions, popGloveColours, sidewaysIdSet } from "@/lib/pop-glove";
+import {
+  handOptions,
+  HandType,
+  popGloveColours,
+  sidewaysIdSet,
+} from "@/lib/pop-glove";
 import { useWaitlistSubmit } from "@/hooks/use-waitlist-submit";
 import { PopGlovePreorderSuccess } from "./pop-glove-preorder-success";
 import { PopGlovePreorderHeader } from "./pop-glove-preorder-header";
@@ -10,8 +15,6 @@ import { PopGloveHandSelector } from "./pop-glove-hand-selector";
 import { PopGloveColourSelector } from "./pop-glove-colour-selector";
 import { PopGloveConfigurationSummary } from "./pop-glove-configuration-summary";
 import { PopGlovePreorderForm } from "./pop-glove-preorder-form";
-
-type HandType = "left" | "right" | "fingerless";
 
 export function PopGlovePreorder() {
   const [selectedHand, setSelectedHand] = useState<HandType>("right");
@@ -31,12 +34,7 @@ export function PopGlovePreorder() {
 
   const isClockSideways = sidewaysIdSet.has(selectedColour.id);
 
-  const watchOrientation =
-    selectedHand === "fingerless"
-      ? "Dual-Hand Set"
-      : isClockSideways
-        ? "Sideways"
-        : "Upright";
+  const watchOrientation = isClockSideways ? "Sideways" : "Upright";
 
   function handleHandChange(hand: HandType) {
     const firstAvailableColourId = handOptions[hand].availableColourIds[0];

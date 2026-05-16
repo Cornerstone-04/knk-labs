@@ -1,8 +1,6 @@
 "use client";
 
-import { handOptions, preorderDiscount } from "@/lib/pop-glove";
-
-type HandType = "left" | "right" | "fingerless";
+import { handOptions, HandType, preorderDiscount } from "@/lib/pop-glove";
 
 type PopGloveColour = {
   id: string;
@@ -35,13 +33,7 @@ export function PopGloveConfigurationSummary({
         <SummaryRow label="Hand" value={handOptions[selectedHand].label} />
         <SummaryRow
           label="Watch Orientation"
-          value={
-            selectedHand === "fingerless"
-              ? "Dual-Hand Set"
-              : isClockSideways
-                ? "Sideways"
-                : "Upright"
-          }
+          value={isClockSideways ? "Sideways" : "Upright"}
         />
 
         <div className="flex items-center justify-between border-t border-white/10 pt-3">

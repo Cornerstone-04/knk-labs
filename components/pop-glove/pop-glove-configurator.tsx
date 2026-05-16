@@ -7,16 +7,15 @@ import { motion } from "motion/react";
 import { LuArrowRight } from "react-icons/lu";
 import {
   handOptions,
+  HandType,
   popGloveColours,
   preorderDiscount,
   sidewaysIdSet,
 } from "@/lib/pop-glove";
 
-type Hand = "left" | "right" | "fingerless";
-
 export const PopGloveConfigurator = forwardRef<HTMLElement>(
   function PopGloveConfigurator(_, ref) {
-    const [selectedHand, setSelectedHand] = useState<Hand>("right");
+    const [selectedHand, setSelectedHand] = useState<HandType>("right");
     const [selectedColourId, setSelectedColourId] = useState("03");
 
     const availableColours = useMemo(() => {
@@ -33,7 +32,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
 
     const isClockSideways = sidewaysIdSet.has(selectedColour.id);
 
-    function handleHandChange(hand: Hand) {
+    function handleHandChange(hand: HandType) {
       const firstAvailableColour = handOptions[hand].availableColourIds[0];
 
       setSelectedHand(hand);
@@ -68,7 +67,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             </p>
 
             <div className="flex flex-wrap gap-4">
-              {(["left", "right", "fingerless"] as const).map((hand) => {
+              {(["left", "right"] as const).map((hand) => {
                 const isActive = selectedHand === hand;
 
                 return (
