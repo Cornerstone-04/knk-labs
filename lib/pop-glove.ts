@@ -5,8 +5,8 @@ export const popGloveColours = [
     name: "Royal Black / Blue",
     hex: "#080a08",
     accent: "#002743",
-    edition: "Signature Royal Pop",
-    image: "/images/pop-glove/royal-black-blue.jpg",
+    edition: "Signature Pop Royal",
+    image: "/images/pop-glove/lan-ba.jpg",
   },
   {
     id: "02",
@@ -14,15 +14,15 @@ export const popGloveColours = [
     hex: "#8a460d",
     accent: "#C0C0C0",
     edition: "Classic Luxury",
-    image: "/images/pop-glove/cognac-tan-silver.jpg",
+    image: "/images/pop-glove/otg-roz.jpg",
   },
   {
     id: "03",
     name: "Redline Crimson / Black",
     hex: "#7a1b06",
     accent: "#101109",
-    edition: "Motorsport",
-    image: "/images/pop-glove/redline-crimson-black.jpg",
+    edition: "Motorsport Inspired",
+    image: "/images/pop-glove/otto-rosso.jpg",
   },
   {
     id: "04",
@@ -30,7 +30,7 @@ export const popGloveColours = [
     hex: "#e5dcd4",
     accent: "#20272d",
     edition: "Modern Clean",
-    image: "/images/pop-glove/arctic-white-navy.jpg",
+    image: "/images/pop-glove/blaue-acht.jpg",
   },
   {
     id: "05",
@@ -38,7 +38,7 @@ export const popGloveColours = [
     hex: "#111111",
     accent: "#9d9a37",
     edition: "Hypercar Energy",
-    image: "/images/pop-glove/carbon-black-neon-green.jpg",
+    image: "/images/pop-glove/green-eight.jpg",
   },
   {
     id: "06",
@@ -46,7 +46,7 @@ export const popGloveColours = [
     hex: "#4d4237",
     accent: "#87430b",
     edition: "Performance Utility",
-    image: "/images/pop-glove/slate-grey-orange.jpg",
+    image: "/images/pop-glove/orenji-hachi.jpg",
   },
   {
     id: "07",
@@ -54,7 +54,7 @@ export const popGloveColours = [
     hex: "#222c36",
     accent: "#ca8a04",
     edition: "Executive Premium",
-    image: "/images/pop-glove/navy-gold.jpg",
+    image: "/images/pop-glove/huit-blanc.jpg",
   },
   {
     id: "08",
@@ -62,7 +62,7 @@ export const popGloveColours = [
     hex: "#2f2c14",
     accent: "#1a1a1a",
     edition: "Tactical Lifestyle",
-    image: "/images/pop-glove/olive-matte-black.jpg",
+    image: "/images/pop-glove/ocho-negro.jpg",
   },
   {
     id: "09",
@@ -70,7 +70,7 @@ export const popGloveColours = [
     hex: "#1A1A1A",
     accent: "#444444",
     edition: "Fingerless Edition",
-    image: "/images/pop-glove/fingerless-black.jpg",
+    image: "/images/pop-glove/ocho-negro.jpg",
   },
 ] as const;
 
