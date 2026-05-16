@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     url: "https://www.knklabs.co.uk/products/pop-glove",
     images: [
       {
-        url: "https://www.knklabs.co.uk/images/pop-glove/pop-og-image.png",
+        url: "https://www.knklabs.co.uk/images/pop-glove/pop-og-image-v2.jpg",
         width: 1200,
         height: 630,
         alt: "P.O.P Glove — a next-generation luxury driving glove with an integrated dorsal-mounted timepiece.",
