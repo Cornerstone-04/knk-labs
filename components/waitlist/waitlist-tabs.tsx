@@ -21,7 +21,7 @@ const tabs: {
   {
     id: "pop",
     label: "P.O.P Gloves",
-    description: "Configure and reserve your P.O.P Glove edition.",
+    description: "Choose and reserve your P.O.P Glove edition.",
   },
 ];
 

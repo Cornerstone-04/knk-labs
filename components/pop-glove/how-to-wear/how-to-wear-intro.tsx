@@ -12,7 +12,7 @@ export function HowToWearIntro() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7, delay: 0.1 }}
-        className="group relative flex aspect-video min-w-0 items-center justify-center overflow-hidden border border-border bg-surface"
+        className="group order-1 md:order-2 relative flex aspect-video min-w-0 items-center justify-center overflow-hidden border border-border bg-surface"
       >
         <Image
           src="/images/pop-glove/pop-swatch-colors.png"
@@ -29,7 +29,7 @@ export function HowToWearIntro() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7 }}
-        className="min-w-0"
+        className="min-w-0 order-2 md:order-1"
       >
         <p className="mb-4 font-mono text-xxs tracking-[0.3em] text-orange normal-case">
           {howToWear.eyebrow}

@@ -13,6 +13,7 @@ export function PopGloveHistory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          className="order-1 md:order-2 min-w-0"
         >
           <p className="mb-6 font-mono text-xxs tracking-[0.3em] text-orange normal-case">
             {popGloveHistory.eyebrow}
@@ -39,7 +40,7 @@ export function PopGloveHistory() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="group relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-surface"
+          className="group order-2 md:order-1 relative flex aspect-square items-center justify-center overflow-hidden border border-border bg-surface"
         >
           <Image
             src="/images/pop-glove/pop-stadium.jpg"

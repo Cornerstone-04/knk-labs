@@ -29,7 +29,8 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
 
     const selectedColour =
       popGloveColours.find((colour) => colour.id === selectedColourId) ??
-      availableColours[0];
+      availableColours[0] ??
+      popGloveColours[0];
 
     const isClockSideways = sidewaysIdSet.has(selectedColour.id);
 
@@ -58,7 +59,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             </p>
 
             <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] font-black leading-tight tracking-[-0.02em] text-white normal-case">
-              Configure Your Glove
+              Choose Your Glove
             </h2>
           </motion.div>
 
@@ -147,18 +148,47 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
             transition={{ duration: 0.55 }}
             className="grid grid-cols-1 gap-10 border-t border-white/10 pt-16 lg:grid-cols-3 lg:gap-16"
           >
-            <div>
-              <div className="group relative aspect-square overflow-hidden border border-border bg-surface">
+            <motion.div
+              key={selectedColour.image}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.7,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="relative flex min-h-90 items-center justify-center overflow-hidden bg-bg sm:min-h-110 lg:min-h-125"
+            >
+              <div
+                className="pointer-events-none absolute bottom-[15%] left-1/2 z-0 h-30 w-[58%] -translate-x-1/2 rounded-full blur-2xl lg:h-32"
+                style={{
+                  backgroundColor:
+                    selectedColour?.name === "Matte Black"
+                      ? "rgb(249 115 22 / 0.20)"
+                      : `color-mix(in oklab, ${selectedColour?.hex} 25%, transparent)`,
+                }}
+              />
+
+              <motion.div
+                animate={{ y: [0, -10, 0], scale: [1, 1.015, 1] }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="group relative z-10 h-80 w-full max-w-120 px-8 sm:h-88 lg:h-100 lg:px-10"
+              >
                 <Image
                   src={selectedColour.image}
                   alt={`${selectedColour.name} P.O.P Glove`}
                   fill
                   priority
                   sizes="(max-width: 640px) 88vw, (max-width: 1024px) 70vw, 25vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-contain group-hover:scale-105 transition-all ease-linear"
                 />
-              </div>
-            </div>
+              </motion.div>
+
+              <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-20 h-20 bg-linear-to-t from-black/20 to-transparent" />
+            </motion.div>
 
             <div className="flex flex-col justify-between">
               <div>

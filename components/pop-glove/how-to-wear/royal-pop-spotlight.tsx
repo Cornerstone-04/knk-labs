@@ -16,7 +16,7 @@ export function RoyalPopSpotlight() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.7 }}
-        className="min-w-0"
+        className="min-w-0 order-1 md:order-2"
       >
         <p className="mb-4 font-mono text-xxs tracking-[0.3em] text-orange normal-case">
           {howToWear.royalPopSpotlight.eyebrow}
@@ -44,7 +44,7 @@ export function RoyalPopSpotlight() {
         onViewportEnter={() => setShouldLoadVideo(true)}
         viewport={{ once: true, margin: "200px" }}
         transition={{ duration: 0.7, delay: 0.1 }}
-        className="group relative mx-auto aspect-9/16 md:aspect-4/5 w-full max-w-160 min-w-0 overflow-hidden border border-border bg-surface transition-all ease-linear hover:border-white/20 hover:bg-surface/80 xl:aspect-square lg:mx-0"
+        className="group relative mx-auto aspect-9/16 md:aspect-4/5 w-full max-w-160 min-w-0 overflow-hidden border border-border bg-surface transition-all ease-linear hover:border-white/20 hover:bg-surface/80 xl:aspect-square lg:mx-0 order-2 md:order-1"
       >
         {!videoLoaded && (
           <VideoSkeleton label="Loading AP x Swatch Royal Pop Video" />
