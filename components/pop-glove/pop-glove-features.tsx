@@ -23,18 +23,6 @@ export function PopGloveFeatures() {
               Every Detail Has a Purpose.
             </h2>
           </motion.div>
-
-          {/* <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-[58ch] font-sans text-[0.95rem] leading-[1.9] text-white/50"
-          >
-            Built around visibility, control, and the Royal Pop watch system,
-            the P.O.P Glove turns a driving accessory into a functional cockpit
-            interface.
-          </motion.p> */}
         </div>
 
         <motion.div
@@ -44,13 +32,13 @@ export function PopGloveFeatures() {
           transition={{ duration: 0.8 }}
           className="relative mb-16 overflow-hidden border border-border bg-[#f3ece5]"
         >
-          <div className="relative aspect-4/5 sm:aspect-16/10 lg:aspect-21/9">
+          <div className="group relative aspect-4/5 sm:aspect-16/10 lg:aspect-21/9">
             <Image
               src="/images/pop-glove/pop-design-cutout.png"
               alt="P.O.P Glove design"
               fill
               sizes="(max-width: 768px) 92vw, (max-width: 1024px) 88vw, 1200px"
-              className="object-contain"
+              className="object-contain group-hover:scale-102 transition-all ease-linear"
             />
 
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/5 md:via-black/20 to-transparent" />
