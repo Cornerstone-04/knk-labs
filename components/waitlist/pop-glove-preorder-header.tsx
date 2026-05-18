@@ -8,7 +8,7 @@ export function PopGlovePreorderHeader() {
       </p>
 
       <h2 className="mb-4 font-heading text-[clamp(1.75rem,4vw,2.75rem)] font-black normal-case leading-none text-white">
-        Configure Your Glove
+        Choose Your Glove
       </h2>
 
       <p className="max-w-2xl font-sans text-sm leading-relaxed text-white/45">
