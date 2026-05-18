@@ -17,7 +17,7 @@ export function PopGloveHandSelector({
         Hand Orientation
       </label>
 
-      <div className="grid grid-cols-3 gap-3 sm:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3">
         {(["left", "right"] as const).map((hand) => {
           const isSelected = selectedHand === hand;
 
