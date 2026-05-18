@@ -26,10 +26,10 @@ export function PopGloveHandSelector({
               key={hand}
               type="button"
               onClick={() => onHandChange(hand)}
-              className={`flex-1 border px-4 py-3 font-sans text-sm font-semibold normal-case transition-all ${
+              className={`px-10 py-4 font-sans text-[0.85rem] font-semibold tracking-[0.08em] transition-all duration-300 ${
                 isSelected
-                  ? "border-orange bg-orange/10 text-orange"
-                  : "border-white/20 text-white/60 hover:border-white/40"
+                  ? "bg-orange text-black shadow-lg shadow-orange/20"
+                  : "border border-white/20 bg-surface/40 text-white/70 hover:border-white/40 hover:text-white"
               }`}
             >
               {hand === "left" ? "Left Hand" : "Right Hand"}

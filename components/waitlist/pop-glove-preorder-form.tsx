@@ -21,10 +21,9 @@ export function PopGlovePreorderForm({
   return (
     <div className="min-w-0 border border-white/10 bg-bg/60 p-5 sm:p-6 md:p-8">
       <div className="mb-8 border-b border-white/10 pb-6">
-        <div className="grid grid-cols-[7rem_1fr] items-center gap-5 sm:grid-cols-[8rem_1fr]">
-          <div className="relative aspect-square overflow-hidden border border-white/10 bg-black/20">
+        <div className="grid grid-cols-[7rem_1fr] items-center gap-5 sm:grid-cols-[10rem_1fr]">
+          <div className="relative aspect-square overflow-hidden border border-white/10 bg-bg">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(249,115,22,0.12),transparent)]" />
-
             <Image
               src={selectedColourImage}
               alt={`${selectedColourName} P.O.P Glove`}

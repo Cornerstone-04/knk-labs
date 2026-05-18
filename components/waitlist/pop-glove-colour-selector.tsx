@@ -34,40 +34,23 @@ export function PopGloveColourSelector({
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 title={colour.name}
-                className={`group flex min-w-0 items-center gap-3 border px-3 py-3 text-left transition-all duration-300 ${
+                className={`group flex items-center gap-3 border p-2 focus:ring-1 focus:ring-orange text-left transition-all duration-300 ${
                   isSelected
-                    ? "border-orange bg-orange/10 shadow-[0_0_24px_rgba(249,115,22,0.08)]"
-                    : "border-border bg-bg hover:border-white/30 hover:bg-white/3"
+                    ? "border-orange bg-orange/10"
+                    : "border-border bg-surface/40 hover:border-white/30 hover:bg-white/3"
                 }`}
               >
                 <span
-                  className={`relative size-10 shrink-0 border transition-all duration-300 ${
-                    isSelected ? "border-orange" : "border-white/15"
-                  }`}
+                  className="relative size-8 shrink-0 border border-white/15"
                   style={{ backgroundColor: colour.hex }}
-                >
-                  {/* <span
-                    className="absolute bottom-1 right-1 size-3 border border-black/40"
-                    style={{ backgroundColor: colour.accent }}
-                  /> */}
-
-                  {isSelected && (
-                    <span className="absolute -right-1 -top-1 size-2 bg-orange" />
-                  )}
-                </span>
+                ></span>
 
                 <span className="min-w-0">
-                  <span className="block font-mono text-xxs md:text-xs tracking-[0.18em] text-white/35">
+                  <span className="block font-mono text-xxs md:text-xs text-white/35">
                     {colour.id}
                   </span>
 
-                  <span
-                    className={`block truncate font-sans text-xs md:text-sm transition-colors ${
-                      isSelected
-                        ? "text-white"
-                        : "text-white/65 group-hover:text-white"
-                    }`}
-                  >
+                  <span className="block truncate font-sans text-xs md:text-sm text-white/70 transition-colors group-hover:text-white">
                     {colour.name}
                   </span>
                 </span>

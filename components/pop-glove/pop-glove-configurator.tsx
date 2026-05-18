@@ -119,12 +119,7 @@ export const PopGloveConfigurator = forwardRef<HTMLElement>(
                     <span
                       className="relative size-10 shrink-0 border border-white/15"
                       style={{ backgroundColor: colour.hex }}
-                    >
-                      {/* <span
-                        className="absolute bottom-1 right-1 size-3 border border-black/40"
-                        style={{ backgroundColor: colour.accent }}
-                      /> */}
-                    </span>
+                    ></span>
 
                     <span className="min-w-0">
                       <span className="block font-mono text-xxs md:text-xs text-white/35">
